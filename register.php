@@ -21,7 +21,7 @@
         <h1>Đăng ký</h1>
     </div>
 
-    <div id="loginForm" name="loginForm">
+    <div id="submit-form" name="submit-form">
         <form action="./register.php" method="post">
             <fieldset id="login-info" name="login-info">
                 <legend>

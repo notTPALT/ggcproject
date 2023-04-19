@@ -20,9 +20,9 @@
 
     <div id="login-status"></div>
 
-    <div id="loginForm" name="loginForm">
+    <div id="submit-form" name="submit-form">
         <form action="./login.php" method="post">
-            <fieldset name="loginForm">
+            <fieldset name="submit-form">
                 <div class="form-component">
                     <div class="form-header">Tên người dùng <p>*</p>
                     </div>
@@ -34,6 +34,8 @@
                     </div>
                     <input type="password" name="pass" placeholder="Mật khẩu" required>
                 </div>
+                <div><a href="./forget_password.php">Quên mật khẩu?</a></div>
+                <div><a href="./register.php">Đăng ký</a></div>
             </fieldset>
 
             <div class="form-component">
