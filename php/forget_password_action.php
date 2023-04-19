@@ -13,6 +13,7 @@
         mysqli_stmt_bind_result($stmt, $ques, $ans);
         mysqli_stmt_fetch($stmt);
         $success = ($_POST['secur_ans'] == $ans);
+        if ($success) $_SESSION['change-pass-username'] = $_POST['username']; 
         echo '<script>verification_check('.$success.');</script>';
     }
     function usernameExist($con) {
