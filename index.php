@@ -38,9 +38,8 @@
                 <div id="banner">
                     <div id="para">Ôn tập và thi trắc nghiệm Vật Lí</div>
                 </div>
-                <button id="btn-login-r-show-username"></button>
 
-                <!--Button đăng nhập/đăng xuẩt tuỳ trường hợp-->
+                <button id="btn-login-r-show-username"></button>
                 <button id="btn-register-r-log-out"></button>
             </div>
 
