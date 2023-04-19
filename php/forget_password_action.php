@@ -3,23 +3,17 @@
 <script src="../js/forget_password.js"></script>
 
 <?php
-    if (!usernameExist($con)) {
+    if (isset($_POST['username']) && !usernameExist($con)) {
         echo "<script>no_such_user();</script>";
     }
-    if (isset($_POST['username']) && isset($_POST['secur_ques']) && isset($_POST['secur_ans'])) {
-        $stmt = mysqli_prepare($con, "SELECT secur_ans FROM user_infos WHERE username = ?");
+    else if (isset($_POST['username'])) {
+        $stmt = mysqli_prepare($con, "SELECT secur_ques, secur_ans FROM user_infos WHERE username = ?");
         mysqli_stmt_bind_param($stmt, "s", $_POST['username']);
         mysqli_stmt_execute($stmt);
-        mysqli_stmt_bind_result($stmt, $answer);
-        if (!mysqli_stmt_fetch($stmt)) {
-            echo "<script>user_has_no_ques();</script>";
-        }
-
-        if ($_POST['secur_ans'] == $ans) {
-            echo 'verification_success();</script>';
-        } else {
-            echo 'verification_fail();</script>';
-        }
+        mysqli_stmt_bind_result($stmt, $ques, $ans);
+        mysqli_stmt_fetch($stmt);
+        $success = ($_POST['secur_ans'] == $ans);
+        echo '<script>verification_check('.$success.');</script>';
     }
     function usernameExist($con) {
         $username = mysqli_real_escape_string($con, $_POST['username']);

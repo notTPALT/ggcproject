@@ -19,9 +19,8 @@
     <div id="login-status"></div>
 
     <div id="loginForm" name="loginForm">
-        <form action="./forget-password.php" method="post">
+        <form action="./forget_password.php" method="post">
             <fieldset name="loginForm">
-
                 <div id="verificaton-check"></div>
                 <div class="form-component">
                     <div class="form-header">Tên người dùng <p>*</p>
