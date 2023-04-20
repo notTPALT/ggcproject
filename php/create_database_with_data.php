@@ -57,6 +57,36 @@
                                 ('user10', 'user10pass', 'ques10', 'ques10ans', 'user10@gmail.com', '0123456789', 'addrs of user10', true, '2003-10-10', 'user', 'tenth')");
     }
 
+    
+    for ($i = 10; $i <= 12; $i++) {
+        for ($j = 1; $j <=7; $j++) {
+            mysqli_query($conDB, "DROP TABLE ques_".$i."_".$j);
+            mysqli_query($conDB, "CREATE TABLE ques_".$i."_".$j." (
+                idx INTEGER,
+                question varchar(500),
+                option1 varchar(500),
+                option2 varchar(500),
+                option3 varchar(500),
+                option4 varchar(500),
+                right_ans INTEGER
+            )");
+            mysqli_query($conDB, "INSERT INTO ques_".$i."_".$j." VALUES (1, 'sample1', 'ans1', 'ans2', 'ans3', 'ans4', 2)");
+            mysqli_query($conDB, "INSERT INTO ques_".$i."_".$j." VALUES (2, 'sample2', 'ans5', 'ans6', 'ans7', 'ans8', 4)");
+        }
+    }
+    mysqli_query($conDB, "DROP TABLE ques_12_8");
+    mysqli_query($conDB, "CREATE TABLE ques_12_8 (
+                idx INTEGER,
+                question varchar(500),
+                option1 varchar(500),
+                option2 varchar(500),
+                option3 varchar(500),
+                option4 varchar(500),
+                right_ans INTEGER
+    )");
+    mysqli_query($conDB, "INSERT INTO ques_12_8 VALUES (1, 'sample1', 'ans1', 'ans2', 'ans3', 'ans4', 2)");
+    mysqli_query($conDB, "INSERT INTO ques_12_8 VALUES (2, 'sample2', 'ans5', 'ans6', 'ans7', 'ans8', 4)");
+
     unset($con);
     unset($conDB);
 ?>
