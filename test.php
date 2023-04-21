@@ -3,7 +3,7 @@ session_start();
 echo file_get_contents("./html/header.html");
 ?>
 
-</h3 id="chapter-name">
+<h3 id="chapter-name">
 </h3>
 <div id="timer"></div>
 <form id="answer-submit" action="<?php $_SERVER['PHP_SELF']?>" method="post">

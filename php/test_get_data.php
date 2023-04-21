@@ -11,6 +11,7 @@ if (isset($_GET['level']) && isset($_GET['chapter'])) {
     $num_of_ques = 1;
     
     echo '<script>update_breadcumb('.$level.', '.$chapter.');</script>';
+    echo '<script>update_chapter_title('.$level.', '.$chapter.');</script>';
 
     $question_table_name = "ques_".$level."_".$chapter;
     $get_question_sets = mysqli_prepare($con, "SELECT * FROM ".$question_table_name);
