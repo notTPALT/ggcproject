@@ -1,11 +1,11 @@
 function init_index_buttons(username) {
     if (username == "none") {
         function login() {
-            window.location.href = "../login.php";
+            window.location.href = "./login.php";
         }
 
         function register() {
-            window.location.href = "../register.php";
+            window.location.href = "./register.php";
         }
 
         document.getElementById("btn-login-r-show-username").innerHTML= "Đăng nhập";
@@ -16,11 +16,11 @@ function init_index_buttons(username) {
 
     } else {
         function goto_personal_information() {
-            window.location.href = "../personal_information.php";
+            window.location.href = "./personal_information.php";
         }
 
         function log_out() {
-            window.location.href = "../log_out.php";
+            window.location.href = "./log_out.php";
         }
 
         document.getElementById("btn-login-r-show-username").innerHTML= "User: " + username;

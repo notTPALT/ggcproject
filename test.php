@@ -1,16 +1,23 @@
 <?php
 session_start();
+if (!isset($_SESSION['username'])) {
+    echo '<script>window.location.href="./login.php";</script>';
+}
 echo file_get_contents("./html/header.html");
 ?>
 
 <h3 id="chapter-name">
 </h3>
-<div id="timer"></div>
-<form id="answer-submit" action="<?php $_SERVER['PHP_SELF']?>" method="post">
-    <div id="result"></div>
-    <div id="question-container"></div>
-    <input id="submit" type="submit" name="submit" value="Nộp bài"></input>
-</form>
+<div>
+    <!-- 2 cái input và div trong này chung 1 chỗ nhé -->
+    <input type="button" id="btn-start-timer" name="btn-start-timer" value="Bắt đầu làm bài!"></button>
+    <div id="timer" name="timer"></div>
+</div>
+<div id="result"></div>
+<div id="check-ans"></div>
+<div id="question-container"></div>
+<button id="submit" name="ans-submit">Nộp bài!</button>
+<!-- </form> -->
 
 <?php 
 echo file_get_contents("./html/footer.html");

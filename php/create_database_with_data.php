@@ -86,6 +86,7 @@
     )");
     mysqli_query($conDB, "INSERT INTO ques_12_8 VALUES (1, 'sample1', 'ans1', 'ans2', 'ans3', 'ans4', 2)");
     mysqli_query($conDB, "INSERT INTO ques_12_8 VALUES (2, 'sample2', 'ans5', 'ans6', 'ans7', 'ans8', 4)");
+    mysqli_query($conDB, "INSERT INTO ques_12_8 VALUES (3, 'Tính: 5 + 6 = ?', '11', 'B', '14', '1011', 1)");
 
     unset($con);
     unset($conDB);

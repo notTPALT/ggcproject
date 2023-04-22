@@ -1,4 +1,4 @@
-<script src="../js/register.js"></script>
+<script src="./js/register.js"></script>
 
 <?php
     if (isset($_POST['username']) && isset($_POST['pass'])) {

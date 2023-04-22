@@ -1,6 +1,6 @@
 <!-- unfinished - not functioning -->
 
-<script src="../js/forget_password.js"></script>
+<script src="./js/forget_password.js"></script>
 
 <?php
     if (isset($_POST['username']) && !usernameExist($con)) {
