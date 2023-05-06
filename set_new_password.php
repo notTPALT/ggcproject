@@ -41,6 +41,6 @@
 </body>
 
 <?php
-    require_once("./php/connect_MySQL.php");
+    require_once("./php/connect_MySQL_n_log.php");
     require_once("./php/set_new_password_action.php");
 ?>

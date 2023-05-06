@@ -1,6 +1,12 @@
 <?php
     $con = mysqli_connect("localhost", "root", "");
     mysqli_query($con, "DROP DATABASE webthi");
+    mysqli_query($con, "CREATE TABLE server_log (
+        username varchar(50),
+        events varchar(200),
+        time TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+        )");
+        
     $createTB = "CREATE TABLE user_infos (
         id          integer         not null PRIMARY KEY AUTO_INCREMENT,
         username    varchar(50) not null UNIQUE,

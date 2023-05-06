@@ -10,7 +10,10 @@
                 if (!mysqli_stmt_execute($update_data_stmt)) {
                     echo "Error!";
                 }
-                else echo '<script>alert("Thay đổi thông tin thành công!"); window.location.href = "./index.php";</script>';
+                else {
+                    project_log($con, "Changed their informations");
+                    echo '<script>alert("Thay đổi thông tin thành công!"); window.location.href = "./index.php";</script>';
+                }
                 mysqli_stmt_close($update_data_stmt);
             }
         }

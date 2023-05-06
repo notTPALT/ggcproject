@@ -105,5 +105,5 @@
 </html>
 
 <?php
-require_once("./php/connect_MySQL.php");
+require_once("./php/connect_MySQL_n_log.php");
 require_once("./php/user_infos_action.php");
