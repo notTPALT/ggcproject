@@ -3,12 +3,12 @@
     mysqli_query($con, "DROP DATABASE webthi");
     $createTB = "CREATE TABLE user_infos (
         id          integer         not null PRIMARY KEY AUTO_INCREMENT,
-        username    varchar(50) not null UNIQUE,
+        username    char(50) not null UNIQUE,
         pass        char(40) not null,
         secure_question  varchar(100),
         secure_answer   varchar(100),
-        email       varchar(50),
-        phone       varchar(11),
+        email       char(50),
+        phone       char(11),
         addrs       varchar(100),
         gender      boolean,
         birthdate   date,
