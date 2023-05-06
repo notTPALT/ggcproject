@@ -1,1 +1,0 @@
-<script src="./js/personal_information.js"></script>
