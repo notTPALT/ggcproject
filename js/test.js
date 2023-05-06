@@ -1,20 +1,14 @@
 var arr = [];
 var num_of_ques = 0;
-var timer_init = 10;
-var timer = timer_init;
+var timer_init = 3600;
 
-var hour = 0, second = timer, minute = 0;
-hour = parseInt(second / 3600);
-second -= hour * 3600;
-minute = parseInt(second / 60);
-second -= minute * 60;
 
 document.getElementById("question-container").hidden = true;
 document.getElementById("submit").hidden = true;
 
 function update_breadcumb(level, chapter) {
     if (level == 0) {
-        document.getElementById("breadcumb").innerHTML = "Trang chủ >> Ôn thi tổng hợp"
+        document.getElementById("breadcumb").innerHTML = "Trang chủ >> Ôn thi tổng hợp";
     } else {
         document.getElementById("breadcumb").innerHTML = "Trang chủ >> Lớp " + level + " >> Chương " + chapter;
     }
@@ -50,30 +44,34 @@ function push_question(index, question, option1, option2, option3, option4, ans)
 }
 
 
-
 function timer_start() {
     document.getElementById("btn-start-timer").hidden = true;
     document.getElementById("question-container").hidden = false;
     document.getElementById("submit").hidden = false;
-    timer = timer_init;
-    var myInterval = setInterval(function() {
+
+    let timer = timer_init;
+    let second = timer_init;
+    let hour = parseInt(second / 3600);
+    second -= hour * 3600;
+    let minute = parseInt(second / 60);
+    second -= minute * 60;
+
+    var timer_countdown = setInterval(function() {
         timer--;
         
         second--;
         if (second < 0) {
             minute--;
             if (minute < 0) {
-                hour--;
+                if (hour > 0) hour--;
                 minute = 59;
-            } else {
-                minute--;
             }
             second = 59;
         }
         
         document.getElementById("timer").innerHTML = "Thời gian còn lại: " + hour + ":" + minute + ":" + second;
         if (timer <= 0) {
-            clearInterval(myInterval);
+            clearInterval(timer_countdown);
             time_out();
         }
     }, 1000);

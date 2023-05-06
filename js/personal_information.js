@@ -1,0 +1,1 @@
+// document.getElementById("head").innerHTML += '<link rel="stylesheet" href="./css/personal_information.css">';

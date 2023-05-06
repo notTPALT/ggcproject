@@ -16,7 +16,7 @@ function init_index_buttons(username) {
 
     } else {
         function goto_personal_information() {
-            window.location.href = "./personal_information.php";
+            window.location.href = "./user_infos.php";
         }
 
         function log_out() {

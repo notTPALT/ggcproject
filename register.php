@@ -97,8 +97,7 @@
                 </div>
 
                 <div class="form-component">
-                    <div class="form-header">Email
-                    </div>
+                    <div class="form-header">Email</div>
                     <input type="text" name="email" placeholder="Email">
                 </div>
 
