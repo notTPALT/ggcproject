@@ -26,9 +26,9 @@
                 </div>
 
                 <div class="form-component">
-                    <div id="secur_ques" class="form-header">Câu hỏi bảo mật:
+                    <div id="secure_question" class="form-header">Câu hỏi bảo mật:
                     </div>
-                    <input type="text" name="secur_ans" placeholder="Câu trả lời" required>
+                    <input type="text" name="secure_answer" placeholder="Câu trả lời" required>
                 </div>
             </fieldset>
 

@@ -2,7 +2,7 @@ function update_username(username) {
     document.getElementById("target").innerHTML += username;
 }
 
-function bind_existing_data(fname, lname, gender, birthdate, email, phone, addrs, secur_ques, secur_ans) {
+function bind_existing_data(fname, lname, gender, birthdate, email, phone, addrs, secure_question, secure_answer) {
     document.addEventListener("DOMContentLoaded", function() {
         document.getElementById("fname").innerHTML = fname;
         document.getElementById("lname").innerHTML = lname;
@@ -11,7 +11,7 @@ function bind_existing_data(fname, lname, gender, birthdate, email, phone, addrs
         document.getElementById("email").innerHTML = email;
         document.getElementById("phone").innerHTML = phone;
         document.getElementById("addrs").innerHTML = addrs;
-        document.getElementById("secur-ques").innerHTML = secur_ques;
-        document.getElementById("secur-ans").innerHTML = secur_ans;
+        document.getElementById("secure-question").innerHTML = secure_question;
+        document.getElementById("secure-answer").innerHTML = secure_answer;
     });
 }

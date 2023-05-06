@@ -2,7 +2,7 @@ document.querySelector("form").addEventListener('input', function() {
     document.getElementById("change-user-infos").disabled = false;
 });
 
-function bind_existing_data(fname, lname, gender, birthdate, email, phone, addrs, secur_ques, secur_ans) {
+function bind_existing_data(fname, lname, gender, birthdate, email, phone, addrs, secure_question, secure_answer) {
     document.addEventListener("DOMContentLoaded", function() {
         document.getElementById("fname").value = fname;
         document.getElementById("lname").value = lname;
@@ -11,8 +11,8 @@ function bind_existing_data(fname, lname, gender, birthdate, email, phone, addrs
         document.getElementById("email").value = email;
         document.getElementById("phone").value = phone;
         document.getElementById("addrs").value = addrs;
-        document.getElementById("secur-ques").value = secur_ques;
-        document.getElementById("secur-ans").value = secur_ans;
+        document.getElementById("secure-question").value = secure_question;
+        document.getElementById("secure-answer").value = secure_answer;
     });
 }
 

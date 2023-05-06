@@ -100,19 +100,19 @@
 
                 <tr>
                     <td>
-                        <label for="secur-ques">Câu hỏi bảo mật:</label>
+                        <label for="secure-question">Câu hỏi bảo mật:</label>
                     </td>
                     <td>
-                        <input type="text" name="secur-ques" id="secur-ques" placeholder="Câu hỏi bảo mật">
+                        <input type="text" name="secure-question" id="secure-question" placeholder="Câu hỏi bảo mật">
                     </td>
                 </tr>
 
                 <tr>
                     <td>
-                        <label for="secur-ans">Câu trả lời:</label>
+                        <label for="secure-answer">Câu trả lời:</label>
                     </td>
                     <td>
-                        <input type="text" name="secur-ans" id="secur-ans" placeholder="Câu trả lời">
+                        <input type="text" name="secure-answer" id="secure-answer" placeholder="Câu trả lời">
                     </td>
                 </tr>
             </table>

@@ -25,13 +25,13 @@
     }
     
     function insert_data($con) {
-        $insert_stmt = mysqli_prepare($con, "insert into user_infos (username, pass, secur_ques, secur_ans, email, phone, addrs, gender, birthdate, fname, lname) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+        $insert_stmt = mysqli_prepare($con, "insert into user_infos (username, pass, secure_question, secure_answer, email, phone, addrs, gender, birthdate, fname, lname) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
         // $insert_stmt = mysqli_prepare($con, "insert into user_infos (username, pass, email) values (?, ?, ?)");
     
         $username   = $_POST['username'];
         $pass       = $_POST['pass'];
-        $secur_ques = $_POST['secur_ques'];
-        $secur_ans  = $_POST['secur_ans'];
+        $secure_question = $_POST['secure_question'];
+        $secure_answer  = $_POST['secure_answer'];
         $phone      = isset($_POST['phone'])     ? $_POST['phone']     : null;
         $email      = isset($_POST['email'])     ? $_POST['email']     : null;
         $address    = isset($_POST['address'])   ? $_POST['address']   : null;
@@ -41,7 +41,7 @@
 
         $gender = (isset($_POST['gender']) && strcmp("male", $_POST['gender']) == 0) ? true : false;
     
-        mysqli_stmt_bind_param($insert_stmt, "sssssssbsss", $username, $pass, $secur_ques, $secur_ans, $email, $phone, $address, $gender, $birthdate, $fname, $lname);
+        mysqli_stmt_bind_param($insert_stmt, "sssssssbsss", $username, $pass, $secure_question, $secure_answer, $email, $phone, $address, $gender, $birthdate, $fname, $lname);
         // mysqli_stmt_bind_param($insert_stmt, "sss", $_POST['username'], $_POST['pass'], $_POST['email']);
         mysqli_stmt_execute($insert_stmt); 
     

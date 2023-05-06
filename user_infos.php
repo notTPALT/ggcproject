@@ -81,19 +81,19 @@
 
                 <tr>
                     <td>
-                        <label for="secur-ques">Câu hỏi bảo mật:</label>
+                        <label for="secure-question">Câu hỏi bảo mật:</label>
                     </td>
                     <td>
-                        <label id="secur-ques">Không có</label>
+                        <label id="secure-question">Không có</label>
                     </td>
                 </tr>
 
                 <tr>
                     <td>
-                        <label for="secur-ans">Câu trả lời:</label>
+                        <label for="secure-answer">Câu trả lời:</label>
                     </td>
                     <td>
-                        <label id="secur-ans">Không có</label>
+                        <label id="secure-answer">Không có</label>
                     </td>
                 </tr>
             </table>

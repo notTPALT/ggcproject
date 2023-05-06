@@ -51,13 +51,13 @@
                 <div class="form-component">
                     <div class="form-header">Câu hỏi bảo mật (Tự viết) <p>*</p>
                     </div>
-                    <input type="text" name="secur_ques" placeholder="Câu hỏi bảo mật" required>
+                    <input type="text" name="secure_question" placeholder="Câu hỏi bảo mật" required>
                 </div>
 
                 <div class="form-component">
                     <div class="form-header">Câu trả lời <p>*</p>
                     </div>
-                    <input type="text" name="secur_ans" placeholder="Câu trả lời" required>
+                    <input type="text" name="secure_answer" placeholder="Câu trả lời" required>
                 </div>
             </fieldset>
 
