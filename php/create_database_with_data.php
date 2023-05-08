@@ -6,7 +6,7 @@
         username    char(50) not null UNIQUE,
         pass        char(40) not null,
         secure_question  varchar(100),
-        secure_answer   varchar(100),
+        secure_answer   varchar(100),   
         email       char(50),
         phone       char(11),
         addrs       varchar(100),
@@ -25,7 +25,7 @@
         username varchar(50),
         events varchar(200),
         time TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-        )");
+    )");
     if (!mysqli_query($conDB, $createTB)) {
         echo 'table already exist.';
     } else {

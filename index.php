@@ -1,6 +1,6 @@
 <?php
 session_start();
-echo file_get_contents("./html/header.html");
+require_once("./html/header.php");
 ?>
 
 <?php 

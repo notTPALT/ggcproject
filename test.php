@@ -3,7 +3,7 @@ session_start();
 if (!isset($_SESSION['username'])) {
     echo '<script>window.location.href="./login.php";</script>';
 }
-echo file_get_contents("./html/header.html");
+require_once("./html/header.php");
 ?>
 
 <h3 id="chapter-name">
