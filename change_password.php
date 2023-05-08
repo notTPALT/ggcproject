@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,13 +18,6 @@
             <table>
                 <tr>
                     <div id="verification-check"></div>
-                    <label for="username">Tên người dùng:</label>
-                    </td>
-                    <td>
-                        <input type="text" name="username" id="username" placeholder="Tên người dùng" required>
-                    </td>
-                </tr>
-
                 <tr>
                     <td>
                         <label for="old-pass">Mật khẩu cũ:</label>

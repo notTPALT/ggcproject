@@ -5,6 +5,8 @@
         if (accountExist($con)) {
             $_SESSION['username'] = $_POST['username'];
             echo '<script>login_success();</script>;';
+
+            project_log($con, "Logged in");
         } else {
             echo '<script>login_fail();</script>;';
         }

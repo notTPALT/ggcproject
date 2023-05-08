@@ -56,6 +56,12 @@ function update_result(level, chapter) {
         if (user_ans !== null && arr[i-1] === user_ans.value) correct++;
     }
     document.getElementById("result").innerHTML = "Đúng " + correct + "/" + num_of_ques + ".<br>Điểm trên hệ số 10: " + (correct / num_of_ques) * 10;
+
+    //AJAX call to log user result
+    var xhr = new XMLHttpRequest();
+    xhr.open('POST', '../php/result_log.php');
+    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+    xhr.send('level=' + level + '&chapter=' + chapter + '&correct=' + correct + '&total=' + num_of_ques + '&score=' + (correct / num_of_ques) * 10);
 }
 
 

@@ -46,6 +46,7 @@
         mysqli_stmt_execute($insert_stmt); 
     
         //Run this script if registered successfully
+        project_log_no_username($con, "Registered an account with username '".$username."'.");
         echo '<script>register_success();</script>';
         
         foreach ($_POST as $key => $value) {
