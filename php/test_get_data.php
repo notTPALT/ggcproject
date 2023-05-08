@@ -8,7 +8,7 @@ if (isset($_GET['level']) && isset($_GET['chapter'])) {
     
     echo '<script>update_breadcumb('.$level.', '.$chapter.');</script>';
     echo '<script>update_chapter_title('.$level.', '.$chapter.');</script>';
-    echo '<script>update_button_events();</script>';
+    echo '<script>update_button_events("'.$level.'", "'.$chapter.'");</script>';
 
     $question_table_name = "ques_".$level."_".$chapter;
     $get_question_sets = mysqli_prepare($con, "SELECT * FROM ".$question_table_name);
@@ -20,17 +20,4 @@ if (isset($_GET['level']) && isset($_GET['chapter'])) {
         $num_of_ques++;
     }
 }
-
-// $timer_init = 3600;
-// $isbegun = true;
-// $timestamp_file = './php/end_timestamp_'.$_GET["level"].'_'.$_GET['chapter'].'.txt';
-// if (!file_exists($timestamp_file)) {
-//     file_put_contents($timestamp_file, time() + $timer_init);
-// }
-// $end_timestamp = file_get_contents($timestamp_file);
-// $current_timestamp = time();
-
-// $diff = $end_timestamp - $current_timestamp;
-// if ($diff <= 0) unlink($timestamp_file);
-// echo '<script>timer_check('.$diff.');</script>';
 ?>

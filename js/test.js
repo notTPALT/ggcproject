@@ -7,6 +7,7 @@ document.getElementById("question-container").hidden = true;
 document.getElementById("submit").hidden = true;
 
 function update_breadcumb(level, chapter) {
+    var gllevel = level;
     if (level == 0) {
         document.getElementById("breadcumb").innerHTML = "Trang chủ >> Ôn thi tổng hợp";
     } else {
@@ -19,14 +20,36 @@ function update_chapter_title(level, chapter) {
         document.getElementById("chapter-name").innerHTML = document.getElementById("_" + level + "_" + chapter).innerHTML;
 }
 
-function update_button_events() {
+function update_button_events(level, chapter) {
     document.getElementById("btn-start-timer").addEventListener("click", timer_start);
-    document.getElementById("submit").addEventListener("click", update_result);
+    document.getElementById("submit").addEventListener("click", () => {
+        update_result(level, chapter);
+    });
 }
 
-function update_result() {
+function show_next_chapter_button(level, chapter) {
+    if (chapter != 8) {
+        if (chapter == 7 && level != 12) {
+            chapter = 1;
+            level++;
+        }
+        else chapter++;
+        document.getElementById("next-chapter").setAttribute("onclick", "window.location.href='./test.php?level=" + level + "&chapter=" + chapter + "';");
+    } else {
+        document.getElementById("next-chapter").setAttribute("onclick", "window.location.href='./test.php?level=0&chapter=0';");
+    }
+    
+    document.getElementById("next-chapter").hidden = false;
+    document.getElementById("next-chapter").innerHTML = "Chương tiếp theo";
+}
+
+function update_result(level, chapter) {
     document.getElementById("timer").hidden = true;
     document.getElementById("submit").hidden = true;
+
+    show_next_chapter_button(level, chapter);
+    
+
     let correct = 0;
     for (let i = 1; i <= num_of_ques; i++) {
         let user_ans = document.querySelector('input[name="ans' + i + '"]:checked');

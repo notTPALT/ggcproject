@@ -17,6 +17,7 @@ require_once("./html/header.php");
 <div id="check-ans"></div>
 <div id="question-container"></div>
 <button id="submit" name="ans-submit">Nộp bài!</button>
+<button id="next-chapter" hidden></button>
 <!-- </form> -->
 
 <?php 
