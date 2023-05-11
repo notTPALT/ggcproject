@@ -23,7 +23,7 @@
 
     $conDB = mysqli_connect("localhost", "root", "", "webthi");
     
-    mysqli_query($conDB, "CREATE TABLE server_log (
+    mysqli_query($conDB, "CREATE TABLE mock_exam_history (
         username char(50),
         corect int,
         incorrect int,
@@ -31,7 +31,7 @@
         point_total char(10)
     )");
 
-    mysqli_query($conDB, "CREATE TABLE mock_exam_history (
+    mysqli_query($conDB, "CREATE TABLE server_log (
         username varchar(50),
         events varchar(200),
         time TIMESTAMP DEFAULT CURRENT_TIMESTAMP

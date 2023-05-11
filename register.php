@@ -107,14 +107,11 @@
                     </td>
 
                     <td>
-                        <input name="gender" type="radio" value="Nam" checked="true">
+                        <input name="gender" type="radio" value="0" checked="true">
                         <label for="">Nam</label>
 
-                        <input name="gender" type="radio" value="Nữ">
+                        <input name="gender" type="radio" value="1">
                         <label for="">Nữ</label>
-
-                        <input name="gender" type="radio" value="Khác">
-                        <label for="">Khác</label>
                     </td>
                 </tr>
 
@@ -160,6 +157,7 @@
 			if ($password == $repassword){
                 // $_SESSION['username'] = $username;
 				mysqli_query($con, $sql);
+                project_log_no_username($con, "Added an account: ".$username);
 				header('location: php/wait.php');
 			} 
 			else{

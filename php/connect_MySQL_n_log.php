@@ -5,6 +5,6 @@
     }
 
     function project_log_no_username($con, $logstring) {
-        mysqli_query($con, "INSERT INTO server_log (username, events) VALUES ('null', '".$logstring."')");
+        mysqli_query($con, "INSERT INTO server_log (username, events) VALUES ('unidentified', '".$logstring."')");
     }
 ?>
