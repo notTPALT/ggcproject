@@ -1,5 +1,5 @@
 <?php
-    $connect = mysqli_connect("localhost", "root", "", "webthi") or die('error');
+    $con = mysqli_connect("localhost", "root", "", "webthi") or die('error');
     
     $create = "CREATE TABLE tbquestion_graduation
     (
@@ -67,12 +67,12 @@
             ('Trong quá trình dao động điều hòa của con lắc đơn. Nhận định nào sau đây là sai ?', 'Khi quả nặng ở điểm giới hạn thì lực căng dây treo có độ lớn nhỏ hơn trọng lượng của vật.', 'Độ lớn của lực căng dây treo con lắc luôn lớn hơn trọng lượng vật.', 'Chu kỳ dao động của con lắc không phụ thuộc vào biên độ dao động của nó.', 'Khi khi góc hợp bởi phương dây treo con lắc và phương thẳng đứng giảm và tốc độ của quả năng sẽ tăng.', 'b'),
             ('Con lắc đơn dao động nhỏ trong một điện trường đều có phương thẳng đứng hướng xuống và vật nặng có điện tích dương với biên độ A và chu kỳ dao động T. Vào thời điểm vật đi qua vị trí cân bằng thì đột ngột tắt điện trường. Chu kỳ và biên độ của con lắc khi đó thay đổi như thế nào? Bỏ qua mọi lực cản.', 'Chu kỳ tăng; biên độ giảm.', 'Chu kỳ giảm biên độ giảm.', 'Chu kỳ giảm; biên độ tăng.', 'Chu kỳ tăng; biên độ tăng.', 'd')
             ";
-    if (!mysqli_query($connect, $create)){
-        mysqli_query($connect, $sql);
+    if (!mysqli_query($con, $create)){
+        mysqli_query($con, $sql);
     }
     else{
-        mysqli_query($connect, $create);
-        mysqli_query($connect, $sql);
+        mysqli_query($con, $create);
+        mysqli_query($con, $sql);
     }
-    mysqli_close($connect);
+    mysqli_close($con);
 ?>

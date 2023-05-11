@@ -100,7 +100,7 @@
                             <li><a id="_12_8" href="./test.php?level=12&chapter=8">Chương 8: Từ Vĩ Mô Đến Vĩ Mô</a></li>
                         </ul>
                     </li>
-                    <li><a href="./test.php?level=0&chapter=0">Ôn thi tốt nghiệp</a></li>
+                    <li><a href="./mock_exam_ready.php">Ôn thi tốt nghiệp</a></li>
                     <li><a href="./contact.php">Liên hệ</a></li>
                     <li><a href="./papers.php">Tài liệu</a></li>
                 </ul>

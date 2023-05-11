@@ -1,0 +1,82 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    background-color: #d9d9d9;
+    text-decoration: none;
+    font-family: Inter;
+    font-weight: 600;
+    text-align: center;
+    padding-top: 30px;
+}
+
+
+table{
+    padding-top: 30px;
+    text-align: left;
+}
+
+/*CSS cho các phần riêng các option của select Class*/
+#yourClass{
+    font-size: 20px;
+    text-align: center; 
+}
+
+/*CSS cho các lựa chọn lớp 10, lớp 11, lớp 12 của select Class */
+option{
+    font-size: 22px; 
+    text-align: center;
+}
+
+/*CSS cho nút Nam, Nữ, Khác */
+input[type='radio']{
+    width: 19px;
+    height: 19px;
+    margin: 13px 3px 13px 18px;
+}
+
+/*CSS cho phần đè lên nút Nam, Nữ, Khác */
+input[type='radio']:after {
+    width: 19px;
+    height: 19px;
+    border-radius: 19px;
+    position: relative;
+    background-color: #923838;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+}
+
+/*CSS selection cho nút Nam, Nữ ,Khác */
+input[type='radio']:checked:after {
+    width: 19px;
+    height: 19px;
+    border-radius: 19px;
+    position: relative;
+    background-color: #923838;
+    opacity: 0.7;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+}
+
+input[type='submit']{
+    width: 122px;
+    height: 44px;
+    background-color: #d63837;
+    border: none;
+    font-size: 20px;
+    display: block;
+    transform: translateY(20px);
+    margin: 0 auto;
+}

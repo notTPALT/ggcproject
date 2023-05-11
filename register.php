@@ -1,5 +1,7 @@
-<?php session_start(); ?>
-
+<?php
+    session_start();
+    require('./php/connect_MySQL_n_log.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,114 +9,166 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Đăng ký</title>
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="icon" type="image/x-icon" href="../resources/TPALT_pfp.png">
+    <title>Sign up</title>
+    <link rel="stylesheet" href="css/style_form.css">
+    <style>
+    .container {
+        width: 500px;
+        height: 550px;
+    }
+
+    table {
+        transform: translateX(60px);
+    }
+
+    /*CSS cho các label Username, Password, Class, Gender, Mail */
+    label {
+        font-size: 20px;
+    }
+
+    /*CSS cho các dữ liệu đầu vào có dạng text, password, email và select Class*/
+    input[type='text'],
+    input[type="password"],
+    input[type="email"],
+    #yourClass {
+        width: 192px;
+        height: 25px;
+        background-color: #a39393;
+        border: none;
+        margin: 13px 0px 13px 18px;
+    }
+    </style>
 </head>
 
-
 <body>
-    <div id="register-status"></div>
-    <p id="countdown"></p>
+    <div class="container">
+        <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST" name="sign-Out">
+            <label for="" style="font-size: 28px;">Sign up</label>
+            <table>
+                <tr>
+                    <td>
+                        <label for="">Username:</label>
+                    </td>
 
-    <div id="header" name="header">
-        <h1>Đăng ký</h1>
-    </div>
+                    <td>
+                        <input type="text" id="username" name="taikhoan" size="30" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <p style="color: red; font-size: 15px; margin-left: 200px;" id="error_username"></p>
+                    </td>
+                </tr>
 
-    <div id="submit-form" name="submit-form">
-        <form action="./register.php" method="post">
-            <fieldset id="login-info" name="login-info">
-                <legend>
-                    <h3>1. Thông tin đăng nhập</h3>
-                </legend>
+                <tr>
+                    <td>
+                        <label for="">Password: </label>
+                    </td>
 
-                <div id="username-availablity-check"></div>
-                <div class="form-component">
-                    <div class="form-header">Tên người dùng <p>*</p>
-                    </div>
-                    <input type="text" name="username" placeholder="Tên người dùng" required>
-                </div>
+                    <td>
+                        <input type="password" id="Password" name="matkhau" size="30" required>
+                    </td>
+                </tr>
 
-                <div class="form-component">
-                    <div class="form-header">Mật khẩu <p>*</p>
-                    </div>
-                    <input type="password" name="pass" placeholder="Mật khẩu" required>
-                </div>
+                <tr>
+                    <td>
+                        <label for="">Re-en password: </label>
+                    </td>
 
-                <div id="rpass-check"></div>
-                <div class="form-component">
-                    <div class="form-header">Nhập lại mật khẩu <p>*</p>
-                    </div>
-                    <input type="password" name="rpass" placeholder="Nhập lại mật khẩu" required>
-                </div>
+                    <td>
+                        <input type="password" id="repassword" name="rematkhau" size="30" required>
+                    </td>
+                </tr>
 
-                <div class="form-component">
-                    <div class="form-header">Câu hỏi bảo mật (Tự viết) <p>*</p>
-                    </div>
-                    <input type="text" name="secure_question" placeholder="Câu hỏi bảo mật" required>
-                </div>
+                <tr>
+                    <td colspan="2">
+                        <p style="color: red; font-size: 15px; margin-left: 200px;" id="error_password"></p>
+                    </td>
+                </tr>
 
-                <div class="form-component">
-                    <div class="form-header">Câu trả lời <p>*</p>
-                    </div>
-                    <input type="text" name="secure_answer" placeholder="Câu trả lời" required>
-                </div>
-            </fieldset>
+                <tr>
+                    <td>
+                        <label for="yourClass">Class:</label>
+                    </td>
 
-            <fieldset id="personal-info" name="personal-info">
-                <legend>
-                    <h3>2. Thông tin cá nhân</h3>
-                </legend>
+                    <td>
+                        <select name="Class" id="yourClass" required>
+                            <option value="">Hãy chọn lớp </option>
+                            <option value="10">Lớp 10</option>
+                            <option value="11">Lớp 11</option>
+                            <option value="12">Lớp 12</option>
+                        </select>
+                    </td>
+                </tr>
 
-                <div class="form-component">
-                    <div class="form-header">Họ</div>
-                    <input type="text" name="fname" placeholder="Họ">
-                </div>
+                <tr>
+                    <td>
+                        <label for="gender" style="font-size: 20px;">Gender:</label>
+                    </td>
 
-                <div class="form-component">
-                    <div class="form-header">Tên</div>
-                    <input type="text" name="lname" placeholder="Tên">
-                </div>
+                    <td>
+                        <input name="gender" type="radio" value="Nam" checked="true">
+                        <label for="">Nam</label>
 
-                <div class="form-component">
-                    <div class="form-header">Giới tính</div>
-                    <div id="radio-gender">
-                        <input type="radio" id="male" name="gender" value="male" checked>
-                        <label for="male">Nam</label>
-                        <input type="radio" id="female" name="gender" value="female">
-                        <label for="female">Nữ</label>
-                    </div>
-                </div>
+                        <input name="gender" type="radio" value="Nữ">
+                        <label for="">Nữ</label>
 
-                <div class="form-component">
-                    <div class="form-header">Ngày sinh</div>
-                    <input type="date" name="birthdate">
-                </div>
+                        <input name="gender" type="radio" value="Khác">
+                        <label for="">Khác</label>
+                    </td>
+                </tr>
 
-                <div class="form-component">
-                    <div class="form-header">Địa chỉ</div>
-                    <input type="text" name="address" placeholder="Địa chỉ">
-                </div>
+                <tr>
+                    <td>
+                        <label for="mail">Mail:</label>
+                    </td>
 
-                <div class="form-component">
-                    <div class="form-header">Email</div>
-                    <input type="text" name="email" placeholder="Email">
-                </div>
-
-                <div class="form-component">
-                    <div class="form-header">Số điện thoại</div>
-                    <input type="text" name="phone" placeholder="Số điện thoại">
-                </div>
-            </fieldset>
-
-            <div class="form-component">
-                <input id="submit" type="submit" name="submit" value="Đăng ký">
-            </div>
+                    <td>
+                        <input type="email" name="email" id="mail" size="30" required>
+                    </td>
+                </tr>
+            </table>
+            <input type="submit" name="signup" id="sign-out_person" value="Sign up">
         </form>
     </div>
 </body>
 
+</html>
 <?php
-    require_once("./php/connect_MySQL_n_log.php");
-    require_once("./php/register_confirm.php");
+	if (isset($_POST['signup'])) {
+		$username     = $_POST['taikhoan'];
+		$password = $_POST['matkhau'];
+    $repassword = $_POST['rematkhau'];
+    $class = $_POST['Class'];
+    $gender = $_POST['gender'];
+		$email = $_POST['email'];
+    
+		$sql = "INSERT INTO user_infos (username, pass, class, gender, email) VALUES ('".$username."', '".$password."', '".$class."', '".$gender."', '".$email."')";
+		
+		// check username
+		$checkUser = "SELECT username FROM user_infos WHERE username = '".$username."'";
+		$tmp = mysqli_query($con, $checkUser);
+		$dong = mysqli_num_rows($tmp);
+		
+		if ($dong > 0){
+			echo "<script>;
+                var a = document.getElementById('error_username');
+                a.innerHTML = '*Username đã tồn tại*';
+				</script>";
+		}
+		else{
+			if ($password == $repassword){
+                // $_SESSION['username'] = $username;
+				mysqli_query($con, $sql);
+				header('location: php/wait.php');
+			} 
+			else{
+				echo "<script>
+                        var b = document.getElementById('error_password');
+                        b.innerHTML = '*Mật khẩu không khớp*';
+					</script>";
+			}
+		}
+		mysqli_close($con);
+	}
 ?>
