@@ -1,25 +1,28 @@
 var arr = [];
 var num_of_ques = 0;
-var timer_init = 3600;
+var correct = 0;
+var timer_init = 3600; //Thời gian làm bài mặc định
 
-
+//Ẩn đi form ôn tập khi chưa nhấn bắt đầu
 document.getElementById("question-container").hidden = true;
 document.getElementById("submit").hidden = true;
 
-function update_breadcumb(level, chapter) {
-    var gllevel = level;
-    if (level == 0) {
-        document.getElementById("breadcumb").innerHTML = "Trang chủ >> Ôn thi tổng hợp";
-    } else {
-        document.getElementById("breadcumb").innerHTML = "Trang chủ >> Lớp " + level + " >> Chương " + chapter;
-    }
-}
+// function update_breadcumb(level, chapter) {
+//     var gllevel = level;
+//     if (level == 0) {
+//         document.getElementById("breadcumb").innerHTML = "Trang chủ >> Ôn thi tổng hợp";
+//     } else {
+//         document.getElementById("breadcumb").innerHTML = "Trang chủ >> Lớp " + level + " >> Chương " + chapter;
+//     }
+// }
 
+//Hiển thị tiêu đề chương
 function update_chapter_title(level, chapter) {
     if (level != 0) 
         document.getElementById("chapter-name").innerHTML = document.getElementById("_" + level + "_" + chapter).innerHTML;
 }
 
+//Thêm các event cho 2 nút bắt đầu làm bài và nộp bài
 function update_button_events(level, chapter) {
     document.getElementById("btn-start-timer").addEventListener("click", timer_start);
     document.getElementById("submit").addEventListener("click", () => {
@@ -27,7 +30,9 @@ function update_button_events(level, chapter) {
     });
 }
 
+//Hiển thị nút sang chương tiếp theo
 function show_next_chapter_button(level, chapter) {
+    //Chỉ có lớp 12 có 8 chương nên sẽ kiểm tra xem tới chương cuối chưa
     if (chapter != 8) {
         if (chapter == 7 && level != 12) {
             chapter = 1;
@@ -36,43 +41,87 @@ function show_next_chapter_button(level, chapter) {
         else chapter++;
         document.getElementById("next-chapter").setAttribute("onclick", "window.location.href='./test.php?level=" + level + "&chapter=" + chapter + "';");
     } else {
-        document.getElementById("next-chapter").setAttribute("onclick", "window.location.href='./test.php?level=0&chapter=0';");
+        //Chuyển tới trang ôn thi tốt nghiệp sau khi đẫ ôn tập chương cuối
+        document.getElementById("next-chapter").setAttribute("onclick", "window.location.href='./mock_exam_ready.php';");
     }
     
     document.getElementById("next-chapter").hidden = false;
     document.getElementById("next-chapter").innerHTML = "Chương tiếp theo";
 }
 
-function update_result(level, chapter) {
+//Cập nhật số lượng câu đúng, đánh dấu câu sai
+//NOTE: Ở đây dùng Promise với async, await để tạm dừng script cho đến khi thực hiện xong đoạn lệnh này 
+const update_correct_answer = (level, chapter, i) =>
+    new Promise(function (resolve, reject) {
+        //Lấy input người dùng chọn
+        let user_ans = document.querySelector('input[name="ans' + i + '"]:checked');
+        //Lấy label của input trên 
+        let chosen_ans_label = document.querySelector('label[for="input_' + i + '_' + get_ans_value(i) + '"]');
+        
+        //XMLHttpRequest để lấy đáp án câu hỏi từ SQL
+        var xhr_getRightAns = new XMLHttpRequest();
+        xhr_getRightAns.open('POST', '../php/test_check_ans.php');
+        xhr_getRightAns.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+        xhr_getRightAns.send('ques_index=' + i + '&level=' + level + '&chapter=' + chapter);
+        xhr_getRightAns.onload = function() {
+            if (xhr_getRightAns.status == 200) {
+                if (!user_ans) { //Nếu như người dùng bỏ câu hỏi thì xem như sai và đánh dấu màu vàng
+                    let right_ans_label = document.querySelector('label[for="input_' + i + '_' + xhr_getRightAns.response + '"]');
+                    right_ans_label.style.color = "yellow";
+                } else if (parseInt(xhr_getRightAns.response) == user_ans.value) { //Trùng đáp án
+                    correct++;
+    
+                    chosen_ans_label.style.color = "green"; 
+                } else { //Trật đáp án
+                    chosen_ans_label.style.color = "red";
+                    let right_ans_label = document.querySelector('label[for="input_' + i + '_' + xhr_getRightAns.response + '"]');
+                    right_ans_label.style.color = "green";
+                }
+                resolve("");
+            } else {
+                reject("");
+            }
+        };
+    });
+
+//Hiển thị kết quả ôn tập
+async function update_result(level, chapter) {
+    //Ẩn đi 2 components 'timer' và 'submit'
     document.getElementById("timer").hidden = true;
     document.getElementById("submit").hidden = true;
 
     show_next_chapter_button(level, chapter);
     
-
-    let correct = 0;
-    for (let i = 1; i <= num_of_ques; i++) {
-        let user_ans = document.querySelector('input[name="ans' + i + '"]:checked');
-        if (user_ans !== null && arr[i-1] === user_ans.value) correct++;
+    //Kiểm tra số kết quả đúng, đánh dấu câu trả lời sai
+    for (let i = 1; i <= num_of_ques; i++) {      
+        await update_correct_answer(level, chapter, i);
     }
     document.getElementById("result").innerHTML = "Đúng " + correct + "/" + num_of_ques + ".<br>Điểm trên hệ số 10: " + (correct / num_of_ques) * 10;
 
-    //AJAX call to log user result
+    //Dùng XMLHttpRequest để lưu dữ liệu ôn tập chương lần này
     var xhr = new XMLHttpRequest();
     xhr.open('POST', '../php/result_log.php');
     xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
     xhr.send('level=' + level + '&chapter=' + chapter + '&correct=' + correct + '&total=' + num_of_ques + '&score=' + (correct / num_of_ques) * 10);
 }
 
-
-function push_question(index, question, option1, option2, option3, option4, ans) {
-    var push_HTML = '<div><label for="">Câu ' + index + ': ' + question + '</label><input type="radio" class="option" name="ans' + index + '" value="1">A. ' + option1 + '</input><input type="radio" class="option" name="ans' + index + '" value="2">B. ' + option2 + '</input><input type="radio" class="option" name="ans' + index + '" value="3">C. ' + option3 + '</input><input type="radio" class="option" name="ans' + index + '" value="4">D. ' + option4 + '</input></div>';
-    document.getElementById("question-container").innerHTML += push_HTML;
-    num_of_ques++;
-    arr.push(ans);
+//Trả về giá trị đã chọn của 1 câu hỏi
+function get_ans_value(i) {
+    let user_ans = document.querySelector('input[name="ans' + i + '"]:checked');
+    if (user_ans !== null) {
+        return user_ans.value;
+    }
+    return null;
 }
 
+//Hiển thị câu hỏi lấy được từ SQL
+function push_question(index, question, option1, option2, option3, option4) {
+    var push_HTML = '<div><label for="">Câu ' + index + ': ' + question + '</label><input type="radio" id="input_' + index + '_1" class="option" name="ans' + index + '" value="1"><label for="input_' + index + '_1">A. ' + option1 + '</label><input type="radio" id="input_' + index + '_2" class="option" name="ans' + index + '" value="2"><label for="input_' + index + '_2">B. ' + option2 + '</label><input type="radio" id="input_' + index + '_3" class="option" name="ans' + index + '" value="3"><label for="input_' + index + '_3">C. ' + option3 + '</label><input type="radio" id="input_' + index + '_4" class="option" name="ans' + index + '" value="4"><label for="input_' + index + '_4">D. ' + option4 + '</label>';
+    document.getElementById("question-container").innerHTML += push_HTML;
+    num_of_ques++;
+}
 
+//Bắt đâu tính giờ
 function timer_start() {
     document.getElementById("btn-start-timer").hidden = true;
     document.getElementById("question-container").hidden = false;
@@ -106,6 +155,7 @@ function timer_start() {
     }, 1000);
 }
 
+//Tự động submit khi hết giờ
 function time_out() {
     let countdown = 3;
     let count = setInterval(function() {

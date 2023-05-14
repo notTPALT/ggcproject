@@ -1,7 +1,9 @@
+//Thêm username vào tiêu đề
 function update_username(username) {
     document.getElementById("target").innerHTML += username;
 }
 
+//Cập nhật dữ liệu có sẵn của người dùng trong SQL 
 function bind_existing_data(fname, lname, gender, birthdate, email, phone, addrs, secure_question, secure_answer) {
     document.addEventListener("DOMContentLoaded", function() {
         document.getElementById("fname").innerHTML = fname;

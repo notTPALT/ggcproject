@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
     <link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
     <title>Home - GGC</title>
+    <link rel="icon" href="./resources/favicon.png">
     <link rel="stylesheet" href="css/index.css">
 </head>
 
@@ -16,11 +17,15 @@
         <div class="header">
             <div id="header-top">
                 <div id="logo-header">
-                    <a href="index.php"><img src="source/logo.png" alt="Logo"></a>
+                    <a href="index.php"><img src="./resources/favicon.png" alt="Logo"></a>
                 </div>
+
+                <!--Tiêu đề trang-->
                 <div id="banner">
                     <div id="para">Ôn thi trắc nghiệm Vật Lí online</div>
                 </div>
+
+                <!--Các thao tác liên quan đến người dùng-->
                 <ul id="nav-infor">
                     <li>
                         <a id="link-to-reg" href="./register.php"><button id="btn-show-username-or-register"
@@ -37,7 +42,8 @@
                                 "<?php echo $_SESSION['username'];?>";
                             </script>
                             <li><a href="./user_infos.php">Thông tin cá nhân</a></li>
-                            <li><a href="change_password.php">Đổi mật khẩu</a></li>
+                            <li><a href="./change_password.php">Đổi mật khẩu</a></li>
+                            <li><a href="./mock_exam_history.php">Lịch sủ thi thử</a></li>
                             <?php   } ?>
                         </ul>
                     </li>
@@ -51,9 +57,10 @@
                 <?php   } ?>
             </div>
 
+            <!--Thanh điều hướng trang-->
             <div id="header-bottom">
                 <ul id="nav-header">
-                    <li><a href="">Trang chủ</a></li>
+                    <li><a href="./index.php">Trang chủ</a></li>
                     <li>
                         <a href="">Lớp 10 ▼</a>
                         <ul class="subnavclass10">
@@ -107,8 +114,10 @@
 
             </div>
         </div>
+
+        <!--Nội dung của trang-->
         <div class="container-content">
-            <div class="breadcrumb">
+            <!-- <div class="breadcrumb">
                 <ul>
                     <li>
                         <a href="#">Trang chủ</a>
@@ -139,5 +148,5 @@
                     </li>
                 </ul>
 
-            </div>
+            </div> -->
             <div class="box-content">

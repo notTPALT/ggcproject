@@ -279,42 +279,6 @@
     z-index: 1;
 }
 
-
-/*CSS cho breadcrums */
-.container-content .breadcrumb{
-    position: absolute;
-    left: 17.71%;
-    top: 3.23%;
-    height: 24.14px;
-    width: 317px;
-}
-
-/*CSS cho >> trong breadcrumbs*/
-.container-content .breadcrumb svg{
-    height: 18px;
-    vertical-align: middle;
-}
-
-/*CSS cho phần tử cha của breadcrum */
-.container-content .breadcrumb ul{
-    display: flex;
-    list-style: none;
-    align-items: center;
-    gap: 3px;
-}
-
-/*CSS cho thẻ a */
-.breadcrumb ul li a{ 
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 24px;
-    color: #000000;
-    text-decoration: none;
-}
-
-
 /*CSS cho phần chứa nội dung trong container-content*/
 .container-content .box-content{
     position: absolute;
@@ -540,5 +504,14 @@ footer {
     }
 .my-button:hover {
     background-color: #3e8e41;
+}
+
+/*Phu's implements*/
+.color-red {
+    color: red;
+}
+
+.color-green {
+    color: green;
 }
    

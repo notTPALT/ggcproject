@@ -1,6 +1,7 @@
 <?php
     session_start();
-	include 'php/create_exam.php';
+    require_once("./php/connect_MySQL_n_log.php");
+	require_once 'php/create_exam.php';
 	if (isset($_SESSION['username'])){
 ?>
 
@@ -73,8 +74,6 @@
     <!-- Direct question -->
     <div class="layout-3">
         <button class="myButton" onclick="prev()" style="float:left;">Câu trước</button>
-        <button class="myButton" style="margin: 0 auto; background-color: rgba(105, 105, 105, 0); z-index: 1" disabled
-            hidden></button>
         <button class="myButton" onclick="next()" style="float:right;">Câu tiếp theo</button>
     </div>
 
@@ -113,23 +112,23 @@
 			}
 			$i++;
 		}
-		echo $right_answer;
-		echo " ".$unanswered;
 
 		$point = $right_answer * 0.25;
-		$sql_result = "INSERT INTO mock_exam_history (username, correct, incorrect, unanswered, point_total) 
-						VALUES ('".$_SESSION['username']."', $right_answer, $wrong_answer, $unanswered, $point)";
+		$sql_result = "INSERT INTO mock_exam_history VALUES ('".$_SESSION['username']."', $right_answer, $wrong_answer, $unanswered, '$point')";
 		$_SESSION['correct'] = $right_answer;
 		$_SESSION['incorrect'] = $wrong_answer;
 		$_SESSION['unanswered'] = $unanswered;
 		$_SESSION['point'] = $point;
-		$sql_delete = "DROP TABLE ".$test."";
+		$sql_delete = "DROP TABLE ".$test;
+        
 		if (mysqli_query($con, $sql_result) && mysqli_query($con, $sql_delete)){
 			echo "<script>
 			localStorage.clear();
-			location.href = 'mock_exam_result.php';
+			location.href = './mock_exam_result.php';
 			</script>";
-		}
+		} else {
+            echo "error";
+        }
 	}
 	}
 ?>

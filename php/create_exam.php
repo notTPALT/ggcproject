@@ -1,5 +1,4 @@
 <?php
-    require ('php/connect_MySQL_n_log.php');
 	if (isset($_SESSION['username'])){
 	$numberInforInAPage = 1;
 	$numberPage = 40;

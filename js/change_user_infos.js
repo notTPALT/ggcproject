@@ -1,7 +1,10 @@
+
+//Không cho submit khi chưa chỉnh dữ liệu
 document.querySelector("form").addEventListener('input', function() {
     document.getElementById("change-user-infos").disabled = false;
 });
 
+//Xuât ra thông tin có sẵn của người dùng
 function bind_existing_data(fname, lname, gender, birthdate, email, phone, addrs, secure_question, secure_answer) {
     document.addEventListener("DOMContentLoaded", function() {
         document.getElementById("fname").value = fname;
@@ -16,6 +19,7 @@ function bind_existing_data(fname, lname, gender, birthdate, email, phone, addrs
     });
 }
 
+//Cập nhật username cho tiêu đề trang
 function update_username(username) {
     document.getElementById("target").innerHTML += username;    
 }

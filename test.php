@@ -9,7 +9,7 @@ require_once("./html/header.php");
 <h3 id="chapter-name">
 </h3>
 <div>
-    <!-- 2 cái input và div trong này chung 1 chỗ nhé -->
+    <!-- Dev note: 2 cái input và div trong này chung 1 chỗ nhé -->
     <input type="button" id="btn-start-timer" name="btn-start-timer" value="Bắt đầu làm bài!"></button>
     <div id="timer" name="timer"></div>
 </div>

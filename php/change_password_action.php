@@ -16,6 +16,8 @@
             }
         }
     }
+
+    //Kiểm tra xen có đúng mật khẩu không
     function passwordExist($con) {
         $password = $_POST['old-pass'];
         $check = mysqli_prepare($con, "SELECT pass FROM user_infos WHERE username = ?");

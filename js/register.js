@@ -1,3 +1,4 @@
+//Thưc hiện khi đăng kí thành công
 function register_success() {
     document.getElementById("register-status").innerHTML = "Đăng ký thành công.";
 

@@ -36,9 +36,9 @@
             </p>
         </div>
         <div class="btn">
-            <a href="mock_exam_ready.php">Trở về</a>
+            <a href="./index.php">Trở về</a>
             <span class="space"></span>
-            <a href="mock_exam_history.php">Làm lại</a>
+            <a href="mock_exam_ready.php">Làm lại</a>
         </div>
         <br>
     </div>
