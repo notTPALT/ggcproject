@@ -64,7 +64,7 @@ table td strong {
 }
 
 /*CSS nút submit Nộp bài*/
-input[type='submit'] {
+input[name='sub'] {
     background-color: #4CAF50;
     color: white;
     height :28px;

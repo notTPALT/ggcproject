@@ -5,6 +5,47 @@
 	if (isset($_SESSION['username'])){
 ?>
 
+<!-- Process submit -->
+<?php
+	if (isset($_POST['sub'])){
+		$i=1;
+		$right_answer=0;
+		$wrong_answer=0;
+		$unanswered=0;
+		$respon = "SELECT * FROM ".$test;
+		$mys = mysqli_query($con, $respon);
+		while($result = mysqli_fetch_array($mys)){ 
+			if(isset($_POST["$i"]) && $result['answer'] == $_POST["$i"]){
+				$right_answer++;
+			}else if(isset($_POST["$i"]) && $_POST["$i"] == "e"){
+				$unanswered++;
+			}
+			else{
+				$wrong_answer++;
+			}
+			$i++;
+		}
+
+		$point = $right_answer * 0.25;
+		$sql_result = "INSERT INTO mock_exam_history VALUES ('".$_SESSION['username']."', $right_answer, $wrong_answer, $unanswered, '$point')";
+		$_SESSION['correct'] = $right_answer;
+		$_SESSION['incorrect'] = $wrong_answer;
+		$_SESSION['unanswered'] = $unanswered;
+		$_SESSION['point'] = $point;
+		$sql_delete = "DROP TABLE ".$test;
+        
+		if (mysqli_query($con, $sql_result) && mysqli_query($con, $sql_delete)){
+			echo "<script>
+			localStorage.clear();
+			location.href = './mock_exam_result.php';
+			</script>";    
+		} else {
+            echo "error";
+        }
+	}
+	}
+?>
+
 <html>
 
 <head>
@@ -13,10 +54,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TEST</title>
     <link rel="stylesheet" href="css/style_graduation.css">
+    <link rel="icon" href="./resources/favicon.png">
     <script src="js/script_graduation.js"></script>
 </head>
 
-<body onload="reload_user_input()">
+<body>
+    <script>
+    // window.addEventListener("beforeunload", function(event) {
+    //     var naviType = String(performance.getEntriesByType("navigation")[0].type);
+    //     if (naviType !== "reload") {
+    //         var confirmMessage =
+    //             "Bạn có chắc không? Việc này sẽ được tính là bỏ thi và bạn sẽ bị đánh 0 điểm vào lịch sử thi thử của bạn.";
+
+    //         event.preventDefault();
+    //         event.returnValue = confirmMessage;
+    //         return confirmMessage;
+    //     }
+    // });
+
+    // const xhrCall = () => {
+    //     return new Promise((resolve, reject) => {
+    //         var xhr_handleClosingMockExam = new XMLHttpRequest();
+    //         xhr_handleClosingMockExam.open('POST', './php/handle_closing_mock_exam.php');
+    //         xhr_handleClosingMockExam.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+    //         xhr_handleClosingMockExam.send();
+    //         console.log(xhr_handleClosingMockExam.response);
+    //         resolve("");
+    //     });
+    // }
+    // window.addEventListener("unload", async function(event) {
+    //     var naviType = String(performance.getEntriesByType("navigation")[0].type);
+    //     if (naviType !== "reload") {
+    //         localStorage.clear();
+    //         await xhrCall();
+    //     };
+    // });
+
+    // function confirmSubmit() {
+    //     let confirmAction = confirm("Bạn có muốn nộp bài không?");
+    //     console.log(confirmAction);
+    //     if (confirmAction) {
+
+    //         window.location.href = "./mock_exam_result.php";
+    //     } else {
+
+    //     }
+    // }
+    </script>
     <p class="title"><b>Test trắc nghiệm THPT môn Vật Lý - GGC<b></p>
 
     <div class="timer">
@@ -28,8 +112,8 @@
         <?php 
 				$sql2 = "SELECT * FROM ".$test."";
 				$tmp2 = mysqli_query($con, $sql2);
-			?>
-        <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
+		?>
+        <form action="" method="POST">
             <?php
 					$i = 1;
 					while($res = mysqli_fetch_array($tmp2)){ ?>
@@ -64,10 +148,8 @@
             <?php 
 						$i++;
 					}
-					echo '<script>document.getElementById("1").hidden = false;</script>';
-					echo '<script>reload_user_input();</script>';
 					?>
-            <input type="submit" name="sub" style="float:center;" value="Nộp bài">
+            <input type="submit" name="sub" style="float:center;" value="Nộp bài" onclick="confirmSubmit();">
         </form>
     </div>
 
@@ -88,47 +170,12 @@
 				}
 			?>
     </div>
+
+    <script>
+    document.getElementById("1").hidden = false;
+    reload_user_input();
+    </script>
+
 </body>
 
 </html>
-
-<!-- Process submit -->
-<?php
-	if (isset($_POST['sub'])){
-		$i=1;
-		$right_answer=0;
-		$wrong_answer=0;
-		$unanswered=0;
-		$respon = "SELECT * FROM ".$test;
-		$mys = mysqli_query($con, $respon);
-		while($result = mysqli_fetch_array($mys)){ 
-			if(isset($_POST["$i"]) && $result['answer'] == $_POST["$i"]){
-				$right_answer++;
-			}else if(isset($_POST["$i"]) && $_POST["$i"] == "e"){
-				$unanswered++;
-			}
-			else{
-				$wrong_answer++;
-			}
-			$i++;
-		}
-
-		$point = $right_answer * 0.25;
-		$sql_result = "INSERT INTO mock_exam_history VALUES ('".$_SESSION['username']."', $right_answer, $wrong_answer, $unanswered, '$point')";
-		$_SESSION['correct'] = $right_answer;
-		$_SESSION['incorrect'] = $wrong_answer;
-		$_SESSION['unanswered'] = $unanswered;
-		$_SESSION['point'] = $point;
-		$sql_delete = "DROP TABLE ".$test;
-        
-		if (mysqli_query($con, $sql_result) && mysqli_query($con, $sql_delete)){
-			echo "<script>
-			localStorage.clear();
-			location.href = './mock_exam_result.php';
-			</script>";
-		} else {
-            echo "error";
-        }
-	}
-	}
-?>

@@ -13,7 +13,7 @@ function addInputEvent(tableID) {
         //Check lại các câu trả lời
         let answer = document.querySelector('input[name="' + tableID + '"]:checked');
         if (answer) {
-            //Đổi giá trị trong locaStorage sang giá trị mới
+            //Đổi giá trị trong localStorage sang giá trị mới
             localStorage.setItem("user_ans_" + tableID, answer.value);
             //Thay đổi màu nút của câu hỏi này
             changeButtonColor(tableID);
@@ -25,7 +25,7 @@ function addInputEvent(tableID) {
 function reload_user_input() {
     //Duyệt từng giá trị trong localStorage
     for (let data of Object.entries(localStorage)) {
-        //Dối với wampserver, trong localStorage sẽ có 1 vài key đặc biệt. 
+        //Dối với wampserver, trong localStorage có thể sẽ có 1 vài key đặc biệt. 
         //Vì vậy dùng dòng này để loại bỏ cấc key không mong muốn.
         if (!data[0].startsWith("user_ans_")) {
             continue;
@@ -41,7 +41,10 @@ function reload_user_input() {
         let inputElement = document.getElementById(dedicatedID).querySelector('input[value="' + answer + '"]');
         if (inputElement) {
             inputElement.checked = true;
-            changeButtonColor(dedicatedID); 
+            if (!changeButtonColor(dedicatedID)) {
+                console.log(answer);
+                console.log(dedicatedID);
+            }
         }
     }
 
@@ -54,20 +57,21 @@ function reload_user_input() {
 
     //Timer
     function startCountdown(duration, display) {
-        var timer = duration, minutes, seconds, hours;
+        var timer = duration,
+            minutes, seconds, hours;
 
         var submitButton = document.querySelector('input[name="sub"]');
 
         //Kiểm tra sự tồn tại của timeLeft trong localStorage
         var timeLeft = localStorage.getItem('timeLeft');
-        if (timeLeft && !isNaN(timeLeft)) 
+        if (timeLeft && !isNaN(timeLeft))
             timer = parseInt(timeLeft, 10);
 
         //Chuyển đổi timer thành các biến h, m, s để xuât ra màn hình
         var intervalId = setInterval(function() {
             hours = parseInt(timer / 3600, 10);
             minutes = parseInt(timer / 60, 10);
-            seconds = parseInt(timer % 60, 10); 
+            seconds = parseInt(timer % 60, 10);
 
             hours = hours < 10 ? "0" + hours : hours;
             minutes = minutes < 10 ? "0" + minutes : minutes;
@@ -79,7 +83,7 @@ function reload_user_input() {
                 clearInterval(intervalId);
                 //Xoá 'timeLeft' trong localStorage
                 localStorage.removeItem('timeLeft');
-                
+
                 //Tự động submit sau khi hết giờ
                 submitButton.click();
             } else {
@@ -96,7 +100,7 @@ function reload_user_input() {
         startCountdown(duration, display);
     };
 
-    //????? (Chiến giải thích hộ, tại sao lại kiểm tra timeLeft 2 lần trong kho startCountdown đã có?)
+    //????? (Chiến giải thích giùm nha, tại sao lại kiểm tra timeLeft 2 lần trong kho startCountdown đã có?)
     var timeLeft = localStorage.getItem('timeLeft');
     // if have timeLeft in localStorage then run startCountdown
     if (timeLeft && !isNaN(timeLeft)) {
@@ -131,5 +135,3 @@ function prev() {
         document.getElementById("btn_toQues" + (cur_ques - 1)).click();
     }
 }
-
-
