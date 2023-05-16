@@ -90,23 +90,44 @@
                 option4 varchar(500),
                 right_ans INTEGER
             )");
-            mysqli_query($conDB, "INSERT INTO ques_".$i."_".$j." VALUES (1, 'sample1', 'ans1', 'ans2', 'ans3', 'ans4', 2)");
-            mysqli_query($conDB, "INSERT INTO ques_".$i."_".$j." VALUES (2, 'sample2', 'ans5', 'ans6', 'ans7', 'ans8', 4)");
+            
+            $ques_index = 1;
+            $fh = fopen("../resources/txt/ques_".$i."_".$j.".txt", 'r');
+            while ($question = fgets($fh)) {
+                $answer1 = fgets($fh);
+                $answer2 = fgets($fh);
+                $answer3 = fgets($fh);
+                $answer4 = fgets($fh);
+                $correct_ans = fgets($fh);
+                mysqli_query($conDB, "INSERT INTO ques_".$i."_".$j." VALUES 
+                    ($ques_index, '$question', '$answer1', '$answer2', '$answer3', '$answer4', $correct_ans)");
+            }
+            fclose($fh);
         }
     }
-    mysqli_query($conDB, "DROP TABLE ques_12_8");
-    mysqli_query($conDB, "CREATE TABLE ques_12_8 (
-                idx INTEGER,
-                question varchar(500),
-                option1 varchar(500),
-                option2 varchar(500),
-                option3 varchar(500),
-                option4 varchar(500),
-                right_ans INTEGER
+    mysqli_query($conDB, "DROP TABLE ques_".$i."_".$j);
+    mysqli_query($conDB, "CREATE TABLE ques_".$i."_".$j." (
+        idx INTEGER,
+        question varchar(500),
+        option1 varchar(500),
+        option2 varchar(500),
+        option3 varchar(500),
+        option4 varchar(500),
+        right_ans INTEGER
     )");
-    mysqli_query($conDB, "INSERT INTO ques_12_8 VALUES (1, 'sample1', 'ans1', 'ans2', 'ans3', 'ans4', 2)");
-    mysqli_query($conDB, "INSERT INTO ques_12_8 VALUES (2, 'sample2', 'ans5', 'ans6', 'ans7', 'ans8', 4)");
-    mysqli_query($conDB, "INSERT INTO ques_12_8 VALUES (3, 'Tính: 5 + 6 = ?', '11', 'B', '14', '1011', 1)");
+    
+    $ques_index = 1;
+    $fh = fopen("../resources/txt/ques_12_8.txt", 'r');
+    while ($question = fgets($fh)) {
+        $answer1 = fgets($fh);
+        $answer2 = fgets($fh);
+        $answer3 = fgets($fh);
+        $answer4 = fgets($fh);
+        $correct_ans = fgets($fh);
+        mysqli_query($conDB, "INSERT INTO ques_12_8 VALUES 
+            ($ques_index, '$question', '$answer1', '$answer2', '$answer3', '$answer4', $correct_ans)");
+    }
+    fclose($fh);
 
     //Table 'tbquestion_graduation' containing mock exam questions
     mysqli_query($conDB, "CREATE TABLE tbquestion_graduation
