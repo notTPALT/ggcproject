@@ -13,11 +13,10 @@ if (isset($_GET['level']) && isset($_GET['chapter'])) {
     $question_table_name = "ques_".$level."_".$chapter;
     $get_question_sets = mysqli_prepare($con, "SELECT * FROM ".$question_table_name);
     mysqli_stmt_execute($get_question_sets);
-    mysqli_stmt_bind_result($get_question_sets, $index, $question, $option1, $option2, $option3, $option4, $ans);
-
-    while (mysqli_stmt_fetch($get_question_sets)) {
-        
-        echo '<script>push_question('.$num_of_ques.', "'.$question.'", "'.$option1.'", "'.$option2.'", "'.$option3.'", "'.$option4.'");</script>';
+    mysqli_stmt_bind_result($get_question_sets, $index, $question, $option1, $option2, $option3, $option4, $image_path, $ans);
+    echo $image_path;
+    while (mysqli_stmt_fetch($get_question_sets)) {   
+        echo '<script>push_question('.trim($num_of_ques).', "'.trim($question).'", "'.trim($option1).'", "'.trim($option2).'", "'.trim($option3).'", "'.trim($option4).'", "'.trim($image_path).'");</script>';
         $num_of_ques++;
     }
 }

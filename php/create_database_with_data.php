@@ -83,11 +83,12 @@
             mysqli_query($conDB, "DROP TABLE ques_".$i."_".$j);
             mysqli_query($conDB, "CREATE TABLE ques_".$i."_".$j." (
                 idx INTEGER,
-                question varchar(500),
-                option1 varchar(500),
-                option2 varchar(500),
-                option3 varchar(500),
-                option4 varchar(500),
+                question nvarchar(500),
+                option1 nvarchar(500),
+                option2 nvarchar(500),
+                option3 nvarchar(500),
+                option4 nvarchar(500),
+                image_path char(254),
                 right_ans INTEGER
             )");
             
@@ -98,21 +99,23 @@
                 $answer2 = fgets($fh);
                 $answer3 = fgets($fh);
                 $answer4 = fgets($fh);
+                $image_path = fgets($fh);
                 $correct_ans = fgets($fh);
                 mysqli_query($conDB, "INSERT INTO ques_".$i."_".$j." VALUES 
-                    ($ques_index, '$question', '$answer1', '$answer2', '$answer3', '$answer4', $correct_ans)");
+                    ($ques_index, '$question', '$answer1', '$answer2', '$answer3', '$answer4', '$image_path', $correct_ans)");
             }
             fclose($fh);
         }
     }
-    mysqli_query($conDB, "DROP TABLE ques_".$i."_".$j);
-    mysqli_query($conDB, "CREATE TABLE ques_".$i."_".$j." (
+    mysqli_query($conDB, "DROP TABLE ques_12_8");
+    mysqli_query($conDB, "CREATE TABLE ques_12_8 (
         idx INTEGER,
-        question varchar(500),
-        option1 varchar(500),
-        option2 varchar(500),
-        option3 varchar(500),
-        option4 varchar(500),
+        question nvarchar(500),
+        option1 nvarchar(500),
+        option2 nvarchar(500),
+        option3 nvarchar(500),
+        option4 nvarchar(500),
+        image_path char(254),
         right_ans INTEGER
     )");
     
@@ -123,9 +126,10 @@
         $answer2 = fgets($fh);
         $answer3 = fgets($fh);
         $answer4 = fgets($fh);
+        $image_path = fgets($fh);
         $correct_ans = fgets($fh);
         mysqli_query($conDB, "INSERT INTO ques_12_8 VALUES 
-            ($ques_index, '$question', '$answer1', '$answer2', '$answer3', '$answer4', $correct_ans)");
+            ($ques_index, '$question', '$answer1', '$answer2', '$answer3', '$answer4', '$image_path', $correct_ans)");
     }
     fclose($fh);
 
