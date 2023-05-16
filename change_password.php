@@ -13,6 +13,8 @@
 
 <body>
     <div class="container">
+        <button type="button" id="btn_homepage" onclick="location.href='./index.php'">Trang chủ</button>
+
         <form action="./change_password.php" method="post" name="change_password">
             <div><label for="" style="font-size: 28px;">Đổi mật khẩu</label></div>
             <table>

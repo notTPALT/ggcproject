@@ -3,6 +3,28 @@ session_start();
 require_once("./html/header.php");
 require_once("./php/connect_MySQL_n_log.php");
 ?>
+<style>
+.tableStyle {
+
+    border: none;
+    width: 90%;
+}
+
+.tableStyle th {
+    background-color: #cad8fa;
+    padding: 5px;
+}
+
+.tableStyle td {
+    background-color: #f0e7da;
+    padding: 5px;
+}
+
+#text {
+    text-align: center;
+}
+</style>
+
 <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
     <table class="tableStyle">
         <tr>

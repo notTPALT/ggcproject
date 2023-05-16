@@ -10,6 +10,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign in </title>
+    <link rel="icon" href="./resources/favicon.png">
     <link rel="stylesheet" href="css/style_form.css">
     <style>
     .container {
@@ -52,6 +53,8 @@
 
 <body>
     <div class="container">
+        <button type="button" id="btn_homepage" onclick="location.href='./index.php'">Trang chủ</button>
+
         <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST" name="sign-up">
             <label for="" style="font-size: 35px;">Sign in</label>
             <table>
@@ -104,11 +107,12 @@
 		$us = $_POST['taikhoan'];
 		$ps = $_POST['matkhau'];
 		
-		$sql = "SELECT COUNT(*) FROM user_infos where username = '$us' and pass = '$ps'";
+		// $sql = "SELECT COUNT(*) as total FROM user_infos where username = '$us' and pass = '$ps'";
+		$sql = "SELECT * FROM user_infos where username = '$us' and pass = '$ps'";
 		
 		$user = mysqli_query($con, $sql);
 
-		if (mysqli_fetch_array($user)){
+		if (mysqli_num_rows($user) > 0) {
             $_SESSION['username'] = $us;
             project_log($con, "Logged in");
 			header("location: ./index.php");

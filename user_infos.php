@@ -13,6 +13,7 @@
 
 <body>
     <div class="container">
+        <button type="button" id="btn_homepage" onclick="location.href='./index.php'">Trang chủ</button>
         <form action="./change_user_infos.php" method="post" name="personal_information">
             <label id="target" for="" style="font-size: 28px;">Thông tin cá nhân: </label>
             <table>

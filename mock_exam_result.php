@@ -17,10 +17,13 @@
 
 <head>
     <title>Kết quả kiểm tra</title>
+    <link rel="icon" href="./resources/favicon.png">
 </head>
 
 <body>
     <div class="container">
+        <button type="button" id="btn_homepage" onclick="location.href='./index.php'">Trang chủ</button>
+
         <a href=""><img class="logo" src="" alt="Logo"></a>
         <div class="result">
             <p style="font-size: 30px;text-align:center;"><b>Kết quả bài TEST: </b><?php echo $_SESSION['username']; ?>

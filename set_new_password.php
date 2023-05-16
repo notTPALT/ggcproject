@@ -12,6 +12,8 @@
 </head>
 
 <body>
+    <button type="button" id="btn_homepage" onclick="location.href='./index.php'">Trang chủ</button>
+
     <div id="header" name="header">
         <h1>Quên mật khẩu</h1>
     </div>

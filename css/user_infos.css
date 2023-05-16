@@ -15,7 +15,7 @@ body{
 /*CSS cho thành phần chứa label, table, button */
 .container{
     width: 600px;
-    height: 380px;
+    height: 500px;
     background-color: #d9d9d9;
     text-decoration: none;
     font-family: 'Times New Roman', Times, serif;

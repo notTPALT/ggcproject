@@ -10,6 +10,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign up</title>
+    <link rel="icon" href="./resources/favicon.png">
     <link rel="stylesheet" href="css/style_form.css">
     <style>
     .container {
@@ -42,6 +43,8 @@
 
 <body>
     <div class="container">
+        <button type="button" id="btn_homepage" onclick="location.href='./index.php'">Trang chủ</button>
+
         <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST" name="sign-Out">
             <label for="" style="font-size: 28px;">Sign up</label>
             <table>

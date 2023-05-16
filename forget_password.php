@@ -15,6 +15,8 @@
     <div id="header" name="header">
         <h1>Quên mật khẩu</h1>
     </div>
+    <button type="button" id="btn_homepage" onclick="location.href='./index.php'">Trang chủ</button>
+
     <div id="submit-form" name="submit-form">
         <form action="./forget_password.php" method="post">
             <fieldset name="submit-form">
