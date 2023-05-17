@@ -19,8 +19,7 @@ document.getElementById("submit").hidden = true;
 //Hiển thị tiêu đề chương
 function update_chapter_title(level, chapter) {
     if (level != 0)
-        document.getElementById("chapter-name").innerHTML = document.getElementById("_" + level + "_" +
-            chapter).innerHTML;
+        document.getElementById("chapter-name").innerHTML = document.getElementById("_" + level + "_" + chapter).innerHTML;
 }
 
 //Thêm các event cho 2 nút bắt đầu làm bài và nộp bài
@@ -39,12 +38,10 @@ function show_next_chapter_button(level, chapter) {
             chapter = 1;
             level++;
         } else chapter++;
-        document.getElementById("next-chapter").setAttribute("onclick",
-            "window.location.href='./test.php?level=" + level + "&chapter=" + chapter + "';");
+        document.getElementById("next-chapter").setAttribute("onclick", "window.location.href='./test.php?level=" + level + "&chapter=" + chapter + "';");
     } else {
         //Chuyển tới trang ôn thi tốt nghiệp sau khi đẫ ôn tập chương cuối
-        document.getElementById("next-chapter").setAttribute("onclick",
-            "window.location.href='./mock_exam_ready.php';");
+        document.getElementById("next-chapter").setAttribute("onclick", "window.location.href='./mock_exam_ready.php';");
     }
 
     document.getElementById("next-chapter").hidden = false;
@@ -55,31 +52,28 @@ function show_next_chapter_button(level, chapter) {
 //NOTE: Ở đây dùng Promise với async, await để tạm dừng script cho đến khi thực hiện xong đoạn lệnh này 
 const update_correct_answer = (level, chapter, i) =>
     new Promise(function(resolve, reject) {
+        xhr_getRightAns = new XMLHttpRequest();
         //Lấy input người dùng chọn
         let user_ans = document.querySelector('input[name="ans' + i + '"]:checked');
         //Lấy label của input trên 
-        let chosen_ans_label = document.querySelector('label[for="input_' + i + '_' + get_ans_value(i) +
-            '"]');
+        let chosen_ans_label = document.querySelector('label[for="input_' + i + '_' + get_ans_value(i) +'"]');
 
         //XMLHttpRequest để lấy đáp án câu hỏi từ SQL
-        var xhr_getRightAns = new XMLHttpRequest();
-        xhr_getRightAns.open('POST', '../php/test_check_ans.php');
+        xhr_getRightAns.open('POST', '../php/test_check_ans.php', true);
         xhr_getRightAns.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
         xhr_getRightAns.send('ques_index=' + i + '&level=' + level + '&chapter=' + chapter);
         xhr_getRightAns.onload = function() {
             if (xhr_getRightAns.status == 200) {
                 if (!user_ans) { //Nếu như người dùng bỏ câu hỏi thì xem như sai và đánh dấu màu vàng
-                    let right_ans_label = document.querySelector('label[for="input_' + i + '_' +
-                        xhr_getRightAns.response + '"]');
-                    right_ans_label.style.color = "yellow";
+                    let right_ans_label = document.querySelector('label[for="input_' + i + '_' + xhr_getRightAns.response + '"]');
+                    right_ans_label.style.color = "brown";
                 } else if (parseInt(xhr_getRightAns.response) == user_ans.value) { //Trùng đáp án
                     correct++;
 
                     chosen_ans_label.style.color = "green";
                 } else { //Trật đáp án
                     chosen_ans_label.style.color = "red";
-                    let right_ans_label = document.querySelector('label[for="input_' + i + '_' +
-                        xhr_getRightAns.response + '"]');
+                    let right_ans_label = document.querySelector('label[for="input_' + i + '_' + xhr_getRightAns.response + '"]');
                     right_ans_label.style.color = "green";
                 }
                 resolve("");
@@ -90,7 +84,7 @@ const update_correct_answer = (level, chapter, i) =>
     });
 
 //Hiển thị kết quả ôn tập
-async function update_result(level, chapter) {
+const update_result = async (level, chapter) => {
     //Ẩn đi 2 components 'timer' và 'submit'
     document.getElementById("timer").hidden = true;
     document.getElementById("submit").hidden = true;
@@ -132,7 +126,7 @@ function push_question(index, question, option1, option2, option3, option4, imag
         '" value="3"><label for="input_' + index + '_3">C. ' + option3 +
         '</label><input type="radio" id="input_' + index + '_4" class="option" name="ans' + index +
         '" value="4"><label for="input_' + index + '_4">D. ' + option4 + '</label></div>';
-    if (image_path != 'none') {
+    if (image_path !== 'none') {
         var image_HTML = '<div><img class="ques_img" src="../resources/ques_images/' + image_path + '" alt="Ques_IMG"></div>';
         document.getElementById("question-container").innerHTML += image_HTML;
     }

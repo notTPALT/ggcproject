@@ -11,4 +11,4 @@ answer6
 answer7
 answer8
 ques1_samplename.png
-4
+3

@@ -43,7 +43,6 @@
             echo "error";
         }
 	}
-	}
 ?>
 
 <html>
@@ -179,3 +178,4 @@
 </body>
 
 </html>
+<?php }?>

@@ -22,9 +22,7 @@
 
 <body>
     <div class="container">
-        <button type="button" id="btn_homepage" onclick="location.href='./index.php'">Trang chủ</button>
-
-        <a href=""><img class="logo" src="" alt="Logo"></a>
+        <a href=""><img class="logo" src="./resources/favicon.png" alt="Logo"></a>
         <div class="result">
             <p style="font-size: 30px;text-align:center;"><b>Kết quả bài TEST: </b><?php echo $_SESSION['username']; ?>
             </p>

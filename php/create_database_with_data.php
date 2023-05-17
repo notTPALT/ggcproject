@@ -103,6 +103,7 @@
                 $correct_ans = fgets($fh);
                 mysqli_query($conDB, "INSERT INTO ques_".$i."_".$j." VALUES 
                     ($ques_index, '$question', '$answer1', '$answer2', '$answer3', '$answer4', '$image_path', $correct_ans)");
+                $ques_index++; 
             }
             fclose($fh);
         }
@@ -130,6 +131,7 @@
         $correct_ans = fgets($fh);
         mysqli_query($conDB, "INSERT INTO ques_12_8 VALUES 
             ($ques_index, '$question', '$answer1', '$answer2', '$answer3', '$answer4', '$image_path', $correct_ans)");
+        $ques_index++;
     }
     fclose($fh);
 
