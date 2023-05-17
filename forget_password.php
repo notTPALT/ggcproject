@@ -9,14 +9,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quên mật khẩu</title>
     <link rel="stylesheet" href="./css/style.css">
+    <style>
+        input[type="submit"] {
+			display: block;
+			margin: 0 auto;
+			color: #fff;
+            background-color: #4CAF50;
+			border: none;
+			padding: 10px 20px;
+			border-radius: 5px;
+			font-size: 16px;
+			cursor: pointer;
+		}
+    </style>
 </head>
 
 <body>
     <div id="header" name="header">
         <h1>Quên mật khẩu</h1>
     </div>
-    <button type="button" id="btn_homepage" onclick="location.href='./index.php'">Trang chủ</button>
-
     <div id="submit-form" name="submit-form">
         <form action="./forget_password.php" method="post">
             <fieldset name="submit-form">
@@ -35,7 +46,8 @@
             </fieldset>
 
             <div class="form-component">
-                <input id="submit" type="submit" name="submit" value="Gửi">
+                <input type="submit" style="display: inline-block; margin-left: 20px; width: 40px; height: 40px; padding: 10px 10px;" id="btn_homepage" onclick="location.href='./index.php'" value="🏠">
+                <input id="submit" style="display: inline-block; margin-right: 5px;" type="submit" name="submit" value="Gửi">
             </div>
         </form>
     </div>

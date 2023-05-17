@@ -45,6 +45,8 @@ d = v<sub>0</sub>.t + (1/2).a.t<sup>2</sup> .
 d =(1/2).a.t<sup>2</sup> .
 d = v<sub>0</sub>.t + 2.a.t<sup>2</sup> .
 d = 2v<sub>0</sub>.t + a.t<sup>2</sup> .
+none
+2
 Một ô tô bắt đầu chuyển động thẳng nhanh dần đều từ trạng thái đứng yên. Trong 4 s đầu ô tô đi được đoạn đường 10 m và không đổi chiều chuyển động. Tính vận tốc của ô tô ở cuối giây thứ hai.
 2,5 m/s.
 3 m/s.
@@ -64,4 +66,5 @@ Gia tốc của chuyển động thẳng nhanh dần đều bao giờ cũng lớ
 Chuyển động thẳng nhanh dần đều có gia tốc lớn thì có vận tốc lớn.
 Chuyển động thẳng biến đổi đều có gia tốc tăng, giảm đều theo thời gian.
 Gia tốc trong chuyển động thẳng nhanh dần đều có hướng và độ lớn không đổi theo thời gian.
+none
 4
