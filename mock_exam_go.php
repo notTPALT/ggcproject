@@ -155,6 +155,7 @@
     <!-- Direct question -->
     <div class="layout-3">
         <button class="myButton" onclick="prev()" style="float:left;">Câu trước</button>
+        <div class="container-center"></div>
         <button class="myButton" onclick="next()" style="float:right;">Câu tiếp theo</button>
     </div>
 
