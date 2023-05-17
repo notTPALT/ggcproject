@@ -1,74 +1,58 @@
 var cur_ques = 1;
 
-//Thay đổi màu của các nút câu hỏi đã trả lời trước đó
+//
 function changeButtonColor(id) {
     var bt = document.getElementById("btn_toQues" + id);
     bt.style.backgroundColor = "orange";
     localStorage.setItem("answered_" + id, true);
 }
 
-//Thêm sự kiện khi có đáp án được chọn cho từng câu hỏi
 function addInputEvent(tableID) {
-    document.getElementById(tableID).addEventListener('input', function() {
-        //Check lại các câu trả lời
-        let answer = document.querySelector('input[name="' + tableID + '"]:checked');
+    var table = document.getElementById(tableID);
+    table.addEventListener("change", function () {
+        var answer = table.querySelector('input[name="' + tableID +'"]:checked');
         if (answer) {
-            //Đổi giá trị trong localStorage sang giá trị mới
             localStorage.setItem("user_ans_" + tableID, answer.value);
-            //Thay đổi màu nút của câu hỏi này
             changeButtonColor(tableID);
         }
     });
 }
 
-//Cập nhật lại các câu đã trả lời trước đó
 function reload_user_input() {
-    //Duyệt từng giá trị trong localStorage
-    for (let data of Object.entries(localStorage)) {
-        //Dối với wampserver, trong localStorage có thể sẽ có 1 vài key đặc biệt. 
-        //Vì vậy dùng dòng này để loại bỏ cấc key không mong muốn.
-        if (!data[0].startsWith("user_ans_")) {
-            continue;
-        }
+    // Load user's previous answers from localStorage
+    for (var i = 1; i <= 40; i++) {
+        var key = "user_ans_" + i;
+        var value = localStorage.getItem(key);
 
-        //Lấy phần số của ID câu hỏi (ID của từng câu hỏi chỉ là số chỉ đến thứ tự câu hỏi)
-        let dedicatedID = parseInt(data[0].substring(9));
-
-        //Lấy câu trả lời
-        let answer = data[1];
-
-        //Tìm element cần thiết và cập nhật lại tình trạng
-        let inputElement = document.getElementById(dedicatedID).querySelector('input[value="' + answer + '"]');
-        if (inputElement) {
-            inputElement.checked = true;
-            if (!changeButtonColor(dedicatedID)) {
-                console.log(answer);
-                console.log(dedicatedID);
+        if (value !== null) {
+            var input = document.querySelector('input[name="' + i + '"][value="' + value + '"]');
+            if (input) {
+                input.checked = true;
+                changeButtonColor(i);
             }
         }
     }
 
-    // //Check question have answer? when page refresh then update button color
-    // for (let i = 1; i <= 40; i++) {
-    //     if(localStorage.getItem("answered_" + i)) {
-    //         changeButtonColor(i);
-    //     }
-    // }
+    // Check if questions have been answered and update button color
+    for (var i = 1; i <= 40; i++) {
+        var key = "answered_" + i;
+        var value = localStorage.getItem(key);
+        if (value !== null) {
+            changeButtonColor(i);
+        }
+    }
 
-    //Timer
+    // Countdown timer
     function startCountdown(duration, display) {
-        var timer = duration,
-            minutes, seconds, hours;
+        var timer = duration, minutes, seconds, hours;
 
         var submitButton = document.querySelector('input[name="sub"]');
 
-        //Kiểm tra sự tồn tại của timeLeft trong localStorage
-        var timeLeft = localStorage.getItem('timeLeft');
-        if (timeLeft && !isNaN(timeLeft))
-            timer = parseInt(timeLeft, 10);
+        // Check if time is saved in localStorage
+        var timeLeft = localStorage.getItem("timeLeft");
+        if (timeLeft && !isNaN(timeLeft)) timer = parseInt(timeLeft, 10);
 
-        //Chuyển đổi timer thành các biến h, m, s để xuât ra màn hình
-        var intervalId = setInterval(function() {
+        var intervalId = setInterval(function () {
             hours = parseInt(timer / 3600, 10);
             minutes = parseInt(timer / 60, 10);
             seconds = parseInt(timer % 60, 10);
@@ -81,57 +65,56 @@ function reload_user_input() {
 
             if (--timer < 0) {
                 clearInterval(intervalId);
-                //Xoá 'timeLeft' trong localStorage
-                localStorage.removeItem('timeLeft');
+                // Delete 'timeLeft' from localStorage
+                localStorage.removeItem("timeLeft");
 
-                //Tự động submit sau khi hết giờ
+                // Click submit button
                 submitButton.click();
             } else {
-                //Tự động cập nhật 'timeLeft' sau mỗi giây
-                localStorage.setItem('timeLeft', timer);
+                // Save time remaining to localStorage
+                localStorage.setItem("timeLeft", timer);
             }
         }, 1000);
     }
 
-    //Load timer
-    window.onload = function() {
-        var duration = 40 * 60; //Đặt thời gian làm bài mặc định
-        var display = document.querySelector('#countdown');
+        window.onload = function () {
+        var duration = 40 * 60; // Set time limit to 40 minutes
+        var display = document.querySelector("#countdown");
         startCountdown(duration, display);
     };
 
-    //????? (Chiến giải thích giùm nha, tại sao lại kiểm tra timeLeft 2 lần trong kho startCountdown đã có?)
-    var timeLeft = localStorage.getItem('timeLeft');
-    // if have timeLeft in localStorage then run startCountdown
+    // Reset time when page is refreshed
+    var timeLeft = localStorage.getItem("timeLeft");
     if (timeLeft && !isNaN(timeLeft)) {
         var duration = parseInt(timeLeft);
-        var display = document.querySelector('#countdown');
+        var display = document.querySelector("#countdown");
         startCountdown(duration, display);
     }
 }
 
-//Hiển thị câu hỏi ra màn hình theo id
 function open_ques(id) {
-    let id_cl = parseInt(id);
+    var id_cl = parseInt(id);
     cur_ques = id_cl;
 
-    for (let i = 1; i <= 40; i++) {
+    for (var i = 1; i <= 40; i++) {
         document.getElementById(i).hidden = true;
     }
 
     document.getElementById(id_cl).hidden = false;
 }
 
-//Hiển thị câu tiếp theo
+// Button navigation
 function next() {
     if (cur_ques < 40) {
         document.getElementById("btn_toQues" + (cur_ques + 1)).click();
     }
 }
 
-//Hiển thị câu trước đó
 function prev() {
     if (cur_ques > 1) {
         document.getElementById("btn_toQues" + (cur_ques - 1)).click();
     }
 }
+
+
+

@@ -6,7 +6,7 @@
 
 .title{
     text-align: center; 
-    background-color: #cd6529; 
+    background-color: red; 
     color: rgb(0, 0, 0); 
     height: 60px;
     font-size: 30px; 
@@ -63,8 +63,12 @@ table td strong {
     font-weight: bold;
 }
 
+.container-center{
+    margin: 0 auto;
+}
+
 /*CSS nút submit Nộp bài*/
-input[name='sub'] {
+input[type='submit'] {
     background-color: #4CAF50;
     color: white;
     height :28px;
@@ -104,6 +108,10 @@ input[name='sub'] {
     border-radius: 5px;
     cursor: pointer;
     line-height: 15px;
+}
+
+.container-center{
+    margin: 0 auto;
 }
 
 /*CSS hover cho nút Câu trước và nút Câu tiếp theo*/

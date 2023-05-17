@@ -10,7 +10,8 @@ function no_such_password() {
 //Hiển thị ra khi sai câu trả lời bảo mật hoặc điều hướng sang trang đặt mật khẩu mới
 function verification_check(success) {
     if (success) {
-        window.location.href = "../set_new_password.php";
+        // window.location.href = "../set_new_password.php";
+        window.location.href = "../ggc/set_new_password.php";
     } else {
         document.getElementById("verification-check").innerHTML = "Sai câu trả lời";
     }
