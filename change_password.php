@@ -9,48 +9,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Đổi mật khẩu</title>
     <link rel="stylesheet" href="./css/change_password.css">
+    <style>
+        input[type="submit"] {
+			display: block;
+			margin: 0 auto;
+			color: #fff;
+			border: none;
+			padding: 10px 20px;
+			border-radius: 5px;
+			font-size: 16px;
+			cursor: pointer;
+		}
+    </style>
 </head>
 
 <body>
     <div class="container">
-        <button type="button" id="btn_homepage" onclick="location.href='./index.php'">Trang chủ</button>
-
-        <form action="./change_password.php" method="post" name="change_password">
+        <input type="submit" style = "margin-left: 50px;width: 40px;height: 40px;padding: 10px 10px;" id="btn_homepage" onclick="location.href='./index.php'" value="🏠">
+       <form action="./change_password.php" method="post" name="change_password">
             <div><label for="" style="font-size: 28px;">Đổi mật khẩu</label></div>
             <table>
                 <tr>
                     <div id="verification-check"></div>
                 <tr>
                     <td>
-                        <label for="old-pass">Mật khẩu cũ:</label>
+                        <label for="old-pass">Mật khẩu cũ<br><br></label>
                     </td>
 
                     <td>
-                        <input type="password" name="old-pass" id="old-pass" size="30" placeholder="Mật khẩu cũ"
-                            required>
+                        <input type="password" style = "width: 300px;height: 30px;margin-left: 30px;" name="old-pass" id="old-pass" size="30" placeholder="Mật khẩu cũ"
+                            required><br><br>
                     </td>
                 </tr>
 
                 <tr>
                     <div id="pass-check"></div>
                     <td>
-                        <label for="new-pass">Mật khẩu mới:</label>
+                        <label for="new-pass">Mật khẩu mới<br><br></label>
                     </td>
 
                     <td>
-                        <input type="password" name="new-pass" id="new-pass" size="30" placeholder="Mật khẩu mới"
-                            required>
+                        <input type="password" style = "width: 300px;height: 30px;margin-left: 30px;" name="new-pass" id="new-pass" size="30" placeholder="Mật khẩu mới"
+                            required><br><br>
                     </td>
                 </tr>
 
                 <tr>
                     <td>
-                        <label for="re-enter-new-pass">Nhập lại mật khẩu:</label>
+                        <label for="re-enter-new-pass">Nhập lại mật khẩu<br><br></label>
                     </td>
 
                     <td>
-                        <input type="password" name="re-enter-new-pass" id="re-enter-new-pass" size="30"
-                            placeholder="Nhập lại mật khẩu" required>
+                        <input type="password" style = "width: 300px;height: 30px;margin-left: 30px;" name="re-enter-new-pass" id="re-enter-new-pass" size="30"
+                            placeholder="Nhập lại mật khẩu" required><br><br>
                     </td>
                 </tr>
             </table>
