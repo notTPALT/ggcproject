@@ -38,13 +38,22 @@
         border: none;
         margin: 13px 0px 13px 18px;
     }
+    input[type="submit"] {
+			display: block;
+			margin: 0 auto;
+			color: #fff;
+			border: none;
+			padding: 10px 20px;
+			border-radius: 5px;
+			font-size: 16px;
+			cursor: pointer;
+		}
     </style>
 </head>
 
 <body>
     <div class="container">
-        <button type="button" id="btn_homepage" onclick="location.href='./index.php'">Trang chủ</button>
-
+        <input type="submit" style = "margin-left: 40px;width: 40px;height: 40px;padding: 10px 10px;" id="btn_homepage" onclick="location.href='./index.php'" value="🏠">
         <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST" name="sign-Out">
             <label for="" style="font-size: 28px;">Sign up</label>
             <table>

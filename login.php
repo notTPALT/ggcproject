@@ -16,6 +16,7 @@
     .container {
         width: 470px;
         height: 360px;
+        padding: 0px 10px;
     }
 
     table {
@@ -48,13 +49,22 @@
         font-size: 18px;
         color: #a39393;
     }
+    input[type="submit"] {
+			display: block;
+			margin: 0 auto;
+			color: #fff;
+			border: none;
+			padding: 10px 20px;
+			border-radius: 5px;
+			font-size: 16px;
+			cursor: pointer;
+		}
     </style>
 </head>
 
 <body>
     <div class="container">
-        <button type="button" id="btn_homepage" onclick="location.href='./index.php'">Trang chủ</button>
-
+        <input type="submit" style = "margin-left: 5px;width: 40px;height: 40px;padding: 10px 10px;" id="btn_homepage" onclick="location.href='./index.php'" value="🏠">
         <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST" name="sign-up">
             <label for="" style="font-size: 35px;">Sign in</label>
             <table>
