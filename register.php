@@ -38,16 +38,6 @@
         border: none;
         margin: 13px 0px 13px 18px;
     }
-    input[type="submit"] {
-			display: block;
-			margin: 0 auto;
-			color: #fff;
-			border: none;
-			padding: 10px 20px;
-			border-radius: 5px;
-			font-size: 16px;
-			cursor: pointer;
-		}
     </style>
 </head>
 

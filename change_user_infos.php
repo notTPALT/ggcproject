@@ -9,34 +9,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thay đổi thông tin cá nhân</title>
     <link rel="stylesheet" href="./css/change_user_infos.css">
-    <style>
-        input[type="submit"] {
-			display: block;
-			margin: 0 auto;
-			color: #fff;
-			border: none;
-			padding: 10px 20px;
-			border-radius: 5px;
-			font-size: 16px;
-			cursor: pointer;
-		}
-        .date-input {
-            margin: 13px 0px 13px 18px;
-            width: 192px; 
-            height: 23px;
-            margin-bottom: 10px;
-            /* Định dạng nền và viền */
-            background-color: #a39393; 
-            border: 1px solid #ccc;
-            /* Phông chữ */
-            color: #333;
-            font-size: 16px;
-            /* Giao diện */
-            padding: 8px;
-            border-radius: 4px;
-        }
-
-    </style>
 </head>
 
 <body>

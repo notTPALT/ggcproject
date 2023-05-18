@@ -3,9 +3,8 @@ Một sóng ngang trền dọc theo một sợi dây dài, nguồn sóng O dao �
 5 cm.
 10 cm.
 8 cm.
-none
+img_12_2_1.png
 3
-img_12_2_1
 Để phân loại sóng dọc hay sóng ngang người ta dựa vào:
 phương truyền sóng trong môi trường.
 phương dao động của các phần tử môi trường.
@@ -14,8 +13,8 @@ sự biến dạng của môi trường khi có sóng truyền qua.
 none
 3
 Trong một thí nghiệm về giao thoa sóng trên mặt nước, hai nguồn kết hợp A, B dao động với tần số f = 15Hz và cùng phTại một điểm M cách A, B những khoảng d1 = 16cm; d2 = 20cm, sóng có biên độ cực tiểu. Giữa M và đường trung trực của AB có hai dãy cực đại. Vận tốc truyền sóng trên mặt nước là:
-Α. 24 cm/s
-Β. 48 cm/s
+24 cm/s
+48 cm/s
 20 cm/s
 60 cm/s
 none
@@ -24,7 +23,9 @@ Xét hiện tượng sóng dừng trên dây đàn hồi nhẹ AĐầu A dao đ�
 cùng pha với sóng tới tại B.
 ngược pha với sóng tới tại B.
 vuông pha với sóng tới tại B.
-lệch pha 0,25π với sóng tới tại B.<sup>2</sup>none
+lệch pha 0,25π với sóng tới tại B.
+none
+2
 Ở bề mặt một chất lỏng có hai nguồn phát sóng kết hợp A và B cách nhau 20 cm. Hai nguồn này dao động theo phương thẳng đứng có phương trình lần lượt là: uA = 5cos(40πt) mm và uB = 5cos(40πt + π) mm. Tốc độ truyền sóng trên mặt chất lỏng là 70 cm/s. Số điểm dao động với biên độ cực tiểu trên đoạn thẳng AB là:
 8.
 9.
@@ -37,9 +38,8 @@ Một sóng dừng trên một sợi dây có dạng trên. Trong đó u là li 
 6 cm.
 4 cm.
 2 cm.
-none
+img_12_2_2.png
 1
-img_12_2_2
 Một sóng âm truyền trong không khí với tốc độ 340 m/s và bước sóng 34 cm. Tần số của sóng âm này là:
 500 Hz.
 2000 Hz.
@@ -59,12 +59,12 @@ Một sóng ngang trền dọc theo một sợi dây dài, nguồn sóng O dao �
 5 cm.
 10 cm.
 8 cm.
-none
+img_12_2_3.png
 3
-img_12_2_3
 Một nguồn âm đặt tại O trong môi trường đẳng hướng. Hai điểm M và N trong môi trường tạo với O thành một tam giác đều. Mức cường độ âm tại M và N đều bằng 24,77 dB, mức cường độ âm lớn nhất mà một máy thu thu được đặt tại một điểm trên đoạn MN là:
 28 dB.
 27 dB.
 25 dB.
 26 dB.
+none
 4

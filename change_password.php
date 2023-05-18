@@ -9,18 +9,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Đổi mật khẩu</title>
     <link rel="stylesheet" href="./css/change_password.css">
-    <style>
-        input[type="submit"] {
-			display: block;
-			margin: 0 auto;
-			color: #fff;
-			border: none;
-			padding: 10px 20px;
-			border-radius: 5px;
-			font-size: 16px;
-			cursor: pointer;
-		}
-    </style>
 </head>
 
 <body>
