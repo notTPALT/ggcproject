@@ -52,7 +52,30 @@ require_once("./html/header.php");
     }
     .space-between-elements {
         margin-bottom: 20px; /* Khoảng cách dưới giữa các phần tử */
-    }      
+    }
+    #next-chapter{
+        margin-top: 20px; /* Khoảng cách với phần tử trước đó */
+        margin: 0 auto;
+        text-align: center;
+        color: #fff;
+        background-color: #4CAF50;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+        cursor: pointer;
+        border: none;
+    }
+    #next-chapter:hover {
+    background-color: #45a049;
+    }    
+    #result{
+        font-size: 25px;
+        font-weight: bold;
+        color: red;
+        text-align: center;
+        margin-bottom: 20px; /* Khoảng cách giữa các câu hi */
+    }  
 </style>
 
 <h3 id="chapter-name" style = "font-size: 25px;"></h3>
