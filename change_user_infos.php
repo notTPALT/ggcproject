@@ -40,7 +40,7 @@
 </head>
 
 <body>
-    <div class="container">
+    <div class="container" style = "width:650px;height: 680px;">
     <input type="submit" style = "margin-left: 50px;width: 40px;height: 40px;padding: 10px 10px;" id="btn_homepage" onclick="location.href='./index.php'" value="🏠">
 
         <form action="./change_user_infos.php" method="post" name="change_personal_information">
