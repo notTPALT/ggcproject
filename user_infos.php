@@ -9,11 +9,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PERSONAL INFORMATION</title>
     <link rel="stylesheet" href="./css/user_infos.css">
+    <style>
+        input[type="submit"] {
+			display: block;
+			margin: 0 auto;
+			color: #fff;
+			border: none;
+			padding: 10px 20px;
+			border-radius: 5px;
+			font-size: 16px;
+			cursor: pointer;
+		}
+    </style>
 </head>
 
 <body>
-    <div class="container">
-        <button type="button" id="btn_homepage" onclick="location.href='./index.php'">Trang chủ</button>
+    <div class="container" style = "height: 600px">
+    <input type="submit" style = "margin-left: 50px;width: 40px;height: 40px;padding: 10px 10px;" id="btn_homepage" onclick="location.href='./index.php'" value="🏠">
         <form action="./change_user_infos.php" method="post" name="personal_information">
             <label id="target" for="" style="font-size: 28px;">Thông tin cá nhân: </label>
             <table>

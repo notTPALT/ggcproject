@@ -12,8 +12,8 @@
 </head>
 
 <body>
-    <div class="container">
-        <button type="button" id="btn_homepage" onclick="location.href='./index.php'">Trang chủ</button>
+    <div class="container" style = "width:650px;height: 680px;">
+    <input type="submit" style = "margin-left: 50px;width: 40px;height: 40px;padding: 10px 10px;" id="btn_homepage" onclick="location.href='./index.php'" value="🏠">
 
         <form action="./change_user_infos.php" method="post" name="change_personal_information">
             <label id="target" for="" style="font-size: 28px;">Thay đổi thông tin cá nhân của </label>
@@ -69,7 +69,7 @@
                         <label for="birth-date">Ngày sinh:</label>
                     </td>
                     <td>
-                        <input type="date" name="birthdate" id="birthdate" value>
+                    <input type="date" name="birthdate" id="birthdate" value="" class="date-input">
                     </td>
                 </tr>
                 <tr>

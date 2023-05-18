@@ -1,0 +1,70 @@
+Phương trình dao động của một vật dao động điều hòa là: x = - 5cos(10πt + π/6) cm. Chọn đáp án đúng:
+Biên độ A = -5 cm
+Pha ban đầu φ = π/6 (rad)
+Chu kì T = 0,2 s
+Li độ ban đầu x0 = 5 cm
+none
+3
+Một vật dao động điều hòa với phương trình: x = 6cos2(4πt + π/6) cm. Quãng đường vật đi được trong 0,125 s kể từ thời điểm t = 0 là:
+6cm
+4,5cm
+7,5cm
+9cm
+none
+1
+Một chất điểm dao động điều hoà với chu kì 1,25 s và biên độ 5 cm. Tốc độ lớn nhất của chất điểm là:
+25,1 cm/s.
+2,5 cm/s.
+63,5 cm/s.
+6,3 cm/s.
+none
+1
+Một vật dao động điều hoà với chu kì T, biên độ bằng 5 cm. Quãng đường vật đi được trong 2,5T là:
+10 cm.
+50 cm.
+45 cm.
+25 cm.
+none
+2
+Một vật nhỏ dao động điều hòa trên trục Ox theo phương trình x = Acos (ωt + φ). Vận tốc của vật có biểu thức là:
+v = ωAcos (ωt +φ).
+v = –ωAsin (ωt +φ).
+v = –Asin (ωt +φ).
+v = ωAsin (ωt +φ).
+none
+2
+Một chất điểm dao động điều hòa dọc trục Ox với phương trình x = 10cos2πt (cm). Quãng đường đi được của chất điểm trong một chu kì dao động là:
+10 cm.
+30 cm.
+40 cm.
+20 cm.
+none
+3
+Một vật nhỏ dao động điều hòa theo phương trình x = Acos10t (t tính bằng s). Tại t = 2 s, pha của dao động là:
+10 rad.
+40 rad.
+20 rad.
+5 rad.
+none
+2
+Một vật dao động điều hòa theo phương trình x = 5cosπt (cm,s). Tốc độ của vật có giá trị cực đại là bao nhiêu?
+–5π cm/s.
+5π cm/s.
+5 cm/s.
+5/π cm/s.
+none
+2
+Chọn một chất điểm dao động điều hòa trên đoạn thẳng MN dài 6 cm với tần số 2 Hz. Chọn gốc thời gian là lúc chất điểm có li độ 3√3/2 cm và chuyển động ngược chiều với chiều dương mà mình đã chọn. Phương trình dao động của chất điểm là:
+x = 3sin(4πt + π/3) cm
+x = 3cos(4πt + π/6) cm
+x = 3sin(4πt + π/6) cm
+x = 3cos(4πt + 5π/6) cm
+none
+2
+Vật dao động điều hòa theo phương trình x = Acosωt (cm). Sau khi dao động được 1/6 chu kì vật có li độ √3/2 cm. Biên độ dao động của vật là:
+2√2 cm
+√3 cm
+2 cm
+4√2 cm
+none
+2

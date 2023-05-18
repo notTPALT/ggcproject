@@ -43,7 +43,7 @@ input[type='text'], #yourClass {
     width: 192px; 
     height: 23px;
     background-color: #a39393; 
-    border: none; 
+    border: 1px solid #ccc;
     margin: 13px 0px 13px 18px;
 }
 
@@ -92,13 +92,33 @@ input[type='radio']:checked:after {
 }
 
 /*CSS cho button CHANGE*/
-input[type='submit']{
+#btn_homepage,#change-user-infos{
+    display: block;
+    color: #fff;
+    background-color: #d63837;
     width: 122px;
     height: 44px;
-    background-color: #d63837;
+    padding: 10px 20px;
     border: none;
-    font-size: 20px;
+    border-radius: 5px;
+    font-size: 16px;
     display: block;
     transform: translateY(20px);
     margin: 0 auto;
+    cursor: pointer;
+}
+.date-input {
+    margin: 13px 0px 13px 18px;
+    width: 192px; 
+    height: 23px;
+    margin-bottom: 10px;
+    /* Định dạng nền và viền */
+    background-color: #a39393; 
+    border: 1px solid #ccc;
+    /* Phông chữ */
+    color: #333;
+    font-size: 16px;
+    /* Giao diện */
+    padding: 8px;
+    border-radius: 4px;
 }

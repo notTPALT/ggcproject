@@ -117,7 +117,7 @@ function get_ans_value(i) {
 
 //Hiển thị câu hỏi lấy được từ SQL
 function push_question(index, question, option1, option2, option3, option4, image_path) {
-    var push_HTML = '<div><label for="">Câu ' + index + ': ' + question +
+    var push_HTML = '<div class="question"><label id="ques_' + index + '" for=""><p class="ques-index">Câu ' + index + ':</p> ' + question +
         '<br></label><input type="radio" id="input_' + index + '_1" class="option" name="ans' + index +
         '" value="1"><label for="input_' + index + '_1">A. ' + option1 +
         '<br></label><input type="radio" id="input_' + index + '_2" class="option" name="ans' + index +

@@ -290,7 +290,7 @@
 
 .box-content{
     font-family: 'Times New Roman', Times, serif;
-    font-weight: bold;
+    font-weight: 400;
     padding-left: 40px;
     padding-top: 40px;
     padding-bottom: 20px;
@@ -511,4 +511,14 @@ footer {
 .color-green {
     color: green;
 }
-   
+
+.ques-index {
+    display: inline-block;
+    margin: 0;
+    padding-right: 10px;
+    font-weight: bold;
+  }
+.ques_img{
+    width: 20%;
+    height: 20%;
+}

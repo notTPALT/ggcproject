@@ -1,14 +1,70 @@
-question1
-answer1
-answer2
-answer3
-answer4
+DC hoặc dấu - là kí hiệu mô tả đại lượng nào sau đây?
+Dòng điện xoay chiều.
+Dòng điện một chiều.
+Dòng điện không đổi.
+Máy biến áp.
 none
 2
-question2
-answer5
-answer6
-answer7
-answer8
-ques1_samplename.png
-3
+AC hoặc dấu ~ là kí hiệu mô tả đại lượng nào sau đây?
+Dòng điện xoay chiều.
+Dòng điện một chiều.
+Dòng điện không đổi.
+Máy biến áp.
+none
+1
+Khi sử dụng các thiết bị điện trong phòng thí nghiệm Vật lí chúng ta cần lưu ý điều gì?
+Cần quan sát kĩ các kí hiệu và nhãn thông số trên thiết bị để sử dụng đúng chức năng, đúng yêu cầu kĩ thuật.
+Khởi động luôn hệ thống và tiến hành thí nghiệm.
+Quan sát sơ bộ các kí hiệu rồi khởi động hệ thống để tiến hành thí nghiệm.
+Không cần sử dụng đúng chức năng của thiết bị.
+none
+1
+Những dụng cụ nào sau đây trong phòng thí nghiệm Vật lí thuộc loại dễ vỡ?
+A.đèn cồn, các hóa chất, những dụng cụ bằng nhựa như ca nhựa,...
+B.ống nghiệm, đũa thủy tinh, nhiệt kế, cốc thủy tinh, kính....
+lực kế, các bộ thí nghiệm như là ròng rọc, đòn bẩy....
+đèn cồn, hóa chất, ống nghiệm…
+none
+2
+Thao tác nào dưới đây có thể gây mất an toàn khi sử dụng thiết bị thí nghiệm Vật lí?
+Chiếu trực tiếp tia laze vào mắt để kiểm tra độ sáng.
+Dùng tay kiểm tra mức độ nóng của vật khi đang đun.
+Không cầm vào phích điện mà cầm vào dây điện khi rút phích điện khỏi ổ cắm.
+Tất cả các phương án trên.
+none
+4
+Những hành động nào sau đây là đúng khi làm việc trong phòng thí nghiệm?
+Để các kẹp điện gần nhau.
+Để chất dễ cháy gần thí nghiệm mạch điện.
+Không đeo găng tay cao su chịu nhiệt khi làm thí nghiệm với nhiệt độ cao.
+Không có hành động nào đúng trong ba hành động trên.
+none
+4
+Khi có hỏa hoạn trong phòng thực hành cần xử lí theo cách nào sau đây?
+Bình tĩnh, sử dụng các biện pháp dập tắt ngọn lửa theo hướng dẫn của phòng thực hành như ngắt toàn bộ hệ thống điện, đưa toàn bộ các hóa chất, các chất dễ cháy ra khu vực an toàn…
+Sử dụng nước để dập đám cháy nơi có các thiết bị điện.
+Sử dụng bình để dập đám cháy quần áo trên người.
+Không cần ngắt hệ thống điện, phải dập đám cháy trước.
+none
+1
+Kí hiệu cảnh báo khu vực nguy hiểm có đặc điểm nào sau đây?
+Hình vuông, viền đen, nền đỏ cam.
+Hình tam giác đều, viền đen hoặc viền đỏ, nền vàng.
+Hình chữ nhật nền xanh hoặc đỏ.
+Hình tròn, viền đỏ, nền trắng.
+none
+2
+DC hoặc dấu - là kí hiệu mô tả đại lượng nào sau đây?
+Dòng điện xoay chiều.
+Dòng điện một chiều.
+Dòng điện không đổi.
+Máy biến áp.
+none
+2
+AC hoặc dấu ~ là kí hiệu mô tả đại lượng nào sau đây?
+Dòng điện xoay chiều.
+Dòng điện một chiều.
+Dòng điện không đổi.
+Máy biến áp.
+none
+1
