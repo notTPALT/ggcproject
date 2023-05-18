@@ -145,7 +145,7 @@
         option_b VARCHAR(255) NOT NULL, 
         option_c VARCHAR(255) NOT NULL, 
         option_d VARCHAR(255) NOT NULL, 
-        answer   VARCHAR(2) NOT NULL,
+        answer   VARCHAR(2) NOT NULL
     )");
 
     mysqli_query($conDB, "INSERT INTO tbquestion_graduation (question, option_a, option_b, option_c, option_d, answer) VALUES

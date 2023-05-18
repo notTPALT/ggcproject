@@ -43,8 +43,9 @@
 
 <body>
     <div class="container">
-        <input type="submit" style = "margin-left: 40px;width: 40px;height: 40px;padding: 10px 10px;" id="btn_homepage" onclick="location.href='./index.php'" value="🏠">
-        <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST" name="sign-Out">
+        <input type="submit" style="margin-left: 40px;width: 40px;height: 40px;padding: 10px 10px;" id="btn_homepage"
+            onclick="location.href='./index.php'" value="🏠">
+        <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST" name="sign-out">
             <label for="" style="font-size: 28px;">Sign up</label>
             <table>
                 <tr>
