@@ -2,6 +2,45 @@
     session_start();
     require('./php/connect_MySQL_n_log.php');
 ?>
+<?php
+	if (isset($_POST['signup'])) {
+		$username     = $_POST['taikhoan'];
+		$password = $_POST['matkhau'];
+    $repassword = $_POST['rematkhau'];
+    $class = $_POST['Class'];
+    $gender = $_POST['gender'];
+		$email = $_POST['email'];
+    
+		$sql = "INSERT INTO user_infos (username, pass, class, gender, email) VALUES ('".$username."', '".$password."', '".$class."', '".$gender."', '".$email."')";
+		
+		// check username
+		$checkUser = "SELECT username FROM user_infos WHERE username = '".$username."'";
+		$tmp = mysqli_query($con, $checkUser);
+		$dong = mysqli_num_rows($tmp);
+		
+		if ($dong > 0){
+			echo "<script>;
+                var a = document.getElementById('error_username');
+                a.innerHTML = '*Username đã tồn tại*';
+				</script>";
+		}
+		else{
+			if ($password == $repassword){
+                // $_SESSION['username'] = $username;
+				mysqli_query($con, $sql);
+                project_log_no_username($con, "Added an account: ".$username);
+				header('location: ./php/wait.php');
+			} 
+			else{
+				echo "<script>
+                        var b = document.getElementById('error_password');
+                        b.innerHTML = '*Mật khẩu không khớp*';
+					</script>";
+			}
+		}
+		mysqli_close($con);
+	}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -45,7 +84,7 @@
     <div class="container">
         <input type="submit" style="margin-left: 40px;width: 40px;height: 40px;padding: 10px 10px;" id="btn_homepage"
             onclick="location.href='./index.php'" value="🏠">
-        <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST" name="sign-out">
+        <form action="" method="POST" name="sign-out">
             <label for="" style="font-size: 28px;">Sign up</label>
             <table>
                 <tr>
@@ -134,42 +173,3 @@
 </body>
 
 </html>
-<?php
-	if (isset($_POST['signup'])) {
-		$username     = $_POST['taikhoan'];
-		$password = $_POST['matkhau'];
-    $repassword = $_POST['rematkhau'];
-    $class = $_POST['Class'];
-    $gender = $_POST['gender'];
-		$email = $_POST['email'];
-    
-		$sql = "INSERT INTO user_infos (username, pass, class, gender, email) VALUES ('".$username."', '".$password."', '".$class."', '".$gender."', '".$email."')";
-		
-		// check username
-		$checkUser = "SELECT username FROM user_infos WHERE username = '".$username."'";
-		$tmp = mysqli_query($con, $checkUser);
-		$dong = mysqli_num_rows($tmp);
-		
-		if ($dong > 0){
-			echo "<script>;
-                var a = document.getElementById('error_username');
-                a.innerHTML = '*Username đã tồn tại*';
-				</script>";
-		}
-		else{
-			if ($password == $repassword){
-                // $_SESSION['username'] = $username;
-				mysqli_query($con, $sql);
-                project_log_no_username($con, "Added an account: ".$username);
-				header('location: php/wait.php');
-			} 
-			else{
-				echo "<script>
-                        var b = document.getElementById('error_password');
-                        b.innerHTML = '*Mật khẩu không khớp*';
-					</script>";
-			}
-		}
-		mysqli_close($con);
-	}
-?>

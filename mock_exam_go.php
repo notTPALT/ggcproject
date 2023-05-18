@@ -27,7 +27,7 @@
 		}
 
 		$point = $right_answer * 0.25;
-		$sql_result = "INSERT INTO mock_exam_history VALUES ('".$_SESSION['username']."', $right_answer, $wrong_answer, $unanswered, '$point')";
+		$sql_result = "INSERT INTO mock_exam_history (username, correct, incorrect, unanswered, point_total) VALUES ('".$_SESSION['username']."', $right_answer, $wrong_answer, $unanswered, '$point')";
 		$_SESSION['correct'] = $right_answer;
 		$_SESSION['incorrect'] = $wrong_answer;
 		$_SESSION['unanswered'] = $unanswered;
@@ -148,7 +148,7 @@
 						$i++;
 					}
 					?>
-            <input type="submit" name="sub" style="float:center;" value="Nộp bài" onclick="confirmSubmit();">
+            <input type="submit" name="sub" style="float:center;" value="Nộp bài">
         </form>
     </div>
 
