@@ -13,48 +13,53 @@
     <link rel="icon" href="./resources/favicon.png">
     <link rel="stylesheet" href="css/style_form.css">
     <style>
-    .container {
-        width: 470px;
-        height: 360px;
-        padding: 0px 10px;
-    }
+        .container{
+          width: 470px;
+          height: 360px;
+        }
 
-    table {
-        transform: translateX(60px);
-    }
+        table{
+          transform: translateX(60px);
+        }
 
-    /*CSS cho các cột trong table */
-    table tr td {
-        padding-top: 12px;
-        padding-left: 6px;
-    }
+        /*CSS cho các cột trong table */
+        table tr td{
+          padding-top: 8px;
+          padding-left: 6px;
+        }
 
-    /*CSS cho các label Username và Password*/
-    label {
-        font-size: 22px;
-    }
+        /*CSS cho các label Username và Password*/
+        label{
+          font-size: 22px;
+        }
 
-    /*CSS cho dữ liệu đầu vào dạng text và password*/
-    input[type='text'],
-    input[type="password"] {
-        width: 182px;
-        height: 23px;
-        background-color: #a39393;
-        border: none;
-        margin: 3px 0px 0px -50px;
-    }
-
-    /*CSS cho chữ của thẻ a*/
-    a {
-        font-size: 18px;
-        color: #a39393;
-    }
+        /*CSS cho dữ liệu đầu vào dạng text và password*/
+        input[type='text'],
+        input[type="password"]{
+          width: 182px; 
+          height: 23px;
+          background-color: whitesmoke;
+          color: rgba(0, 0, 0, 0.733); 
+          border: none; 
+          padding-left: 5px;
+          margin: 3px 0px 0px -50px;
+        }
+  
+        /*CSS cho chữ của thẻ a*/
+        a{
+          font-size: 18px;
+          color: #a39393;
+        }
     </style>
 </head>
 
 <body>
     <div class="container">
-        <input type="submit" style = "margin-left: 5px;width: 40px;height: 40px;padding: 10px 10px;" id="btn_homepage" onclick="location.href='./index.php'" value="🏠">
+    <input type="submit" style = "position: absolute;
+                                      width: 40px;
+                                      height: 40px;
+                                      top: -15px;
+                                      left: 4px" id="btn_homepage" onclick="location.href='./index.php'" value="🏠">
         <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST" name="sign-up">
             <label for="" style="font-size: 35px;">Sign in</label>
             <table>
