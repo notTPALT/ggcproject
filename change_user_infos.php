@@ -8,13 +8,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thay đổi thông tin cá nhân</title>
-    <link rel="stylesheet" href="./css/change_user_infos.css">
+    <link rel="stylesheet" href="./css/style_form.css">
+    <style>
+          .container{
+            width: 689px;
+            height: 450px;
+          }
+
+          table{
+            transform: translateX(70px);
+          }
+
+          /*CSS cho các label First Name, Last Name, Class, Gender, Mail */
+          label{
+            font-size: 22px;
+          }
+
+          /*CSS cho các dữ liệu dầu vào dạng text,email và select Class*/
+          input[type='text'],input[type='email'], #yourClass {
+            width: 212px; 
+            height: 25px;
+            background-color: whitesmoke;
+            color: rgba(0, 0, 0, 0.733); 
+            border: none; 
+            padding-left: 5px;
+            margin: 13px 0px 13px 18px;
+          }
+    </style>
 </head>
 
 <body>
-    <div class="container" style = "width:650px;height: 680px;">
-    <input type="submit" style = "margin-left: 50px;width: 40px;height: 40px;padding: 10px 10px;" id="btn_homepage" onclick="location.href='./index.php'" value="🏠">
-
+    <div class="container">
+    <input type="submit" style = "position: absolute;
+                                      width: 40px;
+                                      height: 40px;
+                                      top: -15px;
+                                      left: 4px" id="btn_homepage" onclick="location.href='./index.php'" value="🏠">
         <form action="./change_user_infos.php" method="post" name="change_personal_information">
             <label id="target" for="" style="font-size: 28px;">Thay đổi thông tin cá nhân của </label>
             <table>
