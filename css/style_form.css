@@ -9,21 +9,53 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    background: -webkit-linear-gradient(to right, #155799, #159957); 
+    background: linear-gradient(to right, #155799, #159957); 
+    color:whitesmoke;
 }
 
 .container{
-    background-color: #d9d9d9;
+    position: relative;
+    background-color: #8464c9;
     text-decoration: none;
     font-family: Inter;
-    font-weight: 600;
+    font-weight: 500;
     text-align: center;
     padding-top: 30px;
+    color:whitesmoke;
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(11, 15, 13, 0.582);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+
 }
 
+svg{
+    position: absolute;
+    left: 8px;
+    top: 8px;
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    border-radius: 4px;
+    background-color: white;
+}
 
 table{
     padding-top: 30px;
     text-align: left;
+}
+
+/*CSS phần chung cho các dữ liệu đầu vào dạng text,pasword, email và Select Class*/
+input[type='text'],
+input[type="password"],
+input[type='email'],
+#yourClass{
+  background-color: whitesmoke;
+  color: rgba(0, 0, 0, 0.733); 
+  border: none; 
+  padding-left: 5px;
 }
 
 /*CSS cho các phần riêng các option của select Class*/
@@ -36,6 +68,12 @@ table{
 option{
     font-size: 22px; 
     text-align: center;
+}
+
+/*CSS cho chữ của thẻ a*/
+a{
+    font-size: 16px;
+    color: #a39393;
 }
 
 /*CSS cho nút Nam, Nữ, Khác */
@@ -51,7 +89,7 @@ input[type='radio']:after {
     height: 19px;
     border-radius: 19px;
     position: relative;
-    background-color: #923838;
+    background-color: whitesmoke;
     content: '';
     display: inline-block;
     visibility: visible;
@@ -63,24 +101,21 @@ input[type='radio']:checked:after {
     height: 19px;
     border-radius: 19px;
     position: relative;
-    background-color: #4CAF50;
-    opacity: 0.7;
+    background-color: rgb(34, 163, 142);
     content: '';
     display: inline-block;
     visibility: visible;
 }
 
 input[type='submit']{
-    display: block;
-    color: #fff;
-    padding: 10px 20px;
+    border-radius: 4px;
     width: 122px;
     height: 44px;
-    background-color: #4CAF50;
+    background-color: black;
+    color: white;
     border: none;
-    font-size: 16px;
+    font-size: 19px;
     display: block;
     transform: translateY(20px);
     margin: 0 auto;
-    cursor: pointer;
 }
