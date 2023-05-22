@@ -1,16 +1,16 @@
-/*CSS cho tất cả trng*/
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-#container{
-    background-color: #F9F9F8;
+#container {
+    background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);
 }
 
 /*CSS cho đầu trang*/
-.header{
+.header {
+    background-color: whitesmoke;
     position: relative;
     height: 158px;
     width: 100%;
@@ -18,7 +18,7 @@
 }
 
 /*CSS cho đầu trang ở phần trên*/
-.header #header-top{
+.header #header-top {
     position: relative;
     width: 1349px;
     height: 150px;
@@ -27,28 +27,28 @@
     margin: 0 auto;
 }
 
-/*CSS cho hình ảnh cho dầu trang ở phần trên*/
-
-#header-top #logo-header{
+/*CSS cho phần chứa logo của dầu trang*/
+#header-top #logo-header {
     position: absolute;
     top: 11px;
-    left: 210px;
+    left: 200px;
     right: 0px;
     margin: 0px auto;
 }
 
-#header-top img{
+/*CSS cho logo đầu trang*/
+#header-top img {
     width: 77px;
     height: 77px;
 }
 
 
 /*CSS cho phần tử bao bọc Ôn thi trắc nghiệm Vật Lý online*/
-#header-top #banner{
+#header-top #banner {
     position: absolute;
     width: 759px;
     height: 79px;
-    background-color: #B0F1FF;
+    background-color: #024422;
     top: 11px;
     left: 30px;
     right: 0px;
@@ -58,36 +58,36 @@
 }
 
 /*CSS cho chữ Ôn thi trắc nghiệm Vật Lý online*/
-#header-top #banner #para{
+#header-top #banner #para {
     position: absolute;
     width: 440px;
     height: 57px;
     left: 215px;
     top: 10px;
     /*CSS cho phần chữ Ôn thi thi trắc nghiệm trắc nghiệm Vật Lý*/
-    font-family: 'Inter';
+    font-family: Arial, Helvetica, sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
     line-height: 57px;
     display: flex;
     align-items: center;
-    text-align: center; 
-    color: #000000;
-    
+    text-align: center;
+    color: rgb(245, 245, 245);
+
 }
 
 /*CSS cho phần chung của hai nút button hello và button đăng xuất */
-#header-top #nav-infor, #button-dangxuat{
+#header-top #nav-infor,
+#button-dangxuat {
     position: absolute;
     height: 22px;
     top: 68px;
 }
 
 /*CSS cho phần riêng của button infor*/
-#header-top #nav-infor{
+#header-top #nav-infor {
     width: 145px;
-    background-color: #B0F1FF;
     line-height: 22px;
     left: 960px;
     right: 0;
@@ -96,70 +96,73 @@
 }
 
 
-#header-top #nav-infor, 
-.subnav-infor{
-    background-color: #B0F1FF;
+#header-top #nav-infor,
+.subnav-infor {
+    background-color: #11ab7d;
     list-style-type: none;
 }
 
-#header-top #nav-infor li{
+/*CSS các phần tử của button infor*/
+#header-top #nav-infor li {
     position: relative;
 }
 
-#header-top #nav-infor li a{
+#header-top #nav-infor li a {
     text-decoration: none;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
-    color: black;
-} 
+    color: whitesmoke;
+}
 
-#header-top #nav-infor > li > a{
+#header-top #nav-infor>li>a {
     display: inline-block;
     width: 145px;
     line-height: 22px;
     text-align: center;
 }
- 
-#header-top #nav-infor > li:hover > a,
-#nav-infor .subnav-infor li:hover{
-    background: #41DDFF;
-    opacity: 0.8;
-}
-  
-#header-top #nav-infor li:hover .subnav-infor{
-   display: block;
-}
-  
-#header-top #nav-infor li .subnav-infor{
-   display: none;
-   position: absolute;
-   width: 100%;
+
+#header-top #nav-infor>li:hover>a,
+#nav-infor .subnav-infor li:hover {
+    background-color: rgba(21, 206, 191, 0.329);
 }
 
-#header-top #nav-infor li .subnav-infor li a{
+#header-top #nav-infor li:hover .subnav-infor {
+    display: block;
+}
+
+#header-top #nav-infor li .subnav-infor {
+    display: none;
+    position: absolute;
+    width: 100%;
+}
+
+#header-top #nav-infor li .subnav-infor li a {
     margin-left: 14px;
 }
 
 /*CSS cho phần riêng button dang xuat */
-#header-top #button-dangxuat{
+#header-top #button-dangxuat {
     width: 85px;
     left: 1210px;
     right: 0px;
     margin: 0px auto;
-    background: #41DDFF;
+    background: grey;
+    font-weight: bold;
     border: 0px;
+    cursor: pointer;
 }
 
+
 /*CSS cho đầu trang ở phần dưới*/
-.header #header-bottom{
+.header #header-bottom {
     position: relative;
     width: 100%;
     min-width: 1349px;
     height: 50px;
     top: -32px;
-    background-color: #FFB681;
+    background-color: #024422;
     z-index: 2;
     left: 0;
     right: 0;
@@ -167,7 +170,7 @@
 }
 
 /*CSS cho phần điều hướng */
-#header-bottom #nav-header{
+#header-bottom #nav-header {
     position: absolute;
     left: 0;
     right: 0;
@@ -177,27 +180,27 @@
 }
 
 /*CSS cho các phần tử con của phần điều hướng */
-#header-bottom #nav-header li{
+#header-bottom #nav-header li {
     display: inline-block;
 }
 
-/*CSS thẻ a cho phẳn tử con cuối cùng trong của phần điều hướng */ 
-#header-bottom #nav-header li:last-child a{
+/*CSS thẻ a cho phẳn tử con cuối cùng trong của phần điều hướng */
+#header-bottom #nav-header li:last-child a {
     border-right: none;
 }
 
 /*CSS cho thẻ a của các phần tử con trong phần điều hướng */
-#header-bottom #nav-header li a{
+#header-bottom #nav-header li a {
     display: inline-block;
-    font-family: 'Inter';
+    font-family: Arial, Helvetica, sans-serif;
     font-style: normal;
-    font-weight: 700;
+    font-weight: 550;
     font-size: 18px;
     text-decoration: none;
     line-height: 50px;
     align-items: center;
     text-align: center;
-    color: #000000;
+    color: #fff;
     padding: 0px 18px;
     border-right: 1px solid #333;
     margin-left: -4px;
@@ -205,34 +208,36 @@
 
 /*CSS hover trực tiếp cho thẻ a là con trực tiếp của nav*/
 /*CSS cho con của phần tử lớp 10, lớp 11, lớp 12*/
-#header-bottom #nav-header > li:hover > a,
+#header-bottom #nav-header>li:hover>a,
 #nav-header .subnavclass10 li:hover,
 #nav-header .subnavclass11 li:hover,
-#nav-header .subnavclass12 li:hover{
-    background-color: #FFD700;
+#nav-header .subnavclass12 li:hover {
+    background-color: rgba(20, 175, 129, 0.253);
+    color: rgba(245, 245, 245, 0.74);
+    opacity: 0.8;
 }
 
 /*css cho phan tu con thứ 2, thứ 3, thứ 4 của nav*/
-#header-bottom #nav-header li:nth-child(2), 
-#nav-header li:nth-child(3), 
-#nav-header li:nth-child(4){
+#header-bottom #nav-header li:nth-child(2),
+#nav-header li:nth-child(3),
+#nav-header li:nth-child(4) {
     position: relative;
 }
 
 
-#header-bottom #nav-header li:nth-child(2):hover .subnavclass10, 
+#header-bottom #nav-header li:nth-child(2):hover .subnavclass10,
 #header-bottom #nav-header li:nth-child(3):hover .subnavclass11,
 #header-bottom #nav-header li:nth-child(4):hover .subnavclass12 {
     display: block;
 }
 
 /*CSS cho phần tử con của nav có chữ lớp 10, lớp 11 và lớp 12*/
-#header-bottom #nav-header li .subnavclass10, 
+#header-bottom #nav-header li .subnavclass10,
 #header-bottom #nav-header li .subnavclass11,
-#header-bottom #nav-header li .subnavclass12{
+#header-bottom #nav-header li .subnavclass12 {
     display: none;
     position: absolute;
-    background-color: #FFB681;
+    background-color: #05331b;
     margin-left: -5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
 }
@@ -240,8 +245,9 @@
 /*CSS phần chung cho thẻ a là con của lớp 10, lớp 11 và lớp 12*/
 #header-bottom #nav-header .subnavclass10 li a,
 #header-bottom #nav-header .subnavclass11 li a,
-#header-bottom #nav-header .subnavclass12 li a{
-    color: #333;
+#header-bottom #nav-header .subnavclass12 li a {
+    color: rgba(245, 245, 220, 0.747);
+    font-weight: bold;
     margin-left: -5px;
     border-right: none;
     font-size: 12.9px;
@@ -251,23 +257,23 @@
 }
 
 /*CSS phần riêng cho thẻ a là con của lớp 10*/
-#header-bottom #nav-header .subnavclass10 li a{
+#header-bottom #nav-header .subnavclass10 li a {
     width: 357.185px;
 }
 
 /*CSS phần riêng cho thẻ a là con của lớp 11*/
-#header-bottom #nav-header .subnavclass11 li a{
+#header-bottom #nav-header .subnavclass11 li a {
     width: 328.185px;
 }
 
 /*CSS phần riêng cho thẻ a là con của lớp 12*/
-#header-bottom #nav-header .subnavclass12 li a{
+#header-bottom #nav-header .subnavclass12 li a {
     width: 307.6px;
 }
 
 
 /*CSS cho container-content*/
-#container .container-content{
+#container .container-content {
     position: relative;
     width: 100%;
     height: 100%;
@@ -276,8 +282,44 @@
     z-index: 1;
 }
 
+
+/*CSS cho breadcrums */
+.container-content .breadcrumb {
+    position: absolute;
+    left: 17.71%;
+    top: 3.23%;
+    height: 24.14px;
+    width: 317px;
+}
+
+/*CSS cho >> trong breadcrumbs*/
+.container-content .breadcrumb svg {
+    height: 18px;
+    vertical-align: middle;
+}
+
+/*CSS cho phần tử cha của breadcrum */
+.container-content .breadcrumb ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    gap: 3px;
+}
+
+/*CSS cho thẻ a */
+.breadcrumb ul li a {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: #000000;
+    text-decoration: none;
+}
+
+
 /*CSS cho phần chứa nội dung trong container-content*/
-.container-content .box-content{
+.container-content .box-content {
     position: absolute;
     width: 53.8%;
     height: 87.58%;
@@ -288,36 +330,41 @@
     border-radius: 20px;
 }
 
-.box-content{
+/*CSS cho phần chứa nội dung lý thuyết*/
+.box-content {
     font-family: 'Times New Roman', Times, serif;
-    font-weight: 400;
     padding-left: 40px;
     padding-top: 40px;
     padding-bottom: 20px;
     overflow-y: scroll;
-    
+
 }
-.header-page{
+
+/*CSS cho phần tiêu đề của phần chứa nội dung lý thuyết */
+.header-page {
     font-size: 18px;
 }
 
-.category-page{
+/*CSS cho các mục lớn của phần chứa nội dung lý thuyết*/
+.category-page {
     font-size: 13.5px;
 }
 
-.column-page{
+/*CSS cho các mục nhỏ của phần chứa nội dung lý thuyết */
+.column-page {
     font-size: 12px;
     color: #0000FF;
 }
 
-.paragraph{
+/*CSS cho văn bản của phần chứa nội dung lý thuyết */
+.paragraph {
     font-size: 12px;
 }
 
 /*CSS cho phần chân trang*/
 footer {
     position: -ms-page;
-    bottom:0;
+    bottom: 0;
 }
 
 
@@ -325,11 +372,13 @@ footer {
     footer {
         position: static;
     }
+
     header {
         padding-top: 40px;
     }
 }
 
+/*CSS cho phần chứa footer-left, footer-center, footer-right*/
 .footer-container {
     background-color: #2d2a30;
     box-sizing: border-box;
@@ -342,7 +391,9 @@ footer {
 }
 
 /*CSS cho footer bên trái, footer chính giữa và footer bên phải */
-.footer-container .footer-left, .footer-container .footer-center, .footer-container .footer-right {
+.footer-container .footer-left,
+.footer-container .footer-center,
+.footer-container .footer-right {
     display: inline-block;
     vertical-align: top;
 }
@@ -370,7 +421,7 @@ footer {
 }
 
 /*CSS cho các icon facebook, about, contact, blog*/
-.footer-container .footer-icons{
+.footer-container .footer-icons {
     margin-left: -1px;
     margin-top: 25px;
 }
@@ -455,7 +506,7 @@ footer {
 .footer-container .footer-icons a {
     display: inline-block;
     width: 35px;
-    height: 30px;
+    height: 29px;
     cursor: pointer;
     background-color: #33383b;
     border-radius: 2px;
@@ -467,49 +518,44 @@ footer {
 }
 
 .footer-container .footer-icons a:hover,
-.footer-links a:hover
- {
+.footer-links a:hover {
     background-color: #11ab7c;
 }
 
 @media (max-width: 880px) {
-    .footer-container .footer-left, .footer-container .footer-center, .footer-container .footer-right{
+
+    .footer-container .footer-left,
+    .footer-container .footer-center,
+    .footer-container .footer-right {
         display: block;
         width: 100%;
         margin-bottom: 40px;
         text-align: center;
     }
+
     .footer-container .footer-center i {
         margin-left: 0;
     }
-}     
+}
 
 .my-button {
     display: block;
-      width: 150px;
-      height: 5%;
-      margin: 0 auto;
-      background-color: #4CAF50;
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      text-align: center;
-      text-decoration: none;
-      font-size: 16px;
-      border-radius: 5px;
-      cursor: pointer;
-    }
+    width: 150px;
+    height: 5%;
+    margin: 0 auto;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
 .my-button:hover {
     background-color: #3e8e41;
-}
-
-/*Phu's implements*/
-.color-red {
-    color: red;
-}
-
-.color-green {
-    color: green;
 }
 
 .ques-index {
@@ -517,8 +563,13 @@ footer {
     margin: 0;
     padding-right: 10px;
     font-weight: bold;
-  }
-.ques_img{
+}
+
+.ques_img {
     width: 20%;
     height: 20%;
+}
+
+.lbl_testAnswer, #btn-show-username-or-register, #button-dangxuat {
+    cursor: pointer;
 }

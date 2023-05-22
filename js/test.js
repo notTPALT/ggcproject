@@ -119,13 +119,13 @@ function get_ans_value(i) {
 function push_question(index, question, option1, option2, option3, option4, image_path) {
     var push_HTML = '<div class="question"><label id="ques_' + index + '" for=""><p class="ques-index">Câu ' + index + ':</p> ' + question +
         '<br></label><input type="radio" id="input_' + index + '_1" class="option" name="ans' + index +
-        '" value="1"><label for="input_' + index + '_1">A. ' + option1 +
+        '" value="1"><label for="input_' + index + '_1" class="lbl_testAnswer">A. ' + option1 +
         '<br></label><input type="radio" id="input_' + index + '_2" class="option" name="ans' + index +
-        '" value="2"><label for="input_' + index + '_2">B. ' + option2 +
+        '" value="2"><label for="input_' + index + '_2" class="lbl_testAnswer">B. ' + option2 +
         '<br></label><input type="radio" id="input_' + index + '_3" class="option" name="ans' + index +
-        '" value="3"><label for="input_' + index + '_3">C. ' + option3 +
+        '" value="3"><label for="input_' + index + '_3" class="lbl_testAnswer">C. ' + option3 +
         '<br></label><input type="radio" id="input_' + index + '_4" class="option" name="ans' + index +
-        '" value="4"><label for="input_' + index + '_4">D. ' + option4 + '<br></label></div>';
+        '" value="4"><label for="input_' + index + '_4" class="lbl_testAnswer">D. ' + option4 + '<br></label></div>';
     if (image_path !== 'none') {
         var image_HTML = '<div><img class="ques_img" src="../resources/ques_images/' + image_path + '" alt="Ques_IMG"></div>';
         document.getElementById("question-container").innerHTML += image_HTML;

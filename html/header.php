@@ -9,7 +9,7 @@
     <link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
     <title>Home - GGC</title>
     <link rel="icon" href="./resources/favicon.png">
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="./css/index.css">
 </head>
 
 <body>
@@ -22,14 +22,14 @@
 
                 <!--Tiêu đề trang-->
                 <div id="banner">
-                    <div id="para">Ôn thi trắc nghiệm Vật Lí online</div>
+                    <div id="para">Ôn tập và thi thử trắc nghiệm Vật Lí online</div>
                 </div>
 
                 <!--Các thao tác liên quan đến người dùng-->
                 <ul id="nav-infor">
                     <li>
                         <a id="link-to-reg" href="./register.php"><button id="btn-show-username-or-register"
-                                style="background-color: #B0F1FF; border: 0px;"><label
+                                style="background-color: rgba(0,0,0,0); border: 0px;"><label
                                     style="align: center;"><?php echo "Đăng ký"; ?></label></button></a>
                         <ul class="subnav-infor">
                             <?php
@@ -72,8 +72,7 @@
                             <li><a id="_10_5" href="./test.php?level=10&chapter=5">Chương 5: Động lượng</a></li>
                             <li><a id="_10_6" href="./test.php?level=10&chapter=6">Chương 6: Chuyển động tròn</a></li>
                             <li><a id="_10_7" href="./test.php?level=10&chapter=7">Chương 7: Biến dạng của vật rắn. Áp
-                                    suất chất
-                                    lỏng</a></li>
+                                    suất chất lỏng</a></li>
                         </ul>
                     </li>
                     <li>
