@@ -569,3 +569,7 @@ footer {
     width: 20%;
     height: 20%;
 }
+
+.lbl_testAnswer, #btn-show-username-or-register, #button-dangxuat {
+    cursor: pointer;
+}
