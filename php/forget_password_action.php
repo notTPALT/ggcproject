@@ -16,6 +16,7 @@
         if ($success) $_SESSION['change-pass-username'] = $_POST['username']; 
         echo '<script>verification_check('.$success.');</script>';
     }
+    
     function usernameExist($con) {
         $username = mysqli_real_escape_string($con, $_POST['username']);
         $check = mysqli_prepare($con, "SELECT COUNT(*) FROM user_infos WHERE username = ?");

@@ -64,46 +64,52 @@
                     <li>
                         <a href="">Lớp 10 ▼</a>
                         <ul class="subnavclass10">
-                            <li><a id="_10_1" href="./test.php?level=10&chapter=1">Chương 1: Mở đầu</a></li>
-                            <li><a id="_10_2" href="./test.php?level=10&chapter=2">Chương 2: Động học</a></li>
-                            <li><a id="_10_3" href="./test.php?level=10&chapter=3">Chương 3: Động lực học</a></li>
-                            <li><a id="_10_4" href="./test.php?level=10&chapter=4">Chương 4: Năng lượng, công, công
+                            <li><a id="_10_1" href="./review.php?level=10&chapter=1">Chương 1: Mở đầu</a></li>
+                            <li><a id="_10_2" href="./review.php?level=10&chapter=2">Chương 2: Động học</a></li>
+                            <li><a id="_10_3" href="./review.php?level=10&chapter=3">Chương 3: Động lực học</a></li>
+                            <li><a id="_10_4" href="./review.php?level=10&chapter=4">Chương 4: Năng lượng, công, công
                                     suất</a></li>
-                            <li><a id="_10_5" href="./test.php?level=10&chapter=5">Chương 5: Động lượng</a></li>
-                            <li><a id="_10_6" href="./test.php?level=10&chapter=6">Chương 6: Chuyển động tròn</a></li>
-                            <li><a id="_10_7" href="./test.php?level=10&chapter=7">Chương 7: Biến dạng của vật rắn. Áp
+                            <li><a id="_10_5" href="./review.php?level=10&chapter=5">Chương 5: Động lượng</a></li>
+                            <li><a id="_10_6" href="./review.php?level=10&chapter=6">Chương 6: Chuyển động tròn</a></li>
+                            <li><a id="_10_7" href="./review.php?level=10&chapter=7">Chương 7: Biến dạng của vật rắn. Áp
                                     suất chất lỏng</a></li>
                         </ul>
                     </li>
                     <li>
                         <a href="">Lớp 11 ▼</a>
                         <ul class="subnavclass11">
-                            <li><a id="_11_1" href="./test.php?level=11&chapter=1">Chương 1: Điện tích. Điện trường</a>
+                            <li><a id="_11_1" href="./review.php?level=11&chapter=1">Chương 1: Điện tích. Điện
+                                    trường</a>
                             </li>
-                            <li><a id="_11_2" href="./test.php?level=11&chapter=2">Chương 2: Dòng điện không Đổi</a>
+                            <li><a id="_11_2" href="./review.php?level=11&chapter=2">Chương 2: Dòng điện không Đổi</a>
                             </li>
-                            <li><a id="_11_3" href="./test.php?level=11&chapter=3">Chương 3: Dòng điện Trong Các Môi
+                            <li><a id="_11_3" href="./review.php?level=11&chapter=3">Chương 3: Dòng điện Trong Các Môi
                                     Trường</a></li>
-                            <li><a id="_11_4" href="./test.php?level=11&chapter=4">Chương 4: Từ trường</a></li>
-                            <li><a id="_11_5" href="./test.php?level=11&chapter=5">Chương 5: Cảm ứng điện từ</a></li>
-                            <li><a id="_11_6" href="./test.php?level=11&chapter=6">Chương 6: Khúc Xạ Ánh Sáng</a></li>
-                            <li><a id="_11_7" href="./test.php?level=11&chapter=7">Chương 7: Mắt. Các Dụng Cụ Quang</a>
+                            <li><a id="_11_4" href="./review.php?level=11&chapter=4">Chương 4: Từ trường</a></li>
+                            <li><a id="_11_5" href="./review.php?level=11&chapter=5">Chương 5: Cảm ứng điện từ</a></li>
+                            <li><a id="_11_6" href="./review.php?level=11&chapter=6">Chương 6: Khúc Xạ Ánh Sáng</a></li>
+                            <li><a id="_11_7" href="./review.php?level=11&chapter=7">Chương 7: Mắt. Các Dụng Cụ
+                                    Quang</a>
                             </li>
                         </ul>
                     </li>
                     <li>
                         <a href="">Lớp 12 ▼</a>
                         <ul class="subnavclass12">
-                            <li><a id="_12_1" href="./test.php?level=12&chapter=1">Chương 1: Dao Động Cơ</a></li>
-                            <li><a id="_12_2" href="./test.php?level=12&chapter=2">Chương 2: Sóng Cơ và Sóng Âm</a></li>
-                            <li><a id="_12_3" href="./test.php?level=12&chapter=3">Chương 3: Dòng điện xoay chiều</a>
+                            <li><a id="_12_1" href="./review.php?level=12&chapter=1">Chương 1: Dao Động Cơ</a></li>
+                            <li><a id="_12_2" href="./review.php?level=12&chapter=2">Chương 2: Sóng Cơ và Sóng Âm</a>
                             </li>
-                            <li><a id="_12_4" href="./test.php?level=12&chapter=4">Chương 4: Dao Động và Sóng Điện
+                            <li><a id="_12_3" href="./review.php?level=12&chapter=3">Chương 3: Dòng điện xoay chiều</a>
+                            </li>
+                            <li><a id="_12_4" href="./review.php?level=12&chapter=4">Chương 4: Dao Động và Sóng Điện
                                     Tử</a></li>
-                            <li><a id="_12_5" href="./test.php?level=12&chapter=5">Chương 5: Sóng Ánh Sáng</a></li>
-                            <li><a id="_12_6" href="./test.php?level=12&chapter=6">Chương 6: Lượng Tử Ánh Sáng</a></li>
-                            <li><a id="_12_7" href="./test.php?level=12&chapter=7">Chương 7: Hạt Nhân Nguyên Tử</a></li>
-                            <li><a id="_12_8" href="./test.php?level=12&chapter=8">Chương 8: Từ Vĩ Mô Đến Vĩ Mô</a></li>
+                            <li><a id="_12_5" href="./review.php?level=12&chapter=5">Chương 5: Sóng Ánh Sáng</a></li>
+                            <li><a id="_12_6" href="./review.php?level=12&chapter=6">Chương 6: Lượng Tử Ánh Sáng</a>
+                            </li>
+                            <li><a id="_12_7" href="./review.php?level=12&chapter=7">Chương 7: Hạt Nhân Nguyên Tử</a>
+                            </li>
+                            <li><a id="_12_8" href="./review.php?level=12&chapter=8">Chương 8: Từ Vĩ Mô Đến Vĩ Mô</a>
+                            </li>
                         </ul>
                     </li>
                     <li><a href="./mock_exam_ready.php">Ôn thi tốt nghiệp</a></li>
@@ -116,36 +122,4 @@
 
         <!--Nội dung của trang-->
         <div class="container-content">
-            <!-- <div class="breadcrumb">
-                <ul>
-                    <li>
-                        <a href="#">Trang chủ</a>
-                    </li>
-
-                    <li>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                            stroke="currentColor" class="w-6 h-6">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M11.25 4.5l7.5 7.5-7.5 7.5m-6-15l7.5 7.5-7.5 7.5" />
-                        </svg>
-                    </li>
-
-                    <li>
-                        <a href="#">Lớp Z</a>
-                    </li>
-
-                    <li>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                            stroke="currentColor" class="w-6 h-6">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M11.25 4.5l7.5 7.5-7.5 7.5m-6-15l7.5 7.5-7.5 7.5" />
-                        </svg>
-                    </li>
-
-                    <li>
-                        <a href="#">Chương Y</a>
-                    </li>
-                </ul>
-
-            </div> -->
-            <div class="box-content">
+            <div id="content-box" class="box-content">

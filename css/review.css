@@ -1,12 +1,3 @@
-<?php
-session_start();
-if (!isset($_SESSION['username'])) {
-    echo '<script>window.location.href="./login.php";</script>';
-}
-require_once("./html/header.php");
-?>
-
-<style>
 .container {
     display: flex;
     justify-content: center;
@@ -93,23 +84,3 @@ input[type="button"] {
     margin-bottom: 20px;
     /* Khoảng cách giữa các câu hỏi */
 }
-</style>
-
-<h3 id="chapter-name" style="font-size: 25px;"></h3>
-<div class="container">
-    <br>
-    <!-- Dev note: 2 cái input và div trong này chung 1 chỗ nhé -->
-    <input type="button" id="btn-start-timer" name="btn-start-timer" value="Bắt đầu làm bài!">
-    <div id="timer" name="timer"></div>
-</div>
-<div id="result"></div>
-<div id="check-ans"></div>
-<div id="question-container"></div>
-<button id="submit" name="ans-submit">Nộp bài!</button>
-<button id="next-chapter" hidden></button>
-
-<?php 
-echo file_get_contents("./html/footer.html");
-require_once("./php/connect_MySQL_n_log.php");
-require_once("./php/test_get_data.php");
-?>

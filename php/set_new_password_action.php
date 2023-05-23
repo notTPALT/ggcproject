@@ -10,5 +10,7 @@
         } else {
             echo '<script>document.getElementById("pass-check").innerHTML = "Hai mật khẩu không giống nhau";</script>';
         }
+    } else {
+        echo '<script>window.location.href="./forget_password.php";</script>';
     }
 ?>

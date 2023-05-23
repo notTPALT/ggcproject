@@ -1,4 +1,4 @@
-<script src="./js/test.js"></script>
+<script src="./js/review.js"></script>
 
 <?php
 if (isset($_GET['level']) && isset($_GET['chapter'])) {
@@ -6,7 +6,6 @@ if (isset($_GET['level']) && isset($_GET['chapter'])) {
     $chapter = $_GET['chapter'];
     $num_of_ques = 1;
     
-    // echo '<script>update_breadcumb('.$level.', '.$chapter.');</script>';
     echo '<script>update_chapter_title('.$level.', '.$chapter.');</script>';
     echo '<script>update_button_events("'.$level.'", "'.$chapter.'");</script>';
 
