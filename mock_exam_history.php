@@ -51,76 +51,101 @@
             $writer->save('php://output');
             exit();
         }
-    ?>
-<style>
-.tableStyle {
-    border: none;
-    width: 90%;
-}
+?>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+        <link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
+        <title>Lịch sử thi</title>
+        <link rel="icon" href="./resources/favicon.png">
+        <link rel="stylesheet" href="css/index.css">
+    </head>
+    <style>
+        .tableStyle {
+            border: none;
+            width: 90%;
+        }
 
-.tableStyle th {
-    background-color: #cad8fa;
-    padding: 5px;
-}
+        .tableStyle th {
+            background-color: #cad8fa;
+            padding: 5px;
+        }
 
-.tableStyle td {
-    background-color: #f0e7da;
-    padding: 5px;
-}
+        .tableStyle td {
+            background-color: #f0e7da;
+            padding: 5px;
+        }
 
-#text {
-    text-align: center;
-}
-</style>
+        #text {
+            text-align: center;
+        }
+    </style>
+    <body>
+        <div id="container">
+            <?php require_once("./html/header.php"); ?>
 
-<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
-    <table class="tableStyle">
-        <tr>
-            <td id="text"><strong>Lần thi</strong></td>
-            <td id="text"><strong>Số câu đúng</strong></td>
-            <td id="text"><strong>Số câu sai</strong></td>
-            <td id="text"><strong>Số câu để trống</strong></td>
-            <td id="text"><strong>Điểm</strong></td>
-        </tr>
+            <!--Nội dung của trang-->
+            <div class="container-content">
+                <div class="box-content">
+                    <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
+                        <table class="tableStyle">
+                            <tr>
+                                <td id="text"><strong>Lần thi</strong></td>
+                                <td id="text"><strong>Số câu đúng</strong></td>
+                                <td id="text"><strong>Số câu sai</strong></td>
+                                <td id="text"><strong>Số câu để trống</strong></td>
+                                <td id="text"><strong>Điểm</strong></td>
+                            </tr>
 
-        <?php
-            $sql = "SELECT * FROM mock_exam_history WHERE username = '".$_SESSION['username']."'";
-            
-            $result = mysqli_query($con, $sql);
-            $i = 1;
-            while($res = mysqli_fetch_array($result)){ $k = $i;?>
-        <tr>
-            <td id="text"><?php echo $k; ?></td>
-            <td id="text"><?php echo $res['correct']; ?></td>
-            <td id="text"><?php echo $res['incorrect']; ?></td>
-            <td id="text"><?php echo $res['unanswered']; ?></td>
-            <td id="text"><?php echo $res['point_total']; ?></td>
-        </tr>
-        <?php
-            $i++;}
+                            <?php
+                                $sql = "SELECT * FROM mock_exam_history WHERE username = '".$_SESSION['username']."'";
+                                
+                                $result = mysqli_query($con, $sql);
+                                $i = 1;
+                                while($res = mysqli_fetch_array($result)){ $k = $i;?>
+                            <tr>
+                                <td id="text"><?php echo $k; ?></td>
+                                <td id="text"><?php echo $res['correct']; ?></td>
+                                <td id="text"><?php echo $res['incorrect']; ?></td>
+                                <td id="text"><?php echo $res['unanswered']; ?></td>
+                                <td id="text"><?php echo $res['point_total']; ?></td>
+                            </tr>
+                            <?php
+                                $i++;}
+                                ?>
+                            <tr>
+                                <td id="text" colspan="5">
+                                    <input style="background-color: #4CAF50;
+                                                    color: white;
+                                                    height :30px;
+                                                    border: none;
+                                                    padding: 10px 20px;
+                                                    text-align: center;
+                                                    text-decoration: none;
+                                                    display: inline-block;
+                                                    font-size: 20px;
+                                                    border-radius: 5px;
+                                                    cursor: pointer;
+                                                line-height: 15px;" type="submit" name="save" value="Lưu kết quả">
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
+                </div>
+            </div>
+            <?php 
+                echo file_get_contents("./html/footer.html");
             ?>
-        <tr>
-            <td id="text" colspan="5">
-                <input style="background-color: #4CAF50;
-                                color: white;
-                                height :30px;
-                                border: none;
-                                padding: 10px 20px;
-                                text-align: center;
-                                text-decoration: none;
-                                display: inline-block;
-                                font-size: 20px;
-                                border-radius: 5px;
-                                cursor: pointer;
-                            line-height: 15px;" type="submit" name="save" value="Lưu kết quả">
-            </td>
-        </tr>
-    </table>
-</form>
+        </div>
+    </body>
+</html>
 <?php 
-        echo file_get_contents("./html/footer.html");
     }
     else{
         echo "Đăng nhập để có thể truy cập!";
     }
-?>
+?>  

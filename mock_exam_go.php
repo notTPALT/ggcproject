@@ -58,48 +58,6 @@
 </head>
 
 <body>
-    <script>
-    // window.addEventListener("beforeunload", function(event) {
-    //     var naviType = String(performance.getEntriesByType("navigation")[0].type);
-    //     if (naviType !== "reload") {
-    //         var confirmMessage =
-    //             "Bạn có chắc không? Việc này sẽ được tính là bỏ thi và bạn sẽ bị đánh 0 điểm vào lịch sử thi thử của bạn.";
-
-    //         event.preventDefault();
-    //         event.returnValue = confirmMessage;
-    //         return confirmMessage;
-    //     }
-    // });
-
-    // const xhrCall = () => {
-    //     return new Promise((resolve, reject) => {
-    //         var xhr_handleClosingMockExam = new XMLHttpRequest();
-    //         xhr_handleClosingMockExam.open('POST', './php/handle_closing_mock_exam.php');
-    //         xhr_handleClosingMockExam.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-    //         xhr_handleClosingMockExam.send();
-    //         console.log(xhr_handleClosingMockExam.response);
-    //         resolve("");
-    //     });
-    // }
-    // window.addEventListener("unload", async function(event) {
-    //     var naviType = String(performance.getEntriesByType("navigation")[0].type);
-    //     if (naviType !== "reload") {
-    //         localStorage.clear();
-    //         await xhrCall();
-    //     };
-    // });
-
-    // function confirmSubmit() {
-    //     let confirmAction = confirm("Bạn có muốn nộp bài không?");
-    //     console.log(confirmAction);
-    //     if (confirmAction) {
-
-    //         window.location.href = "./mock_exam_result.php";
-    //     } else {
-
-    //     }
-    // }
-    </script>
     <p class="title"><b>Test trắc nghiệm THPT môn Vật Lý - GGC<b></p>
 
     <div class="timer">

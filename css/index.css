@@ -4,7 +4,12 @@
     box-sizing: border-box;
 }
 
+<<<<<<< Updated upstream
 #container {
+=======
+#container{
+    min-width: 1349px;
+>>>>>>> Stashed changes
     background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);
 }
 
