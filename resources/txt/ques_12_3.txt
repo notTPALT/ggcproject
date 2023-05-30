@@ -2,7 +2,9 @@
 3,1 A
 2,2 A
 0,31 A
-0,22 A<sup>2</sup>none
+0,22 A
+none
+2
 Cho dòng điện xoay chiều i = 2cos100πt (A) qua điện trở R = 50 Ω trong thời gian 1 phút. Nhiệt lượng tỏa ra trên điện trở là:
 6000 J
 1000 J
@@ -64,4 +66,5 @@ R ≤ 5,8 Ω
 R ≤ 3,6 Ω
 R ≤ 36 Ω
 R ≤ 72 Ω
+none
 1

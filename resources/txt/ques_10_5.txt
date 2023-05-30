@@ -1,0 +1,70 @@
+Khi ánh sáng trắng đi qua một lăng kính, bị tách ra thành các chùm tia có màu sắc khác nhau là do hiện tượng:
+tán xạ ánh sáng
+tán sắc ánh sáng
+phản xạ ánh sáng
+khúc xạ ánh sáng
+none
+3
+Chiếu một tia sáng màu xanh từ chân không vào một môi trường trong suốt theo phương xiên góc với mặt phân cách. Sau khi vào môi trường này:
+màu của ánh sáng thay đổi
+tần số của ánh sáng thay đổi
+bước sóng của ánh sáng thay đổi
+phương truyền của ánh sáng không thay đổi
+none
+3
+Chiếu một chùm tia sáng hẹp gồm hai thành phần ánh sáng đơn sắc vàng và kục đi từ không khí vào mặc của tấm thủy tinh theo phương xiên góHiện tượng xảy ra là:
+hai tia khúc xạ lệch về hai phía của pháp tuyến
+tia khúc xạ màu vàng bị lệch ít, tia khúc xạ màu lục bị lệch nhiều
+tia khúc xạ màu kkục bị lệch ít, tia khúc xạ màu vàng bị lệch nhiều
+chùm tia sáng chỉ bị khúc xạ
+none
+2
+Hiện tượng nào dưới đây do ánh sáng bị tán sắc gây ra?
+Hiện tượng quang – phát quang
+Hiện tượng cấu vòng
+Hiện tượng tia sáng bị đổi hướng khi truyền qua mặt phân cách giữa hai môi trường trong suốt
+Hiện tượng phát xạ lượng từ
+none
+2
+Để đo bước sóng của ánh sáng đơn sắc người ta có thể dùng:
+thí nghiệm Y – ân về giao thoa ánh sáng
+thí nghiệm tán sắc ánh sáng
+thì nghiệm tổng hợp ánh sáng trắng
+thí nghiện của Niu – tơn về ánh sáng đơn sắc
+none
+1
+Tia hồng ngoại là sóng điện từ có bước sóng:
+nhỏ hơn bước sóng ánh sáng đỏ
+nhỏ hơn bước sóng ánh sáng tím
+lớn hơn bước sóng ánh sáng đỏ
+nằm trong khoảng bước sóng ánh sáng đỏ và tím
+none
+3
+Tia hồng ngoại, tử ngoại và Rơn – ghen không có tính chất chung nào nếu dứoi đây?
+Đều có khả năng đâm xuyên mạnh
+Đều là sóng điện từ
+Đều có tính lượng từ
+Đều có tính chất sóng
+none
+1
+Tính chất giống nhau giữa tia Rơn – ghen và tia tử ngoại là:
+bị hấp thụ bởi thủy tinh và nước
+làm phát quang một số chất
+có tính đâm xuyên mạnh
+đều bị lệch trong điện trường
+none
+2
+Trong bốn loại tia dưới đây, tia nào xếp thứ hai về khả năng đâm xuyên?
+Tia gamma
+Tia hồng ngoại
+Tia Rơn – ghen
+Tia tử ngoại
+none
+3
+Tia X và tia tử ngoại không có chung tính chất nào sau đây ?
+không mang điện
+có khả năng sinh lí
+tác dụng mạnh lên kính ảnh
+bị nước hấp thụ mạnh.
+none
+4

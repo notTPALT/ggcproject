@@ -1,0 +1,115 @@
+body {
+    background-color: #DCDCDC;
+    font-family: Arial, sans-serif;
+}
+
+div {
+    text-align: center;
+    margin-top: 20px;
+}
+
+h1 {
+    color: #333;
+    font-size: 24px;
+}
+
+input[type="text"] {
+    width: 300px;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+}
+
+table {
+    margin: 20px auto;
+    border-collapse: collapse;
+    width: 80%;
+}
+table, tr {
+    border: none;
+    border-radius: 5px;
+}
+
+td {
+    padding: 5px;
+}
+
+textarea {
+    width: 100%;
+    padding: 3px;
+    border: none;
+    border-radius: 5px;
+    resize: vertical;
+}
+.center {
+    text-align: center;
+}
+
+.center input[type="submit"] {
+    height: 40px;
+    width: 80px;
+    padding: 5px 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #d32f2f;
+   }
+   .small-row td {
+    padding: 5px;
+}
+
+.small-row input[type="text"],
+.small-row textarea {
+    width: 100%;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+}
+
+.small-question-row td:first-child,
+.small-answer-row td:first-child {
+    width: 30%;
+}
+
+.small-question-row td:last-child,
+.small-answer-row td:last-child {
+    width: 70%;
+}
+.sidebar {
+    flex: 1;
+    background-color: yellowgreen;
+    width: 20%;
+    padding: 10px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li {
+    margin-bottom: 10px;
+}
+
+.sidebar a {
+    display: block;
+    padding: 5px;
+    background-color: #f2f2f2;
+    color: #333;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.sidebar a:hover {
+    background-color: #ccc;
+}
+.sidebar a.active {
+    background-color: #ff9800;
+    text-align: center;
+    font-size: 20px;
+}

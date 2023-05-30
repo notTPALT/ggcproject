@@ -16,12 +16,16 @@ Chiếu một chùm tia sáng hẹp gồm hai thành phần ánh sáng đơn s�
 hai tia khúc xạ lệch về hai phía của pháp tuyến
 tia khúc xạ màu vàng bị lệch ít, tia khúc xạ màu lục bị lệch nhiều
 tia khúc xạ màu kkục bị lệch ít, tia khúc xạ màu vàng bị lệch nhiều
-chùm tia sáng chỉ bị khúc xạ<sup>2</sup>none
+chùm tia sáng chỉ bị khúc xạ
+none
+2
 Hiện tượng nào dưới đây do ánh sáng bị tán sắc gây ra?
 Hiện tượng quang – phát quang
 Hiện tượng cấu vòng
 Hiện tượng tia sáng bị đổi hướng khi truyền qua mặt phân cách giữa hai môi trường trong suốt
-Hiện tượng phát xạ lượng từ<sup>2</sup>none
+Hiện tượng phát xạ lượng từ
+none
+2
 Để đo bước sóng của ánh sáng đơn sắc người ta có thể dùng:
 thí nghiệm Y – ân về giao thoa ánh sáng
 thí nghiệm tán sắc ánh sáng
@@ -47,7 +51,9 @@ Tính chất giống nhau giữa tia Rơn – ghen và tia tử ngoại là:
 bị hấp thụ bởi thủy tinh và nước
 làm phát quang một số chất
 có tính đâm xuyên mạnh
-đều bị lệch trong điện trường<sup>2</sup>none
+đều bị lệch trong điện trường
+none
+2
 Trong bốn loại tia dưới đây, tia nào xếp thứ hai về khả năng đâm xuyên?
 Tia gamma
 Tia hồng ngoại
@@ -60,4 +66,5 @@ không mang điện
 có khả năng sinh lí
 tác dụng mạnh lên kính ảnh
 bị nước hấp thụ mạnh.
+none
 4
