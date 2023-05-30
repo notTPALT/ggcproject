@@ -573,3 +573,13 @@ footer {
 .lbl_testAnswer, #btn-show-username-or-register, #button-dangxuat {
     cursor: pointer;
 }
+
+#yt-url ,#btn_goToYT {
+    margin: 50px 5px 20px 5px;
+    width: 90px;
+    height: 30px;
+}
+
+#yt-url {
+    width: 300px;
+}

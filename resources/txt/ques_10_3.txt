@@ -1,0 +1,70 @@
+Những chất nào dưới đây không phải là chất bán dẫn?
+Silic (Si)
+Gecmani (Ge)
+Lưu huỳnh (S)
+Sunfua chì (PbS)
+none
+3
+Chọn phát biểu đúng
+Điện trở suất của bán dẫn giảm tuyến tính với nhiệt độ
+Tính dẫn điện của bán dẫn phụ thuộc vào độ tinh khiết của chất bán dẫn
+Lỗ trống trong chất bán dẫn là hạt dẫn điện mạng điện tíâm
+Trong điều kiện nhiệt độ thấp, trong chất bán dẫn nhiều electron tự do
+none
+2
+Điều kiện tác động làm xuất hiện cặp electron-lỗ trống trong chất bán dẫn là độ ẩm của môi trường
+ánh sáng
+âm thanh
+ánh sáng thíhợp
+siêu âm
+none
+3
+Để tạo ra chất bán dẫn loại n, người ta pha thêm tạp chất, cápha tạp chất đúng là
+Ge + As
+Ge + In
+Ge + S
+Ge + Pb
+none
+1
+Để tạo ra chất bán dẫn loại p, người ta pha thêm tạp chất, cápha tạp chất đúng là
+Si + As
+Si + B
+Si + S
+Si + Pb<sup>2</sup>
+none
+3
+Chọn phát biểu đúng khi nói về các hạt tải điện trong chất bán dẫn
+Các hạt tải điện trong chất bán dẫn luôn bgồm electron dẫn và lỗ trống
+Các hạt tải điện trong chất bán dẫn loại p chỉ là chỗ trống
+Các hạt tải điện trong chất bán dẫn loại n chỉ là electron
+hloại hạt tải điện gồm electron dẫn và lỗ trống đều mang điện âm
+none
+1
+Tính chất của điôt bán dẫn là
+Chỉnh lưu và khuếđại
+Trộn sóng
+Ổn áp và phát quang
+Chỉnh lưu và dđộng
+none
+4
+Tranzito là dụng bán dẫn chân, cấu tạo của nó số lớp chuyển tiếp là
+4 lớp
+2 lớp
+3 lớp
+1 lớp
+none
+2
+Chọn câu sai
+Với cùng một hiệu điện thế ngược đặt vào một điôt chỉnh lưu, cường độ dòng điện ngược tăng khi nhiệt độ tăng.
+thể dùng điôt phát quang để làm thí nghiệm minh họa tính chỉnh lưu của điôt.
+Phôtôđiôt thể tạo ra dòng điện, nếu lớp chuyển tiếp p – n của nó được chiếu bằng ánh sáng thíhợp, khi hcủa của Phôtôđiôt được nối với một điện trở.
+thể ththế một tranzito n – p – n bằng hđiôt mắc chung ở phía bán dẫn loại p.
+none
+4
+Chọn câu sai
+Tại lớp chuyển tiếp p – n, sự khuếtán electron từ bán dẫn loại p sang bán dẫn loại n và khuếtán lỗ trống từ bán dẫn loại n sang bán dẫn loại p
+Khi electron gặp lỗ trống, chúng liên kết và một cặp electron và lỗ trống biến mất
+Lớp chuyển tiếp p – n gọi là lớp nghèo vì không hạt tải điện
+Điện trở của lớp nghèo trong tiếp xúc p-n rất lớn
+none
+1

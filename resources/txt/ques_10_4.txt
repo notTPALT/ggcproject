@@ -1,0 +1,70 @@
+Một hạt mang điện chuyển động trên một mặt phẳng (P) vuông góc với đường sức của một từ trường đều. Lực Lo-ren-xơ tác dụng lên hạt mang điện có
+phương vuông góc với mặt phẳng (P)
+độ lớn tỉ lệ với điện tícủa hạt mang điện
+chiều không phụ thuộc vào điện tícủa hạt mang điện
+độ lớn tỉ lệ nghịvới tốc độ của hạt mang điện
+none
+2
+Một electron được bắn vào trong một từ trường đều theo phương vuông góc với các đường sức của từ trường. Quỹ đạo của electron trong từ trường là
+một đường tròn
+một đường parabon
+một nửa đường thẳng
+một đường elip
+none
+1
+Khi một electron được bắn vào một từ trường đều theo phương vuông góc với các đường sức của từ trường. Đại lượng của electron không thđổi theo thời gilà
+vận tốc
+gia tốc
+động lượng
+động năng.
+none
+4
+Một ion btheo quỹ đạo tròn bán kính R trong một mặt phẳng vuông góc với các đường sức của một từ trường đều. Khi độ lớn của vận tốc tăng gấp đôi thì bán kính quỹ đạo là bnhiêu.
+R/2
+R
+2R
+4R.
+none
+3
+Khi nói về tương tác từ, điều nào sđâu là đúng?
+Các cực cùng tên của nchâm thì hút nhau
+Hdòng điện không đổi, đặt song song cùng chiều thì hút nhau
+Các cực khác tên của nchâm thì đẩy nhau
+Nếu cực bắc của một nchâm hút một thanh sắt thì cực ncủa thanh nchâm đẩy thanh sắt.
+none
+2
+Tính chất nào sđây của đường sức từ không giống với đường sức của điện trường (tĩnh)?
+Qua mỗi điểm trong không gichỉ vẽ được một đường sức
+Các đường sức là những đường cong khép kín (hoặc vô hạn ở hđầu)
+Chiều của đường sức tuân theo những quy tắc xác định.
+Chỗ nào từ trường (hđiện trường) mạnh thì vẽ các đường sức mvà chỗ nào từ trường (hđiện trường) yếu thì vẽ các đường sức thưa.
+none
+2
+Xung quanh vật nào sđây không từ trường?
+Dòng điện không đổi
+Hạt mang điện chuyển động
+Hạt mang điện đứng yên
+Nchâm chữ U
+none
+3
+Đường sức từ dạng là đường thẳng, song song, cùng chiều cáđều nhxuất hiện
+Xung quanh dòng điện thẳng
+Xung quanh một thanh nchâm thẳng
+Trong lòng của một nchâm chữ U
+Xung quanh một dòng điện tròn.
+none
+3
+Chọn câu s?
+Các đường mạt sắt của từ phổ cho biết dạng của đường sức từ.
+Các đường sức từ của từ trường đều là những đường thẳng song song, cáđều nhau.
+Nói chung các đường sức điện thì không kín, còn các đường sức từ là những đường cong kín.
+Một hạt mang điện chuyển động theo quỹ đạo tròn trong từ trường thì quỹ đạo của nó là một đường sức từ của từ trường
+none
+4
+hthanh kim loại bằng sắt, ngoài giống nhau. Khi đặt chúng gần nhthì chúng hút nhau. kết luận gì về hthanh đó ?
+Đó là hthanh nchâm.
+Một thanh là nchâm, thanh còn lại là thanh sắt.
+thể là hthanh nchâm, cũng thể là hthanh sắt.
+thể là hthanh nchâm, cũng thể là một thanh nchâm và một thanh sắt.
+none
+4

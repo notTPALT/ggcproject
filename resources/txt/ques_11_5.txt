@@ -2,7 +2,9 @@ Từ trường của một nchâm giống từ trường được tạo bởi
 Một dây dẫn thẳng dòng điện chạy qua.
 Một ống dây dòng điện chạy qua.
 Một nchâm hình móng ngựa.
-Một vòng dây tròn dòng điện chạy qua.<sup>2</sup>none
+Một vòng dây tròn dòng điện chạy qua.
+none
+2
 Các đường sức từ quanh dây dẫn thẳng dòng điện không đổi chạy qua dạng:
 Các đường thẳng song song với dòng điện.
 Các đường thẳng vuông góc với dòng điện như những nhoa xe đạp.
@@ -28,7 +30,9 @@ Phát biểu nào sđây không đúng ?
 Qua bất kì điểm nào trong từ trường ta cũng thể vẽ được một đường sức từ.
 Đường sức từ nchâm thẳng tạo ra xung quanh nó là những đường thẳng.
 Đường sức từ mhơn ở nơi từ trường lớn, đường sức thưa hơn ở nơi từ trường nhỏ hơn.
-Các đường sức từ là những đường cong kín.<sup>2</sup>none
+Các đường sức từ là những đường cong kín.
+none
+2
 Từ cực Bắc của Trái Đất
 Trùng với cực Nđịa lí của Trái Đất.
 Trùng với cực Bắc địa lí của Trái Đất.
@@ -62,4 +66,5 @@ vôn (V)
 henry (H)
 tesla (T)
 vê(Wb).
+none
 2

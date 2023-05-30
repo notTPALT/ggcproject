@@ -16,7 +16,9 @@ none
 Si + As
 Si + B
 Si + S
-Si + Pb<sup>2</sup>none
+Si + Pb
+none
+2
 Để đo bước sóng của ánh sáng đơn sắc người ta có thể dùng:
 thí nghiệm Y – ân về giao thoa ánh sáng
 thí nghiệm tán sắc ánh sáng
@@ -42,7 +44,9 @@ Tính chất giống nhau giữa tia Rơn – ghen và tia tử ngoại là:
 bị hấp thụ bởi thủy tinh và nước
 làm phát quang một số chất
 có tính đâm xuyên mạnh
-đều bị lệch trong điện trường<sup>2</sup>none
+đều bị lệch trong điện trường
+none
+2
 Trong bốn loại tia dưới đây, tia nào xếp thứ hai về khả năng đâm xuyên?
 Tia gamma
 Tia hồng ngoại
@@ -62,4 +66,5 @@ Cho mạch dao động LC, cuộn dây có độ tự cảm L = 2mH và tụ đi
 25 Hz
 10 Hz
 2,5 MHz
+none
 4

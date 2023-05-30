@@ -16,7 +16,9 @@ Công thức xác định cường độ dòng điện không đổi là:
 I=qt
 I = q/t
 I = t/q
-I = q/e<sup>2</sup>none
+I = q/e
+none
+2
 Ngoài đơn vị ampe (A), đơn vị cường độ dòng điện thể là
 culông (C)
 vôn (V)
@@ -35,7 +37,9 @@ Hđiện cực kim loại trong pin điện hoá phải
 cùng kíthước
 Là hkim loại khác nhvề bản chất hoá học
 cùng khối lượng
-cùng bản chất<sup>2</sup>none
+cùng bản chất
+none
+2
 Hcực của pin điện hoá được ngâm trong chất điện phân là dung dịch
 Muối
 Axit
@@ -62,4 +66,5 @@ A.12C
 B.24C
 C.0,83C
 D.2,4C
+none
 1

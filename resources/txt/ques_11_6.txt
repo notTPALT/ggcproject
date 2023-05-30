@@ -9,7 +9,9 @@ Nước và thuỷ tinh chiết suất lần lượt là n1 và n2. Chiết su�
 n21 = n1/n2
 n21 = n2/n1
 n21 = n2 - n1
-n12 = n1 - n2<sup>2</sup>none
+n12 = n1 - n2
+none
+2
 Khi chiếu ánh sáng từ không khí vào nước thì
 góc khúc xạ luôn nhỏ hơn góc tới
 góc khúc xạ luôn lớn hơn góc tới
@@ -28,7 +30,9 @@ Một điểm sáng O nằm trong chất lỏng chiết suất n, cámặt chấ
 1,12
 1,2
 1,33
-1,4<sup>2</sup>none
+1,4
+none
+2
 Một người nhìn một hòn sỏi nhỏ O nằm ở đáy một nước sâu 1,2m theo phương gần vuông góc với mặt nướBiết chiết suất của nước là 4/3. Người này thấy ảnh O’ của O nằm cámặt nước một khoảng bằng
 1,5m
 80cm
@@ -47,15 +51,20 @@ Một bản mặt song song dày 6cm, chiết suất n = 1,5 được đặt tro
 1cm
 2cm
 3cm
-4cm<sup>2</sup>none
+4cm
+none
+2
 Tốc độ ánh sáng trong chân không là 3.108 m/s. Kim cương chiết suất 2,42. Tốc độ truyền ánh sáng trong kim cương là
 242000km/s
 124000km/s
 72600km/s
-62700 km/s<sup>2</sup>none
+62700 km/s
+none
+2
 Chiếu một chùm tia sáng tới mặt phân cágiữa hmôi trường trong suốt. Khi xảy ra hiện tượng phản xạ toàn phần thì
 cường độ ánh sáng của chùm khúc xạ gần bằng cường độ sáng của chùm tới
 Cường độ ánh sáng của chùm tia phản xạ gần bằng cường độ sáng của chùm tới.
 cường độ sáng của chùm tia phản xạ lớn hơn cường độ sáng của chùm tia tới
 cường độ sáng của chùm tia tới, chùm tia phản xạ và chùm tia khúc xạ bằng nhau
+none
 2

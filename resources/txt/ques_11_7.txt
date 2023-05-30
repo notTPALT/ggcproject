@@ -66,4 +66,5 @@ thể tạo ra chùm sáng song song từ chùm sáng hội tụ
 thể tạo ra chùm sáng phân kì từ chùm sáng phân kì
 thể tạo ra chùm sáng hội tụ từ chùm sáng song song
 thể tạo ra chùm sáng hội tụ từ chùm sáng hội tụ
+none
 1

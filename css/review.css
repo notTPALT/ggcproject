@@ -84,3 +84,8 @@ input[type="button"] {
     margin-bottom: 20px;
     /* Khoảng cách giữa các câu hỏi */
 }
+
+#content-box {
+    font-family: 'Calibri';
+    font-size: large;
+}

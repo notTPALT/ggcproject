@@ -70,14 +70,18 @@ const update_correct_answer = (level, chapter, i) =>
                 if (!user_ans) { //Nếu như người dùng bỏ câu hỏi thì xem như sai và đánh dấu màu vàng
                     let right_ans_label = document.querySelector('label[for="input_' + i + '_' + xhr_getRightAns.response + '"]');
                     right_ans_label.style.color = "brown";
+                    right_ans_label.style.fontWeight = "bold";
                 } else if (parseInt(xhr_getRightAns.response) == user_ans.value) { //Trùng đáp án
                     correct++;
 
                     chosen_ans_label.style.color = "green";
+                    chosen_ans_label.style.fontWeight = "bold";
                 } else { //Trật đáp án
                     chosen_ans_label.style.color = "red";
+                    chosen_ans_label.style.fontWeight = "bold";
                     let right_ans_label = document.querySelector('label[for="input_' + i + '_' + xhr_getRightAns.response + '"]');
                     right_ans_label.style.color = "green";
+                    right_ans_label.style.fontWeight = "bold";
                 }
                 resolve("");
             } else {
