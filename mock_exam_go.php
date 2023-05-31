@@ -90,6 +90,7 @@
         }
 ?>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -114,7 +115,7 @@
 				$tmp2 = mysqli_query($con, $sql2);
 		?>
         <form action="" method="POST">
-        <?php
+            <?php
             $i = 1;
             while($res = mysqli_fetch_array($tmp2)){ ?>
             <table id="<?php echo $res['id'] ?>" hidden>
@@ -142,10 +143,10 @@
                 </tr>
 
                 <script>
-                    addInputEvent("<?php echo $res['id'] ?>");
+                addInputEvent("<?php echo $res['id'] ?>");
                 </script>
             </table>
-        <?php 
+            <?php 
 				$i++;
 			}
 		?>
@@ -171,41 +172,45 @@
             }
 		?>
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>                
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script>
-        document.getElementById("1").hidden = false;
-        reload_user_input();
-        $(document).ready(function () {
-            // set thời gian động 
-            let countDownDate = new Date("<?php echo "$getDateTime"; ?>").getTime();
+    document.getElementById("1").hidden = false;
+    reload_user_input();
+    $(document).ready(function() {
+        // set thời gian động 
+        let countDownDate = new Date("<?php echo "$getDateTime"; ?>").getTime();
 
-            var x = setInterval(function() {
-                var now = new Date().getTime();
+        var x = setInterval(function() {
+            var now = new Date().getTime();
 
-                // Find the distance between now an the count down date
-                var distance = countDownDate - now; 
-                // Time calculations for days, hours, minutes and seconds
-                var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            // Find the distance between now an the count down date
+            var distance = countDownDate - now;
+            // Time calculations for days, hours, minutes and seconds
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-                hours = hours < 10 ? "0" + hours : hours;
-                minutes = minutes < 10 ? "0" + minutes : minutes;
-                seconds = seconds < 10 ? "0" + seconds : seconds;
+            hours = hours < 10 ? "0" + hours : hours;
+            minutes = minutes < 10 ? "0" + minutes : minutes;
+            seconds = seconds < 10 ? "0" + seconds : seconds;
 
-                
-                document.getElementById("thoigianconlai").innerHTML = hours + " giờ " + minutes + " phút " + seconds + " giây";
-                // If the count down is over, write some text 
-                if (distance < 0) {
-                    clearInterval(x);
-                    document.getElementById("thoigianconlai").innerHTML = "Hết thời gian làm bài";
-                    var submitButton = document.querySelector('input[name="sub"]');
-                    submitButton.click();
-                }
-            }, 200);
-        });
+
+            document.getElementById("thoigianconlai").innerHTML = hours + " giờ " + minutes + " phút " +
+                seconds + " giây";
+            // If the count down is over, write some text 
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("thoigianconlai").innerHTML = "Hết thời gian làm bài";
+                var submitButton = document.querySelector('input[name="sub"]');
+                submitButton.click();
+            }
+        }, 200);
+    });
     </script>
 </body>
+
 </html>
-<?php }?>
+<?php } else {
+    echo "<script>location.href = './login.php';</script>";
+}?>
