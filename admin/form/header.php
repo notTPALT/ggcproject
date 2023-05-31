@@ -18,7 +18,7 @@
     if (isset($_POST['logout'])){
       unset($_SESSION['admin']);
       echo "<script>
-              window.location.href = 'login_admin.php';
+              window.location.href = '../login_admin.php';
             </script>";
     }
 ?>

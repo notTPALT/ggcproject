@@ -27,9 +27,9 @@
                 <!-- Danh mục nội dung -->
                 <ul>
                     <li><a href="#" class="active"><b>Danh mục</b></a></li>
-                    <li><a href="user.php">亗 Tài khoản</a></li>
+                    <li><a href="account_user.php">亗 Tài khoản</a></li>
                     <li><a style="background-color: yellow;" href="question.php">亗 Câu hỏi thi thử ◉</a></li>
-                    <li><a href="point.php">亗 Điểm</a></li>
+                    <li><a href="account_admin.php">亗 Tài khoản admin</a></li>
                 </ul>
             </nav>
         </div>

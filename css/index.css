@@ -4,12 +4,8 @@
     box-sizing: border-box;
 }
 
-<<<<<<< Updated upstream
-#container {
-=======
 #container{
     min-width: 1349px;
->>>>>>> Stashed changes
     background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);
 }
 
@@ -157,6 +153,7 @@
     font-weight: bold;
     border: 0px;
     cursor: pointer;
+    border-radius: 7px;
 }
 
 
@@ -577,4 +574,22 @@ footer {
 
 .lbl_testAnswer, #btn-show-username-or-register, #button-dangxuat {
     cursor: pointer;
+}
+
+/*  */
+.feature-list {
+    list-style-type: decimal;
+    margin-left: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.feature-list li {
+    margin-bottom: 10px;
+}
+.highlight {
+    font-weight: bold;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 20px;
 }

@@ -7,7 +7,7 @@
     $id = $_POST['id'];
 
     // Xóa câu hỏi khỏi cơ sở dữ liệu
-    $sql = "DELETE FROM tbquestion_graduation WHERE id = '$id'";
+    $sql = "DELETE FROM tb_admin WHERE id = '$id'";
     if (mysqli_query($con, $sql)) {
         echo "success";
     } else {
