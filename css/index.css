@@ -4,8 +4,7 @@
     box-sizing: border-box;
 }
 
-#container{
-    min-width: 1349px;
+#container {
     background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);
 }
 
@@ -153,7 +152,6 @@
     font-weight: bold;
     border: 0px;
     cursor: pointer;
-    border-radius: 7px;
 }
 
 
@@ -584,21 +582,4 @@ footer {
 
 #yt-url {
     width: 300px;
-}
-/*  */
-.feature-list {
-    list-style-type: decimal;
-    margin-left: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
-}
-
-.feature-list li {
-    margin-bottom: 10px;
-}
-.highlight {
-    font-weight: bold;
-    padding-left: 20px;
-    padding-right: 20px;
-    font-size: 20px;
 }

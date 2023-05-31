@@ -1,0 +1,57 @@
+/*CSS cho tất cả */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*CSS cho thành phần chứa label, table, button */
+.container{
+    width: 600px;
+    height: 500px;
+    background-color: #d9d9d9;
+    text-decoration: none;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 600;
+    text-align: center;
+    padding-top: 30px;
+    font-size: 20px;
+}
+
+/*CSS cho bảng chứa các thông tin cần nhập */
+table{
+    padding-top: 30px;
+    text-align: left;
+    transform: translateX(95px);
+}   
+
+/*CSS cho các cột trong table */
+table tr td{
+    padding-top: 10px;
+    padding-top: 10px;
+    padding-left: 6px;
+}
+
+/*CSS cho các label Name, Class, Gender, Mail */
+label{
+    font-size: 20px;
+}
+
+/*CSS cho button UPDATE*/
+input[type='submit']{
+    width: 122px;
+    height: 44px;
+    background-color: #d63837;
+    border: none;
+    font-size: 20px;
+    display: block;
+    transform: translateY(20px);
+    margin: 0 auto;
+}

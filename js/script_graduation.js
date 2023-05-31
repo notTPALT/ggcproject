@@ -43,53 +43,53 @@ function reload_user_input() {
     }
 
     // Countdown timer
-    // function startCountdown(duration, display) {
-    //     var timer = duration, minutes, seconds, hours;
+    function startCountdown(duration, display) {
+        var timer = duration, minutes, seconds, hours;
 
-    //     var submitButton = document.querySelector('input[name="sub"]');
+        var submitButton = document.querySelector('input[name="sub"]');
 
-    //     // Check if time is saved in localStorage
-    //     var timeLeft = localStorage.getItem("timeLeft");
-    //     if (timeLeft && !isNaN(timeLeft)) timer = parseInt(timeLeft, 10);
+        // Check if time is saved in localStorage
+        var timeLeft = localStorage.getItem("timeLeft");
+        if (timeLeft && !isNaN(timeLeft)) timer = parseInt(timeLeft, 10);
 
-    //     var intervalId = setInterval(function () {
-    //         hours = parseInt(timer / 3600, 10);
-    //         minutes = parseInt(timer / 60, 10);
-    //         seconds = parseInt(timer % 60, 10);
+        var intervalId = setInterval(function () {
+            hours = parseInt(timer / 3600, 10);
+            minutes = parseInt(timer / 60, 10);
+            seconds = parseInt(timer % 60, 10);
 
-    //         hours = hours < 10 ? "0" + hours : hours;
-    //         minutes = minutes < 10 ? "0" + minutes : minutes;
-    //         seconds = seconds < 10 ? "0" + seconds : seconds;
+            hours = hours < 10 ? "0" + hours : hours;
+            minutes = minutes < 10 ? "0" + minutes : minutes;
+            seconds = seconds < 10 ? "0" + seconds : seconds;
 
-    //         display.textContent = hours + " giờ " + minutes + " phút " + seconds + " giây";
+            display.textContent = hours + " giờ " + minutes + " phút " + seconds + " giây";
 
-    //         if (--timer < 0) {
-    //             clearInterval(intervalId);
-    //             // Delete 'timeLeft' from localStorage
-    //             localStorage.removeItem("timeLeft");
+            if (--timer < 0) {
+                clearInterval(intervalId);
+                // Delete 'timeLeft' from localStorage
+                localStorage.removeItem("timeLeft");
 
-    //             // Click submit button
-    //             submitButton.click();
-    //         } else {
-    //             // Save time remaining to localStorage
-    //             localStorage.setItem("timeLeft", timer);
-    //         }
-    //     }, 1000);
-    // }
+                // Click submit button
+                submitButton.click();
+            } else {
+                // Save time remaining to localStorage
+                localStorage.setItem("timeLeft", timer);
+            }
+        }, 1000);
+    }
 
-        // window.onload = function () {
-        // var duration = 1 * 60; // Set time limit to 40 minutes
-        // var display = document.querySelector("#countdown");
-        // startCountdown(duration, display);
-    // };
+        window.onload = function () {
+        var duration = 40 * 60; // Set time limit to 40 minutes
+        var display = document.querySelector("#countdown");
+        startCountdown(duration, display);
+    };
 
     // Reset time when page is refreshed
-    // var timeLeft = localStorage.getItem("timeLeft");
-    // if (timeLeft && !isNaN(timeLeft)) {
-    //     var duration = parseInt(timeLeft);
-    //     var display = document.querySelector("#countdown");
-    //     startCountdown(duration, display);
-    // }
+    var timeLeft = localStorage.getItem("timeLeft");
+    if (timeLeft && !isNaN(timeLeft)) {
+        var duration = parseInt(timeLeft);
+        var display = document.querySelector("#countdown");
+        startCountdown(duration, display);
+    }
 }
 
 function open_ques(id) {

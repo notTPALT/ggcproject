@@ -1,0 +1,87 @@
+#header {
+    /* background-color: white; */
+    margin-right: 30px;
+    margin-left: 30px;
+    text-align: center;
+}
+
+#submit-form {
+    padding: 10px;
+    margin: 0px 30px 0px 30px;
+    box-sizing: border-box;
+    /* border: 1px solid black; */
+}
+
+#login-info {
+    padding: 10px;
+    /* position: relative; */
+    float: left;
+    /* border: 1px solid black; */
+}
+
+#personal-info {
+    padding: 10px;
+    /* position: relative; */
+    float: right;
+    display: block;
+    /* border: 1px solid black; */
+}
+
+#submit {
+    padding-top: 10px;
+    margin: 10px 0px 0px 70px;  
+}
+
+#radio-gender {
+    margin: 14px 0px 7px 0px;
+}
+
+#register-status, #countdown, #login-status {
+    color: red;
+    margin: auto;
+    max-width: fit-content;
+}
+
+#username-availablity-check, #rpass-check {
+    color: red;
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+.form-header {
+    font-size: 14px;
+    margin: 0px 0px 4px 0px;
+}
+
+.form-component {
+    width: 100%;
+    padding: 10px;
+}
+
+
+.form-component div p {
+    color: red;
+    display: inline;
+}
+
+
+input {
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+body {
+    max-width: max-content;
+    margin: auto;
+    padding: 10px;
+    font-family: sans-serif;
+    /* background-color: aqua; */
+}
+
+#lmao {
+    background-color: aqua;
+}
+
+#lmao img {
+    position: absolute;
+}

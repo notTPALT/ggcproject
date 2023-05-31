@@ -9,20 +9,19 @@
     //Table 'user_infos'
     $conDB = mysqli_connect("localhost", "root", "", "ggcproject");
     $createTB = "CREATE TABLE user_infos (
-        id               integer       NOT NULL PRIMARY KEY AUTO_INCREMENT,
-        username         char(50)      NOT NULL UNIQUE,
-        pass             char(40)      NOT NULL,
-        class            int,
+        id          integer         not null PRIMARY KEY AUTO_INCREMENT,
+        username    char(50) not null UNIQUE,
+        pass        char(40) not null,
+        class       int,
         secure_question  varchar(100),
-        secure_answer    varchar(100),   
-        email            char(50),
-        phone            char(11),
-        addrs            varchar(100),
-        gender           boolean,
-        birthdate        date,
-        fname            varchar(20),
-        lname            varchar(20),
-        status           int           NOT NULL
+        secure_answer   varchar(100),   
+        email       char(50),
+        phone       char(11),
+        addrs       varchar(100),
+        gender      boolean,
+        birthdate   date,
+        fname       varchar(20),
+        lname       varchar(20)
         )";
     if (!mysqli_query($conDB, $createTB)) {
         echo 'table already exist.';
@@ -63,15 +62,12 @@
 
     //Table mock_exam_history
     mysqli_query($conDB, "CREATE TABLE mock_exam_history (
-        username    char(50),
-        correct     int,
-        incorrect   int,
-        unanswered  int,
+        username char(50),
+        correct int,
+        incorrect int,
+        unanswered int,
         point_total char(10),
-        time        TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-        time_end    TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-        time_finish TIMESTAMP NOT NULL,
-        ordinal     int       NOT NULL
+        time TIMESTAMP DEFAULT CURRENT_TIMESTAMP
     )");
 
     //Table server_log to store users' activities
@@ -88,11 +84,11 @@
             mysqli_query($conDB, "DROP TABLE ques_".$i."_".$j);
             mysqli_query($conDB, "CREATE TABLE ques_".$i."_".$j." (
                 idx INTEGER,
-                question varchar(500),
-                option1 varchar(500),
-                option2 varchar(500),
-                option3 varchar(500),
-                option4 varchar(500),
+                question nvarchar(500),
+                option1 nvarchar(500),
+                option2 nvarchar(500),
+                option3 nvarchar(500),
+                option4 nvarchar(500),
                 image_path char(254),
                 right_ans INTEGER
             )");
@@ -117,10 +113,10 @@
     mysqli_query($conDB, "CREATE TABLE ques_12_8 (
         idx INTEGER,
         question nvarchar(500),
-        option1  varchar(500),
-        option2  varchar(500),
-        option3  varchar(500),
-        option4  varchar(500),
+        option1 nvarchar(500),
+        option2 nvarchar(500),
+        option3 nvarchar(500),
+        option4 nvarchar(500),
         image_path char(254),
         right_ans INTEGER
     )");
@@ -208,21 +204,6 @@
     ('Con lắc đơn dao động nhỏ trong một điện trường đều có phương thẳng đứng hướng xuống và vật nặng có điện tích dương với biên độ A và chu kỳ dao động T. Vào thời điểm vật đi qua vị trí cân bằng thì đột ngột tắt điện trường. Chu kỳ và biên độ của con lắc khi đó thay đổi như thế nào? Bỏ qua mọi lực cản.', 'Chu kỳ tăng; biên độ giảm.', 'Chu kỳ giảm biên độ giảm.', 'Chu kỳ giảm; biên độ tăng.', 'Chu kỳ tăng; biên độ tăng.', 'd')
     ");
     
-    // Table tb_admin
-    mysqli_query($conDB, "DROP TABLE tb_admin");
-    if (mysqli_query($conDB, "CREATE TABLE tb_admin (
-        id       int          PRIMARY KEY AUTO_INCREMENT,
-        username varchar(50)  NOT NULL,
-        pass     varchar(50)  NOT NULL,
-        fname    varchar(50) COLLATE utf8mb4_vietnamese_ci,
-        lname    varchar(50) COLLATE utf8mb4_vietnamese_ci,
-        phone    text
-    )")) {
-        echo "Created table tb_admin. <br>";
-    } else {
-        echo "Table tb_admin not created. <br>";
-    }
-
     unset($con);
     unset($conDB);
 ?>
