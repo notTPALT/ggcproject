@@ -6,6 +6,7 @@
 ?>
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,6 +19,7 @@
     <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
+
 <body>
     <?php require_once("form/header.php"); ?>
     <div class="container">
@@ -32,12 +34,13 @@
             </nav>
         </div>
 
-        <div class="box-content" style = "width : 80%">
-           
+        <div class="box-content" style="width : 80%">
+
         </div>
     </div>
-   <?php require_once("../../html/footer.html"); ?>
+    <?php echo file_get_contents("../html/footer.html"); ?>
 </body>
+
 </html>
 <?php 
     } 

@@ -6,6 +6,7 @@
 ?>
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -19,6 +20,7 @@
     <link rel="stylesheet" href="css/main.css">
     <script src="js/js_question.js"></script>
 </head>
+
 <body>
     <?php require_once("form/header.php"); ?>
     <div class="container">
@@ -34,10 +36,11 @@
             </nav>
         </div>
 
-        <div class="box-content" style = "width : 80%">
+        <div class="box-content" style="width : 80%">
             <table class="tableStyle">
                 <tr>
-                    <td id="text">STT</td><td id="text">Câu hỏi</td>
+                    <td id="text">STT</td>
+                    <td id="text">Câu hỏi</td>
                     <td id="text" colspan="3">Chức năng</td>
                     <td><button id="btnAddQuestion" style="height: 30px;">Thêm câu hỏi</button></td>
                 </tr>
@@ -46,21 +49,25 @@
                     $tmp = mysqli_query($con, $sql);
                     $i = 1;
                     while($res = mysqli_fetch_array($tmp)){ ?>
-                            <tr id="<?php echo $res['id'];?>">
-                                <td id="text"><?php echo $i++; ?></td>
-                                <td style="max-width: 600px; text-overflow: ellipsis; overflow: hidden; white-space: nowrap;"><?php echo $res['question']; ?></td>
-                                <td><input type="button" value="Xem" onclick="showQuestion(<?php echo $res['id']; ?>)"></td>
-                                <td><input type="button" value="Sửa" style="background-color: #FFD700;" onclick="updateQuestion(<?php echo $res['id']; ?>)"></td>
-                                <td><input type="button" value="Xóa" style="background-color: red;" onclick="deleteQuestion(<?php echo $res['id']; ?>)"></td>
-                            </tr>
-                            <?php
+                <tr id="<?php echo $res['id'];?>">
+                    <td id="text"><?php echo $i++; ?></td>
+                    <td style="max-width: 600px; text-overflow: ellipsis; overflow: hidden; white-space: nowrap;">
+                        <?php echo $res['question']; ?></td>
+                    <td><input type="button" value="Xem" onclick="showQuestion(<?php echo $res['id']; ?>)"></td>
+                    <td><input type="button" value="Sửa" style="background-color: #FFD700;"
+                            onclick="updateQuestion(<?php echo $res['id']; ?>)"></td>
+                    <td><input type="button" value="Xóa" style="background-color: red;"
+                            onclick="deleteQuestion(<?php echo $res['id']; ?>)"></td>
+                </tr>
+                <?php
                     }
                     ?>
             </table>
         </div>
     </div>
-    <?php require_once("../../html/footer.html"); ?>
+    <?php echo file_get_contents("../html/footer.html"); ?>
 </body>
+
 </html>
 <?php 
     } 
