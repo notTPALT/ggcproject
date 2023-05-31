@@ -1,0 +1,70 @@
+Vật nào sau đây được coi là chất điểm?
+Một xe máy đi từ TP Hồ Chí Minh ra Hà Nội.
+Một xe ô tô khách loại 45 chỗ ngồi chuyển động từ giữa sân trường ra cổng trường.
+Một bạn học sinh đi từ nhà ra cổng.
+Một bạn học sinh đi từ cuối lớp lên bục giảng.
+none
+1
+Trường hợp nào dưới đây không thể coi vật là chất điểm?
+Viên đạn đang chuyển động trong không khí.
+Trái Đất trong chuyển động quay quanh Mặt Trời.
+Viên bi trong sự rơi từ tầng thứ năm của một tòa nhà xuống đất.
+Trái Đất trong chuyển động tự quay quanh trục của nó.
+none
+4
+‘‘Lúc 15 giờ 30 phút hôm qua, xe chúng tôi đang chạy trên quốc lộ 5, cách Hải Dương 10 km”. Việc xác định vị trí của ô tô như trên còn thiếu yếu tố gì?
+Vật làm mốc.
+Mốc thời gian.
+Thước đo và đồng hồ.
+Chiều dương trên đường đi.
+none
+4
+Hệ quy chiếu bao gồm các yếu tố nào sau đây?
+Hệ tọa độ kết hợp với mốc thời gian và đồng hồ đo thời gian.
+Hệ tọa độ, đồng hồ đo.
+Hệ tọa độ, thước đo.
+Mốc thời gian và đồng hồ.
+none
+1
+Độ lớn của độ dịch chuyển và quãng đường đi được của một chuyển động
+bằng nhau khi vật chuyển động thẳng, không đổi chiều.
+luôn luôn bằng nhau trong mọi trường hợp.
+quãng đường chính là độ lớn của độ dịch chuyển.
+khi vật chuyển động thẳng.
+none
+1
+Một người lái ô tô đi thẳng 6 km theo hướng tây, sau đó rẽ trái đi thẳng theo hướng nam 4 km rồi quay sang hướng đông 3 km. Xác định quãng đường đi được và độ lớn độ dịch chuyển tổng hợp của ô tô.
+s = 13 km, d = 5 km.
+s = 13 km, d = 13 km.
+s = 13 km, d = 3 km.
+s = 13 km, d = 9 km.
+none
+1
+Công thức nào sau đây là công thức tính độ dịch chuyển trong chuyển động thẳng biến đổi đều?
+d = v<sub>0</sub>.t + (1/2).a.t<sup>2</sup> .
+d =(1/2).a.t<sup>2</sup> .
+d = v<sub>0</sub>.t + 2.a.t<sup>2</sup> .
+d = 2v<sub>0</sub>.t + a.t<sup>2</sup> .
+none
+2
+Một ô tô bắt đầu chuyển động thẳng nhanh dần đều từ trạng thái đứng yên. Trong 4 s đầu ô tô đi được đoạn đường 10 m và không đổi chiều chuyển động. Tính vận tốc của ô tô ở cuối giây thứ hai.
+2,5 m/s.
+3 m/s.
+5 m/s.
+4 m/s.
+none
+1
+Một đoàn tàu bắt đầu rời ga, chuyển động thẳng nhanh dần đều. Sau khi đi được 1000 m đạt đến vận tốc 10 m/s. Tính vận tốc của tàu sau khi đi được 2000 m.
+14,14 m/s.
+15,5 m/s.
+15 m/s.
+10 m/s.
+none
+1
+Câu nào đúng?
+Gia tốc của chuyển động thẳng nhanh dần đều bao giờ cũng lớn hơn gia tốc của chuyển động thẳng chậm dần đều.
+Chuyển động thẳng nhanh dần đều có gia tốc lớn thì có vận tốc lớn.
+Chuyển động thẳng biến đổi đều có gia tốc tăng, giảm đều theo thời gian.
+Gia tốc trong chuyển động thẳng nhanh dần đều có hướng và độ lớn không đổi theo thời gian.
+none
+4

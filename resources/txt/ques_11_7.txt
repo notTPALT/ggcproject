@@ -1,0 +1,70 @@
+Thấu kính phân kì là
+Một khối chất trong suốt, được giới hạn bởi hmặt cầu lồi
+Một khối chất trong suốt, được giới hạn bởi một mặt cầu lồi và một mặt phẳng
+Một khối chất trong suốt, được giới hạn bởi 2 mặt cầu lõm
+Một khối chất trong suốt, được giới hạn bởi mặt cầu lồi bán kính nhỏ hơn mặt cầu lõm.
+none
+3
+Thấu kính hội tụ là
+Một khối chất trong suốt, được giới hạn bởi hmặt luôn là các mặt cầu
+Một khối chất trong suốt, được giới hạn bởi một mặt cầu lõm và một mặt phẳng.
+Một khối chất trong suốt, được giới hạn bởi hmặt cầu lõm.
+Một khối chất trong suốt, được giới hạn bởi hmặt cầu, mặt cầu lồi bán kính nhỏ hơn mặt cầu lõm.
+none
+4
+Khi nói về đường đi của một tia sáng qua thấu kính hội tụ, phát biểu nào sđây là sai?
+Một chùm tia sáng song song với trục chính thì chùm tia ló hội tụ ở tiêu điểm ảnh sthấu kính
+Tia sáng đi qua quang tâm của thấu kính thì truyền thẳng qua thấu kính
+Một chùm tia sáng hội tụ tại tiêu điểm vật tới thấu kính thì chùm tia ló đi qua song song với trục hoành
+Tia sáng đi song song với trục chính thì tia ló đường kéo dài đi qua tiêu điểm chính của thấu kính.
+none
+4
+Khi nói về đường đi của tia sáng qua thấu kính phân kì, phát biểu nào sđây là sai
+Một chùm tia sáng song song với trục chính qua thấu kính thì chùm tia ló đường kéo dài đi qua tiêu điểm ảnh trước thấu kính
+Tia sáng đi qua quang tâm của thấu kính thì truyền thẳng qua thấu kính
+Một chùm tia sáng hội tụ tại tiêu điểm ảnh tới thấu kính thì chùm tia ló đi song song với trục chính.
+Tia sáng đi song song với trục chính thì tia ló đường kéo dài đi qua tiêu điểm chính của thấu kính.
+none
+3
+Ảnh của vật qua thấu kính phân kì là
+Ảnh thật, cùng chiều và lớn hơn vật
+Ảnh thật, ngược chiều, nhỏ hơn vật
+Ảnh ảo, cùng chiều và nhỏ hơn vật
+Ảnh ảo, cùng chiều và lớn hơn vật
+none
+3
+Khi nói về sự tạo ảnh của vật qua thấu kính hội tụ, phát biểu nào sđây là s?
+Vật thật thể cho ảnh thật, ngược chiều và lớn hơn vật
+Vật thật thể cho ảnh thật, ngược chiều và nhỏ hơn vật
+Vật thật thể cho ảnh ảo, cùng chiều và lớn hơn vật
+Vật thật thể cho ảnh ảo, cùng chiều và nhỏ hơn vật.
+none
+4
+Khi 0 < d < f, ảnh của vật qua thấu kính là
+Ảnh thật, cùng chiều và lớn hơn vật
+Ảnh ảo, cùng chiều và nhỏ hơn vật
+Ảnh ảo, cùng chiều và lớn hơn vật
+Ảnh thật, cùng chiều và nhỏ hơn vật
+none
+3
+Khi d > 2f, ảnh của vật qua thấu kính là
+Ảnh thật, cùng chiều và lớn hơn vật
+Ảnh ảo, cùng chiều và nhỏ hơn vật
+Ảnh ảo, cùng chiều và lớn hơn vật
+Ảnh thật, ngược chiều và nhỏ hơn vật
+none
+4
+Khi nói về chùm sáng đi qua thấu kính phân kì, phát biểu nào sđây là sai?
+thể tạo ra chùm sáng song song từ chùm sáng hội tụ
+Không thể tạo ra chùm sáng hội tụ từ chùm sáng phân kì
+thể tạo ra chùm sáng hội tụ từ chùm sáng song song
+Không thể tạo ra chùm sáng song song từ chùm sáng phân kì.
+none
+3
+Khi nói về chùm sáng đi qua thấu kính hội tụ, phát biểu nào sđây là sai?
+thể tạo ra chùm sáng song song từ chùm sáng hội tụ
+thể tạo ra chùm sáng phân kì từ chùm sáng phân kì
+thể tạo ra chùm sáng hội tụ từ chùm sáng song song
+thể tạo ra chùm sáng hội tụ từ chùm sáng hội tụ
+none
+1

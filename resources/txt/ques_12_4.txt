@@ -1,0 +1,70 @@
+Một mạch điện dao động điện từ lí tưởng có L = 5 mH; C = 0,0318 mF. Điện áp cực đại trên tụ điện là 8 V. Khi điện áp trên tụ điện là 4 V thì cường độ dòng điện tức thời trong mạch là:
+0,55 A
+0,45 A
+0,55 mA
+0,45 mA
+none
+1
+Một mạch dao động từ LC lí tưởng. Khi điện áp giữa hai đầu bản tụ điện là 2 V thì cường độ dòng điện đi qua cuộn dây là i, khi điện áp giữa hai đầu bản tụ điện là 4 V thì cường độ dòng điện qua cuộn dây là i/2. Điện áp cực đại giữa hai đầu cuộn dây là:
+4 V
+2√5 V
+2√3 V
+6 V
+none
+2
+Cho mạch dao động LC, cuộn dây có độ tự cảm L = 2mH và tụ điện có điện dung C = 2pF. Lấy π2 = 10. Tần số dao động f của mạch là:
+1,5 MHz
+25 Hz
+10 Hz
+2,5 MHz
+none
+4
+Khung dao động điện từ gồm một cuộn dây thuần cảm có độ tự cảm L = 0,1 H và tụ điện có điện dung C = 10µF. Dao động điện từ trong khung là dao động điều hòa với cường độ dòng điện cực đại I0 = 0,05 Tính điện áp giữa hai bản tụ ở thời điểm i = 0,03 A và cường độ dòng điện trong mạch lúc điện tích trên tụ có giá trị q = 30 µC.
+u = 4 V, i = 0,4 A.
+u = 5 V, i = 0,04 A.
+u = 4 V, i = 0,04 A.
+u = 5 V, i = 0,4 A.
+none
+3
+Trong một mạch dao động điện từ LC với L = 25 mH và C = 1,6 µF. đang có dao động điện từ. Ở thời điểm t, cường độ dòng điện trong mạch có độ lớn bằng 6,93 mA và điện tích trên tụ điện bằng 0,8 µNăng lượng của mạch dao động bằng:
+0,6 mJ.
+800 nJ.
+1,2 mJ.
+0,8 mJ
+none
+2
+Cường độ tức thời của dòng điện trong một mạch dao động là i = 0,15sin2000t (A). Tụ điện trong mạch có điện dung C = 2 µF. Điện áp cực đại trên tụ điện là:
+3,75 V
+7,5 V
+37,5 V
+75 V
+none
+3
+Một mạch chọn sóng của một máy thu gồm một cuộn cảm thuần có độ tự cảm L = 0,1 mH và tụ điện có điện dung thay đổi được từ 10 pF đến 1000 pF. Máy thu có thể thu được tất cả các sóng vô tuyến có dải sóng nằmg trong khoảng:
+12,84 m ÷ 128,4 m
+59,6 m ÷ 596 m
+62 m ÷ 620 m
+35,5 m ÷ 355 m
+none
+2
+Một mạch dao động của máy thu vô tuyến có tụ điện với điện dung C và cuộn cảm thuần với độ tự cảm L, thu được sóng điện từ có bước sóng 20 m. Để thu được sóng điện từ có bước sóng 40 m, người ta phải mắc song song với tụ điện của mạch dao động trên một tụ điện có điện dung C bằng:
+4C
+C
+2C
+3C
+none
+4
+Một mạch dao động của máy thu vô tuyến điện gồm một cuộn cảm thuần có độ tự cảm L = 12 µH với điện trở không đáng kể và một tụ điện có điện dung có thể điều chỉnh đượĐể thu được các sóng vô tuyến có bước sóng từ 10 m tới 160 m thì điện dung của tụ điện phải có giá trị trong khoảng từ:
+2,35 pF tời 600 pF
+4,3 pF tới 560 pF
+4,5 pF tới 600 pF
+2,35 pF tới 300 pF
+none
+1
+Một mạch dao động LC gồm tụ điện C = 8 nF và cuộn cảm L = 8 mH. Nạp điện cho tụ điện đến điện áp 6 V rồi cho phóng điện qua cuộn cảm. Cường độ dòng điện qua cuộn cảm có giá trị cực đại bằng:
+12 A.
+17 mA.
+8,5 mA.
+6 mA.
+none
+4

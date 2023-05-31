@@ -1,0 +1,70 @@
+Đặt điện áp xoay chiều u = 311cos100πt (V) vào 2 đầu của một cuộn cảm thuần có độ tự cảm L = 1/π(H). Cường độ dòng điện hiệu dụng qua cuộn cảm có giá trị bằng:
+3,1 A
+2,2 A
+0,31 A
+0,22 A
+none
+2
+Cho dòng điện xoay chiều i = 2cos100πt (A) qua điện trở R = 50 Ω trong thời gian 1 phút. Nhiệt lượng tỏa ra trên điện trở là:
+6000 J
+1000 J
+800 J
+1200 J
+none
+1
+Mắc một cuộn cảm vào một điện áp xoay chiều có tần số f, cuộn cảm có cảm kháng là ZL. Nếu giảm độ tự cảm của cuộn cảm đi một nửa và tần số tăng lên 4 lần thì cảm kháng ZL sẽ:
+tăng 8 lần
+giảm 8 lần
+tăng 2 lần
+giảm 2 lần.
+none
+3
+Cho một đoạn mạch xoay chiều có R, L, C mắc nối tiếp. Vôn kế có điện trở rất lớn mắc giữa hai đầu điện trở thuần chỉ 20 V, giữa hai đầu cuộn cảm thuần chỉ 55 V và giữa hai đầu tụ điện chỉ 40 V. Nếu mắc vôn kế giữa hai đầu đoạn mạch trên thì vôn kế sẽ chỉ:
+115 V
+45 V
+25 V
+70 V
+none
+3
+Một đoạn mạch xoay chiều gồm điện trở R = 20 Ω. Mắc nối tiếp với cuộn cảm thuần L. Đặt vào hai đầu đoạn mạch điện áp u = 40√2 cos100πt (V) thì điện áp hiệu dụng ở hai đầu cuộn cảm UL = 32 V. Độ tự cảm của cuộn dây là:
+0,0012 H
+0,012 H
+0,17 H
+0,085 H
+none
+4
+Điện áp giữa hai đầu của một đoạn mạch có R, L, C mắc nối tiếp sớm pha π/4 so với cường độ dòng điện. Phát biểu nào sau đây đúng đối với đoạn mạch này:
+Tần số dòng điện trong đoạn mạch nhỏ hơn giá trị cần để xảy ra cộng hưởng.
+Tổng trở của đoạn mạch bằng hai lần điện trở thuần của mạch.
+Điện áp giữa hai đầu điện trở thuần sớm pha π/4 so với điện áp giữa hai bản tụ điện.
+Điện trở thuần của đoạn mạch bằng hiệu số giữa cảm kháng và dung kháng.
+none
+4
+Mắc đoạn mạch gồm biến trở R và một cuộn cảm thuần có L = 3,2 mH và một tự có điện dung C=2µF mắc nối tiếp vào điện áp xoay chiều. Để tổng trở của mạch là Z = ZL + ZC thì điện trở R phải có giá trị bằng:
+80 Ω
+40 Ω
+60 Ω
+100 Ω
+none
+1
+Đoạn mạch có R, L, C mắc nối tiếp được mắc vào mạng điện có tần số f1 thì đoạn mạch có cảm kháng là 36 Ω và dung kháng là 144 Ω. Nếu mạng điện có tần số f2 = 120 Hz thì cường độ dòng điện trong mạch cùng pha với điện áp giữa hai đầu đoạn mạch. Giá trị của tần số f1 là:
+85 Hz
+100 Hz
+60 Hz
+50 Hz
+none
+3
+Đặt vào hai đầu đoạn mạch có R, L, C mắc nối tiếp một điện áp xoay chiều có biểu thức u = 135√2 cos100πt (V). Cường độ dòng điện chạy trong mạch có biểu thức i = 3cos(100πt – π/4) (A). Điện trở của mạch điện có giá trị bằng:
+45 Ω
+45√2 Ω
+22,5 Ω
+22,5√3 Ω
+none
+1
+Nguời ta cần truyền đi xa một công suất điện 1 MW dưới điện áp 6 kV, mạch có hệ số công suất cosφ = 0,9. Để hiệu suất truyền tải điện không nhỏ hơn 80% thì điện trở R của đường dây phải thỏa mãn:
+R ≤ 5,8 Ω
+R ≤ 3,6 Ω
+R ≤ 36 Ω
+R ≤ 72 Ω
+none
+1

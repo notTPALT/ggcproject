@@ -1,0 +1,70 @@
+Từ trường của một nchâm giống từ trường được tạo bởi
+Một dây dẫn thẳng dòng điện chạy qua.
+Một ống dây dòng điện chạy qua.
+Một nchâm hình móng ngựa.
+Một vòng dây tròn dòng điện chạy qua.
+none
+2
+Các đường sức từ quanh dây dẫn thẳng dòng điện không đổi chạy qua dạng:
+Các đường thẳng song song với dòng điện.
+Các đường thẳng vuông góc với dòng điện như những nhoa xe đạp.
+Những vòng tròn đồng tâm với tâm nằm tại vị trí nơi dòng điện chạy qua
+Những đường xoắn ốc đồng trục với trục là dòng điện.
+none
+3
+Tính chất bản của từ trường là
+Gây ra lực từ tác dụng lên nchâm hoặc lên dòng điện đặt trong nó.
+Gây ra lực hấp dẫn lên các vật đặt trong nó.
+Gây ra lực đàn hồi tác dụng lên các dòng điện và nchâm đặt trong nó.
+Gây ra sự biến đổi về tính chất điện của môi trường xung quanh.
+none
+1
+Từ phổ là
+Hình ảnh của các đường mạt sắt cho ta hình ảnh của các đường sức từ của từ trường.
+Hình ảnh tương tác của hnchâm với nhau.
+Hình ảnh tương tác giữa dòng điện và nchâm.
+Hình ảnh tương tác của hdòng điện chạy trong hdây dẫn thẳng song song.
+none
+1
+Phát biểu nào sđây không đúng ?
+Qua bất kì điểm nào trong từ trường ta cũng thể vẽ được một đường sức từ.
+Đường sức từ nchâm thẳng tạo ra xung quanh nó là những đường thẳng.
+Đường sức từ mhơn ở nơi từ trường lớn, đường sức thưa hơn ở nơi từ trường nhỏ hơn.
+Các đường sức từ là những đường cong kín.
+none
+2
+Từ cực Bắc của Trái Đất
+Trùng với cực Nđịa lí của Trái Đất.
+Trùng với cực Bắc địa lí của Trái Đất.
+Gần với cực Nđịa lí của Trái Đất.
+Gần với cực Bắc địa lí của Trái Đất.
+none
+3
+Các đường sức từ trong lòng nchâm hình chữ U là
+Những đường thẳng song song cáđều nhau.
+Những đường cong, cáđều nhau.
+Những đường thẳng hướng từ cực Nsang cực Bắc.
+Những đường cong hướng từ cực Nsang cực Bắc.
+none
+1
+Chọn câu trả lời đúng. Người ta chế tạo một số tnắm cửa hình thức giống hệt nhau. Trong đó một số tnắm làm bằng đồng, một số làm bằng sắt và một số làm bằng gỗ rồi mạ đồng. Để phân biệt chúng ta thể:
+Dùng cân, tnắm nào nhẹ nhất thì được làm bằng gỗ mạ đồng.
+Dùng nchâm vĩnh cửu, tnắm nào nchâm hút thì làm bằng sắt mạ đồng.
+Dùng nchâm vĩnh cửu, tnắm nào nchâm hút thì làm bằng đồng.
+Áp dụng A và B.
+none
+4
+Chọn câu trả lời đúng. Trên thanh nchâm chỗ nào hút sắt mạnh nhất?
+Phần giữa của thanh.
+Chỉ cực Bắc.
+từ hcực.
+Mọi chỗ đều hút sắt như nhau.
+none
+3
+Đơn vị của độ tự cảm là
+vôn (V)
+henry (H)
+tesla (T)
+vê(Wb).
+none
+2

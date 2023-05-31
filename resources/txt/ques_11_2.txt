@@ -1,0 +1,70 @@
+Chọn phát biểu đúng
+Dòng điện không đổi là dòng điện chiều không thđổi
+Dòng điện không đổi là dòng điện chiều thđổi theo thời gian
+Dòng điện là dòng chuyển dời của các điện tích
+Dòng điện không đổi là dòng điện chiều và cường độ không thđổi theo thời gian
+none
+4
+Cường độ dòng điện được đo bằng
+Vôn kế
+Lực kế
+công tơ điện
+D.ampe kế
+none
+4
+Công thức xác định cường độ dòng điện không đổi là:
+I=qt
+I = q/t
+I = t/q
+I = q/e
+none
+2
+Ngoài đơn vị ampe (A), đơn vị cường độ dòng điện thể là
+culông (C)
+vôn (V)
+culong trên giây (C/s)
+jun (J)
+none
+3
+Suất điện động của nguồn điện là đại lượng đặc trưng cho khả năng
+thực hiện công của các lực lạ bên trong nguồn điện
+sinh công trong mạđiện
+tạo ra điện tídương trong một giây
+trữ điện tícủa nguồn điện
+none
+1
+Hđiện cực kim loại trong pin điện hoá phải
+cùng kíthước
+Là hkim loại khác nhvề bản chất hoá học
+cùng khối lượng
+cùng bản chất
+none
+2
+Hcực của pin điện hoá được ngâm trong chất điện phân là dung dịch
+Muối
+Axit
+Bazơ
+Một trong các dung dịtrên
+none
+4
+Trong nguồn điện hoá học (pin, acquy) sự chuyển hoá từ
+năng thành điện năng
+Nội năng thành điện năng
+Hoá năng thành điện năng
+Qunăng thành điện năng
+none
+3
+Công của lực lạ làm dịchuyển điện lượng 4C từ cực âm đến cực dương bên trong nguồn điện là 24J. Suất điện động của nguồn là:
+6V
+96V
+12V
+9,6V
+none
+1
+Đặt hiệu điện thế 24 V vào hđầu điện trở 20 Ω trong khoảng thời gi10s . Điện lượng chuyển qua điện trở này trong khoảng thời giđó là
+A.12C
+B.24C
+C.0,83C
+D.2,4C
+none
+1

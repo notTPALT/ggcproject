@@ -1,0 +1,70 @@
+Điều kiện tác động làm xuất hiện cặp electron-lỗ trống trong chất bán dẫn là
+độ ẩm của môi trường
+âm thanh
+ánh sáng thíhợp
+siêu âm
+none
+3
+Để tạo ra chất bán dẫn loại n, người ta pha thêm tạp chất, cápha tạp chất đúng là
+Ge + As
+Ge + In
+Ge + S
+Ge + Pb
+none
+1
+Để tạo ra chất bán dẫn loại p, người ta pha thêm tạp chất, cápha tạp chất đúng là
+Si + As
+Si + B
+Si + S
+Si + Pb
+none
+2
+Để đo bước sóng của ánh sáng đơn sắc người ta có thể dùng:
+thí nghiệm Y – ân về giao thoa ánh sáng
+thí nghiệm tán sắc ánh sáng
+thì nghiệm tổng hợp ánh sáng trắng
+thí nghiện của Niu – tơn về ánh sáng đơn sắc
+none
+1
+Tia hồng ngoại là sóng điện từ có bước sóng:
+nhỏ hơn bước sóng ánh sáng đỏ
+nhỏ hơn bước sóng ánh sáng tím
+lớn hơn bước sóng ánh sáng đỏ
+nằm trong khoảng bước sóng ánh sáng đỏ và tím
+none
+3
+Tia hồng ngoại, tử ngoại và Rơn – ghen không có tính chất chung nào nếu dứoi đây?
+Đều có khả năng đâm xuyên mạnh
+Đều là sóng điện từ
+Đều có tính lượng từ
+Đều có tính chất sóng
+none
+1
+Tính chất giống nhau giữa tia Rơn – ghen và tia tử ngoại là:
+bị hấp thụ bởi thủy tinh và nước
+làm phát quang một số chất
+có tính đâm xuyên mạnh
+đều bị lệch trong điện trường
+none
+2
+Trong bốn loại tia dưới đây, tia nào xếp thứ hai về khả năng đâm xuyên?
+Tia gamma
+Tia hồng ngoại
+Tia Rơn – ghen
+Tia tử ngoại
+none
+3
+Tia X và tia tử ngoại không có chung tính chất nào sau đây ?
+không mang điện
+có khả năng sinh lí
+tác dụng mạnh lên kính ảnh
+bị nước hấp thụ mạnh.
+none
+4
+Cho mạch dao động LC, cuộn dây có độ tự cảm L = 2mH và tụ điện có điện dung C = 2pF. Lấy π2 = 10. Tần số dao động f của mạch là:
+1,5 MHz
+25 Hz
+10 Hz
+2,5 MHz
+none
+4

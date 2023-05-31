@@ -1,0 +1,70 @@
+Khi nói về chiết suất của môi trường. Phát biểu nào sđây là đúng?
+Chiết suất tỉ đối của môi trường chiết quang lớn hơn so với môi trường chiết quang nhỏ thì nhỏ hơn đơn vị.
+Môi trường chiết quang kém chiết suất tuyệt đối nhỏ hơn 1.
+Chiết suất tỉ đối của môi trường 2 so với môi trường 1 bằng tỉ số chiết suất tuyệt đối n2 của môi trường 2 với chiết suất tuyệt đối n1 của môi trường 1
+Chiết suất tỉ đối của 2 môi trường luôn lớn hơn đơn vị vì tốc độ ánh sáng trong chân không là tốc độ lớn nhất
+none
+3
+Nước và thuỷ tinh chiết suất lần lượt là n1 và n2. Chiết suất tỉ đối giữa thuỷ tinh và nước là
+n21 = n1/n2
+n21 = n2/n1
+n21 = n2 - n1
+n12 = n1 - n2
+none
+2
+Khi chiếu ánh sáng từ không khí vào nước thì
+góc khúc xạ luôn nhỏ hơn góc tới
+góc khúc xạ luôn lớn hơn góc tới
+góc khúc xạ luôn bằng góc tới
+khi góc tới tăng thì góc khúc xạ giảm.
+none
+1
+Chiếu một tia sáng đơn sắc đi từ không khí vào môi trường chiết suất n với góc tới i. Tia phản xạ vuông góc với tia khúc xạ. Hệ thức nào sđây là đúng?
+sini = n
+sini = 1/n
+tani = n
+tani = 1/n
+none
+3
+Một điểm sáng O nằm trong chất lỏng chiết suất n, cámặt chất lỏng một đoạn 12cm, phát ra chùm ánh sáng hẹp đến gặp mặt phân cávới không khí tại điểm B với góc tới rất nhỏ, tia ló truyền theo phương BE. Đặt mắt trên phương nhìn thấy ảnh ảo O’của O dường như cámặt chất lỏng một khoảng 10cm. chiết suất của chất lỏng đó là
+1,12
+1,2
+1,33
+1,4
+none
+2
+Một người nhìn một hòn sỏi nhỏ O nằm ở đáy một nước sâu 1,2m theo phương gần vuông góc với mặt nướBiết chiết suất của nước là 4/3. Người này thấy ảnh O’ của O nằm cámặt nước một khoảng bằng
+1,5m
+80cm
+90cm
+10dm
+none
+3
+Một người nhìn một hòn sỏi nhỏ O nằm cáđáy một nước stheo phương gần vuông góc với mặt nướNgười này thấy ảnh O’ của O nằm cámặt nước một khoảng bằng 1,2m. Biết chiết suất của nước là 4/3. Độ sâu của nước trong là
+90cm
+10dm
+16dm
+1,8m
+none
+3
+Một bản mặt song song dày 6cm, chiết suất n = 1,5 được đặt trong không khí. Ảnh S’ của S qua bản mặt song song cáS một đoạn
+1cm
+2cm
+3cm
+4cm
+none
+2
+Tốc độ ánh sáng trong chân không là 3.108 m/s. Kim cương chiết suất 2,42. Tốc độ truyền ánh sáng trong kim cương là
+242000km/s
+124000km/s
+72600km/s
+62700 km/s
+none
+2
+Chiếu một chùm tia sáng tới mặt phân cágiữa hmôi trường trong suốt. Khi xảy ra hiện tượng phản xạ toàn phần thì
+cường độ ánh sáng của chùm khúc xạ gần bằng cường độ sáng của chùm tới
+Cường độ ánh sáng của chùm tia phản xạ gần bằng cường độ sáng của chùm tới.
+cường độ sáng của chùm tia phản xạ lớn hơn cường độ sáng của chùm tia tới
+cường độ sáng của chùm tia tới, chùm tia phản xạ và chùm tia khúc xạ bằng nhau
+none
+2
