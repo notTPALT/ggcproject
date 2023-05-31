@@ -14,7 +14,7 @@
             <li>
                 <a id="link-to-reg" href="./register.php"><button id="btn-show-username-or-register"
                         style="background-color: rgba(0,0,0,0); border: 0px;"><label
-                            style="align: center;"><?php echo "Đăng ký"; ?></label></button></a>
+                            style="align: center; cursor: pointer;"><?php echo "Đăng ký"; ?></label></button></a>
                 <ul class="subnav-infor">
                     <?php
                         if (isset($_SESSION['username'])){ ?>

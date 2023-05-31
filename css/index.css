@@ -49,7 +49,7 @@
     position: absolute;
     width: 759px;
     height: 79px;
-    background-color: #024422;
+    background-color: #B0F1FF;
     top: 11px;
     left: 30px;
     right: 0px;
@@ -74,7 +74,7 @@
     display: flex;
     align-items: center;
     text-align: center;
-    color: rgb(245, 245, 245);
+    color: rgb(0, 0, 0);
 
 }
 
@@ -99,7 +99,6 @@
 
 #header-top #nav-infor,
 .subnav-infor {
-    background-color: #11ab7d;
     list-style-type: none;
 }
 
@@ -122,11 +121,13 @@
     width: 145px;
     line-height: 22px;
     text-align: center;
+    background-color: #B0F1FF;
+    border-radius: 7px;
 }
 
 #header-top #nav-infor>li:hover>a,
 #nav-infor .subnav-infor li:hover {
-    background-color: rgba(21, 206, 191, 0.329);
+    background-color: #B0F1FF;
 }
 
 #header-top #nav-infor li:hover .subnav-infor {
@@ -149,8 +150,7 @@
     left: 1210px;
     right: 0px;
     margin: 0px auto;
-    background: grey;
-    font-weight: bold;
+    background: #B0F1FF;
     border: 0px;
     cursor: pointer;
     border-radius: 7px;
@@ -164,7 +164,7 @@
     min-width: 1349px;
     height: 50px;
     top: -32px;
-    background-color: #024422;
+    background-color: #facb8d;
     z-index: 2;
     left: 0;
     right: 0;
@@ -202,7 +202,7 @@
     line-height: 50px;
     align-items: center;
     text-align: center;
-    color: #fff;
+    color: #000000;
     padding: 0px 18px;
     border-right: 1px solid #333;
     margin-left: -4px;
@@ -214,8 +214,8 @@
 #nav-header .subnavclass10 li:hover,
 #nav-header .subnavclass11 li:hover,
 #nav-header .subnavclass12 li:hover {
-    background-color: rgba(20, 175, 129, 0.253);
-    color: rgba(245, 245, 245, 0.74);
+    background-color: rgb(255, 100, 100);
+    font-weight: bolder;
     opacity: 0.8;
 }
 
@@ -239,7 +239,7 @@
 #header-bottom #nav-header li .subnavclass12 {
     display: none;
     position: absolute;
-    background-color: #05331b;
+    background-color: #FACB8D;
     margin-left: -5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
 }
@@ -248,7 +248,7 @@
 #header-bottom #nav-header .subnavclass10 li a,
 #header-bottom #nav-header .subnavclass11 li a,
 #header-bottom #nav-header .subnavclass12 li a {
-    color: rgba(245, 245, 220, 0.747);
+    color: rgb(0, 0, 0);
     font-weight: bold;
     margin-left: -5px;
     border-right: none;
@@ -521,7 +521,7 @@ footer {
 
 .footer-container .footer-icons a:hover,
 .footer-links a:hover {
-    background-color: #11ab7c;
+    background-color: #eef864a1;
 }
 
 @media (max-width: 880px) {
