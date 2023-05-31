@@ -2,9 +2,10 @@
     session_start();
     if (isset($_SESSION['admin'])){
     require('../../php/connect_MySQL_n_log.php');
-?>  
+?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,6 +19,7 @@
     $tmp = mysqli_query($con, $sql);
     $res = mysqli_fetch_array($tmp);
 ?>
+
 <body>
 
     <div>
@@ -52,6 +54,7 @@
         </table>
     </form>
 </body>
+
 </html>
 <?php 
     } 

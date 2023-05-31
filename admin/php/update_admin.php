@@ -5,6 +5,7 @@
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -19,7 +20,7 @@
     </div>
     <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
         <table>
-        <?php
+            <?php
             $id = isset($_POST['id']) ? $_POST['id'] : "OK";
             $sql = "SELECT * FROM tb_admin WHERE id = '$id'";
             $tmp = mysqli_query($con, $sql);
@@ -27,23 +28,24 @@
         ?>
             <tr>
                 <td>Tài khoản</td>
-                <td><input name="username" rows="4" cols="50"value="<?php echo $res['username']; ?>" required></input></td>
+                <td><input name="username" rows="4" cols="50" value="<?php echo $res['username']; ?>" required></input>
+                </td>
             </tr>
             <tr>
                 <td>Mật khẩu</td>
-                <td><input name="pass" rows="4" cols="50"value="<?php echo $res['pass']; ?>" required></input></td>
+                <td><input name="pass" rows="4" cols="50" value="<?php echo $res['pass']; ?>" required></input></td>
             </tr>
             <tr>
                 <td>Số điện thoại</td>
-                <td><input name="phone" rows="4" cols="50"value="<?php echo $res['phone']; ?>"></input></td>
+                <td><input name="phone" rows="4" cols="50" value="<?php echo $res['phone']; ?>"></input></td>
             </tr>
             <tr>
                 <td>Họ đệm</td>
-                <td><input name="fname" rows="4" cols="50"value="<?php echo $res['fname']; ?>"></input></td>
+                <td><input name="fname" rows="4" cols="50" value="<?php echo $res['fname']; ?>"></input></td>
             </tr>
             <tr>
                 <td>Tên</td>
-                <td><input name="lname" rows="4" cols="50"value="<?php echo $res['lname']; ?>"></input></td>
+                <td><input name="lname" rows="4" cols="50" value="<?php echo $res['lname']; ?>"></input></td>
             </tr>
             <tr>
                 <td colspan="3" class="center"><input type="submit" name="update" value="Cập nhật"></td>
@@ -52,6 +54,7 @@
         <input type="text" name="tmp" value="<?php echo $res['id']; ?>" hidden></input>
     </form>
 </body>
+
 </html>
 <?php
     if(isset($_POST['update'])){

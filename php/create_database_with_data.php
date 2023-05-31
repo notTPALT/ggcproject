@@ -83,21 +83,20 @@
 
 
     //Series of tables containing questions
+    mysqli_query($conDB, "CREATE TABLE review_questions (
+        idx INTEGER,
+        question varchar(500),
+        option1 varchar(500),
+        option2 varchar(500),
+        option3 varchar(500),
+        option4 varchar(500),
+        image_path char(254),
+        right_ans INTEGER,
+        question_of varchar(20)
+    )");
+
     for ($i = 10; $i <= 12; $i++) {
         for ($j = 1; $j <=7; $j++) {
-            mysqli_query($conDB, "DROP TABLE ques_".$i."_".$j);
-            mysqli_query($conDB, "CREATE TABLE ques_".$i."_".$j." (
-                idx INTEGER,
-                question varchar(500),
-                option1 varchar(500),
-                option2 varchar(500),
-                option3 varchar(500),
-                option4 varchar(500),
-                image_path char(254),
-                right_ans INTEGER
-            )");
-            
-            $ques_index = 1;
             $fh = fopen("../resources/txt/ques_".$i."_".$j.".txt", 'r');
             while ($question = fgets($fh)) {
                 $answer1 = fgets($fh);
@@ -106,7 +105,7 @@
                 $answer4 = fgets($fh);
                 $image_path = fgets($fh);
                 $correct_ans = fgets($fh);
-                mysqli_query($conDB, "INSERT INTO ques_".$i."_".$j." VALUES 
+                mysqli_query($conDB, "INSERT INTO review_questions VALUES 
                     ($ques_index, '$question', '$answer1', '$answer2', '$answer3', '$answer4', '$image_path', $correct_ans)");
                 $ques_index++;
             }
@@ -214,9 +213,9 @@
         id       int          PRIMARY KEY AUTO_INCREMENT,
         username varchar(50)  NOT NULL,
         pass     varchar(50)  NOT NULL,
-        fname    varchar(50) COLLATE utf8mb4_vietnamese_ci,
-        lname    varchar(50) COLLATE utf8mb4_vietnamese_ci,
-        phone    text
+        fname    varchar(50)  NOT NULL COLLATE utf8mb4_vietnamese_ci,
+        lname    varchar(50)  NOT NULL COLLATE utf8mb4_vietnamese_ci,
+        phone    text         NOT NULL
     )")) {
         echo "Created table tb_admin. <br>";
     } else {

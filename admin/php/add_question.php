@@ -5,6 +5,7 @@
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,6 +14,7 @@
     <link rel="stylesheet" href="../css/form.css">
     <title>Thêm câu hỏi</title>
 </head>
+
 <body>
     <div>
         <h1>Thêm câu hỏi thi thử tốt nghiệp</h1>
@@ -48,12 +50,13 @@
                     <input name="answer" type="radio" value="d">D
                 </td>
             </tr>
-            <tr class = "center">
+            <tr class="center">
                 <td colspan="2"><input type="submit" name="add" value="Thêm"></td>
             </tr>
         </table>
     </form>
 </body>
+
 </html>
 <?php
     if(isset($_POST['add'])){

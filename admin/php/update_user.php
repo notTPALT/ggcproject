@@ -5,6 +5,7 @@
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -19,7 +20,7 @@
     </div>
     <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
         <table>
-        <?php
+            <?php
             $id = isset($_POST['id']) ? $_POST['id'] : "OK";
             $sql = "SELECT * FROM user_infos WHERE id = '$id'";
             $tmp = mysqli_query($con, $sql);
@@ -27,53 +28,57 @@
         ?>
             <tr>
                 <td>Tài khoản</td>
-                <td><input name="username" rows="4" cols="50"value="<?php echo $res['username']; ?>" required></input></td>
+                <td><input name="username" rows="4" cols="50" value="<?php echo $res['username']; ?>" required></input>
+                </td>
             </tr>
             <tr>
                 <td>Mật khẩu</td>
-                <td><input name="pass" rows="4" cols="50"value="<?php echo $res['pass']; ?>" required></input></td>
+                <td><input name="pass" rows="4" cols="50" value="<?php echo $res['pass']; ?>" required></input></td>
             </tr>
             <tr>
                 <td>Lớp</td>
-                <td><input name="Class" rows="4" cols="50"value="<?php echo $res['class']; ?>"></input></td>
+                <td><input name="Class" rows="4" cols="50" value="<?php echo $res['class']; ?>"></input></td>
             </tr>
             <tr>
                 <td>Câu hỏi bảo mật</td>
-                <td><input name="secure_question" rows="4" cols="50"value="<?php echo $res['secure_question']; ?>"></input></td>
+                <td><input name="secure_question" rows="4" cols="50"
+                        value="<?php echo $res['secure_question']; ?>"></input></td>
             </tr>
             <tr>
                 <td>Câu trả lời bảo mật</td>
-                <td><input name="secure_answer" rows="4" cols="50"value="<?php echo $res['secure_answer']; ?>"></input></td>
+                <td><input name="secure_answer" rows="4" cols="50" value="<?php echo $res['secure_answer']; ?>"></input>
+                </td>
             </tr>
             <tr>
                 <td>Email</td>
-                <td><input name="email" rows="4" cols="50"value="<?php echo $res['email']; ?>"></input></td>
+                <td><input name="email" rows="4" cols="50" value="<?php echo $res['email']; ?>"></input></td>
             </tr>
-           
+
             <tr>
                 <td>Số điện thoại</td>
-                <td><input name="phone" rows="4" cols="50"value="<?php echo $res['phone']; ?>"></input></td>
+                <td><input name="phone" rows="4" cols="50" value="<?php echo $res['phone']; ?>"></input></td>
             </tr>
             <tr>
                 <td>Địa chỉ</td>
-                <td><input name="addrs" rows="4" cols="50"value="<?php echo $res['addrs']; ?>"></input></td>
+                <td><input name="addrs" rows="4" cols="50" value="<?php echo $res['addrs']; ?>"></input></td>
             </tr>
             <tr>
                 <td>Giới tính</td>
-                <td><input name="gender" rows="4" cols="50"value="<?php echo $res['gender']; ?>"></input></td>
+                <td><input name="gender" rows="4" cols="50" value="<?php echo $res['gender']; ?>"></input></td>
                 <td><label>0 - Nam | 1 - Nữ | 2 - Khác</label></td>
             </tr>
             <tr>
                 <td>Ngày sinh</td>
-                <td><input name="birthdate" type="date" rows="4" cols="50"value="<?php echo $res['birthdate']; ?>"></input></td>
+                <td><input name="birthdate" type="date" rows="4" cols="50"
+                        value="<?php echo $res['birthdate']; ?>"></input></td>
             </tr>
             <tr>
                 <td>Họ đệm</td>
-                <td><input name="fname" rows="4" cols="50"value="<?php echo $res['fname']; ?>"></input></td>
+                <td><input name="fname" rows="4" cols="50" value="<?php echo $res['fname']; ?>"></input></td>
             </tr>
             <tr>
                 <td>Tên</td>
-                <td><input name="lname" rows="4" cols="50"value="<?php echo $res['lname']; ?>"></input></td>
+                <td><input name="lname" rows="4" cols="50" value="<?php echo $res['lname']; ?>"></input></td>
             </tr>
             <tr>
                 <td colspan="3" class="center"><input type="submit" name="update" value="Cập nhật"></td>
@@ -82,6 +87,7 @@
         <input type="text" name="tmp" value="<?php echo $res['id']; ?>" hidden></input>
     </form>
 </body>
+
 </html>
 <?php
     if(isset($_POST['update'])){

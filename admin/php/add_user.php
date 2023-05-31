@@ -5,6 +5,7 @@
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,6 +14,7 @@
     <link rel="stylesheet" href="../css/form.css">
     <title>Thêm tài khoản</title>
 </head>
+
 <body>
     <div>
         <h1>Thêm tài khoản</h1>
@@ -47,8 +49,8 @@
                     <input name="gender" type="radio" value="0" checked="true">
                     <label for="">Nam</label>
                     <input name="gender" type="radio" value="1">
-                    <label for="" >Nữ</label>
-                    <input name="gender" type="radio" value="2" >
+                    <label for="">Nữ</label>
+                    <input name="gender" type="radio" value="2">
                     <label for="">Khác</label>
                 </td>
             </tr>
@@ -83,15 +85,16 @@
                 <td><input name="fname" type="text" required></td>
             </tr>
             <tr>
-                <td>Tên<label style="color: red; font-size: 20px;">*</label>    </td>
+                <td>Tên<label style="color: red; font-size: 20px;">*</label> </td>
                 <td><input name="lname" type="text" required></td>
             </tr>
-            <tr class = "center">
+            <tr class="center">
                 <td colspan="2"><input type="submit" name="add" value="Thêm"></td>
             </tr>
         </table>
     </form>
 </body>
+
 </html>
 <?php
     if(isset($_POST['add'])){

@@ -5,6 +5,7 @@
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,6 +19,7 @@
     $tmp = mysqli_query($con, $sql);
     $res = mysqli_fetch_array($tmp);
 ?>
+
 <body>
 
     <div>
@@ -67,7 +69,8 @@
             </tr>
             <tr>
                 <td>Giới tính</td>
-                <td><label><?php if ($res['gender'] == 1) echo "Nữ"; else if ($res['gender'] == 0) echo "Nam"; else echo "Khác"; ?></label></td>
+                <td><label><?php if ($res['gender'] == 1) echo "Nữ"; else if ($res['gender'] == 0) echo "Nam"; else echo "Khác"; ?></label>
+                </td>
             </tr>
             <tr>
                 <td>Ngày sinh</td>
@@ -76,6 +79,7 @@
         </table>
     </form>
 </body>
+
 </html>
 <?php 
     } 

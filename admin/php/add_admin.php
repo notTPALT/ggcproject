@@ -5,6 +5,7 @@
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,6 +14,7 @@
     <link rel="stylesheet" href="../css/form.css">
     <title>Thêm tài khoản admin</title>
 </head>
+
 <body>
     <div>
         <h1>Thêm tài khoản admin</h1>
@@ -40,15 +42,16 @@
                 <td><input name="fname" type="text" required></td>
             </tr>
             <tr>
-                <td>Tên<label style="color: red; font-size: 20px;">*</label>    </td>
+                <td>Tên<label style="color: red; font-size: 20px;">*</label> </td>
                 <td><input name="lname" type="text" required></td>
             </tr>
-            <tr class = "center">
+            <tr class="center">
                 <td colspan="2"><input type="submit" name="add" value="Thêm"></td>
             </tr>
         </table>
     </form>
 </body>
+
 </html>
 <?php
     if(isset($_POST['add'])){

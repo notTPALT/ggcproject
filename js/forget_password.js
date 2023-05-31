@@ -18,7 +18,7 @@ function verification_check(success) {
 }
 
 //AJAX call để lấy câu hỏi dựa trên username
-document.getElementById("username").addEventListener("blur", () => {
+document.getElementById("username").addEventListener("input", () => {
     var checkingUsername = document.getElementById("username").value;
     var xhr = new XMLHttpRequest();
     xhr.open("POST", "../php/get_secure_question.php");
