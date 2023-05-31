@@ -1,0 +1,64 @@
+body {
+    background-color: #DCDCDC;
+    font-family: Arial, sans-serif;
+}
+/* tieu de */
+div {
+    text-align: center;
+    margin-top: 20px;
+}
+
+h1 {
+    color: #333;
+    font-size: 24px;
+}
+/*box-content*/
+table {
+    margin: 20px auto;
+    border-collapse: collapse;
+    width: 80%;
+}
+
+table, tr {
+    border: none;
+    border-radius: 5px;
+}
+
+td {
+    padding: 5px;
+}
+
+/* css for update_question*/
+textarea {
+    width: 100%;
+    padding: 3px;
+    border: none;
+    border-radius: 5px;
+    resize: vertical;
+}
+/* css for submit */
+.center {
+    text-align: center;
+}
+
+.center input[type="submit"] {
+    height: 40px;
+    width: 80px;
+    padding: 5px 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #d32f2f;
+}
+/* css for add and show */
+input[type="text"] {
+    width: 300px;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+}
