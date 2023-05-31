@@ -1,4 +1,4 @@
-<script src="./js/test.js"></script>
+<script src="./js/review.js"></script>
 
 <?php
 if (isset($_GET['level']) && isset($_GET['chapter'])) {

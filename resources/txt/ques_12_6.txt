@@ -2,7 +2,9 @@ Tính chất giống nhau giữa tia Rơn – ghen và tia tử ngoại là:
 bị hấp thụ bởi thủy tinh và nước
 làm phát quang một số chất
 có tính đâm xuyên mạnh
-đều bị lệch trong điện trường<sup>2</sup>none
+đều bị lệch trong điện trường
+none
+2
 Trong bốn loại tia dưới đây, tia nào xếp thứ hai về khả năng đâm xuyên?
 Tia gamma
 Tia hồng ngoại
@@ -37,7 +39,6 @@ Một sóng ngang trền dọc theo một sợi dây dài, nguồn sóng O dao �
 10 cm.
 8 cm.
 img_12_2_3
-none
 3
 Một nguồn âm đặt tại O trong môi trường đẳng hướng. Hai điểm M và N trong môi trường tạo với O thành một tam giác đều. Mức cường độ âm tại M và N đều bằng 24,77 dB, mức cường độ âm lớn nhất mà một máy thu thu được đặt tại một điểm trên đoạn MN là:
 28 dB.
@@ -57,10 +58,13 @@ Nước và thuỷ tinh chiết suất lần lượt là n1 và n2. Chiết su�
 n21 = n1/n2
 n21 = n2/n1
 n21 = n2 - n1
-n12 = n1 - n2<sup>2</sup>none
+n12 = n1 - n2
+none
+2
 Khi chiếu ánh sáng từ không khí vào nước thì
 góc khúc xạ luôn nhỏ hơn góc tới
 góc khúc xạ luôn lớn hơn góc tới
 góc khúc xạ luôn bằng góc tới
 khi góc tới tăng thì góc khúc xạ giảm.
+none
 1

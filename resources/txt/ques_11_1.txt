@@ -1,4 +1,4 @@
-Tìm phát biểu s
+Tìm phát biểu sai
 Điện dung củtụ điện đặc trưng cho khả năng tíđiện củtụ điện ở một hiệu điện thế nhất định
 Tụ điện là dụng thường dùng để tívà phóng điện trong mạch
 Tụ điện là một hệ h vật dẫn đặt gần nh và cánh bởi một lớp cách điện
@@ -66,4 +66,5 @@ U = 200(V)
 U = 260(V)
 U = 300(V)
 U = 500(V)
+none
 2
