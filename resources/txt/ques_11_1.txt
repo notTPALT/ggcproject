@@ -26,7 +26,7 @@ U = 50 (V)
 U = 200 (V)
 none
 1
-tụ điện gồm h tụ điện: = 20 (μF), = 30 (μF) mắc nối tiếp với nh, rồi mắc vào h cực củnguồn điện hiệu điện thế U = 60 (V). Hiệu điện thế trên mỗi tụ điện là:
+Tụ điện gồm h tụ điện: = 20 (μF), = 30 (μF) mắc nối tiếp với nhau, rồi mắc vào h cực của nguồn điện hiệu điện thế U = 60 (V). Hiệu điện thế trên mỗi tụ điện là:
 U1= 60(V) và U2= 60(V)
 U1= 15(V) và U2= 45(V)
 U1= 45(V) và U2= 15(V)

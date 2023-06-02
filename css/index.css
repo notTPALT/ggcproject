@@ -100,6 +100,7 @@
 #header-top #nav-infor,
 .subnav-infor {
     list-style-type: none;
+    background-color: #B0F1FF;
 }
 
 /*CSS các phần tử của button infor*/
@@ -113,7 +114,6 @@
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
-    color: whitesmoke;
 }
 
 #header-top #nav-infor>li>a {
@@ -127,7 +127,7 @@
 
 #header-top #nav-infor>li:hover>a,
 #nav-infor .subnav-infor li:hover {
-    background-color: #B0F1FF;
+    background-color: #77e6ff;
 }
 
 #header-top #nav-infor li:hover .subnav-infor {

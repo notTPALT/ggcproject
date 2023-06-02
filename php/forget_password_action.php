@@ -1,8 +1,8 @@
-<!-- unfinished - not functioning -->
-
-<script src="./js/forget_password.js"></script>
+<script src="./js/forget_password.js"></script> <!-- Import các function cần thiết -->
 
 <?php
+
+    // Kiểm tra xem ces
     if (isset($_POST['username']) && !usernameExist($con)) {
         echo "<script>no_such_user();</script>";
     }

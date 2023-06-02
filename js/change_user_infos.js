@@ -1,10 +1,12 @@
 
-//Không cho submit khi chưa chỉnh dữ liệu
+//Thêm event để không cho người dùng submit khi chưa có dữ liệu nào được chỉnh sửa
 document.querySelector("form").addEventListener('input', function() {
     document.getElementById("change-user-infos").disabled = false;
 });
 
-//Xuât ra thông tin có sẵn của người dùng
+/**
+ * Cập nhật các trường thông tin theo dữ liệu đã cho.
+ */
 function bind_existing_data(fname, lname, gender, birthdate, email, phone, addrs, secure_question, secure_answer) {
     document.addEventListener("DOMContentLoaded", function() {
         document.getElementById("fname").value = fname;
@@ -19,8 +21,10 @@ function bind_existing_data(fname, lname, gender, birthdate, email, phone, addrs
     });
 }
 
-//Cập nhật username cho tiêu đề trang
+/**
+ * Thêm tên người dùng váo tiêu đề trang
+ * @param {string} username Tên người dùng
+ */
 function update_username(username) {
     document.getElementById("target").innerHTML += username;    
 }
-

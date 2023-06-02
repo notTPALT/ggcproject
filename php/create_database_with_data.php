@@ -1,12 +1,18 @@
 <?php
-    //Database 'ggcproject'
+    // File này dùng để tạo database cùng các bảng cần thiết để dự án có thể hoạt động bình thường.
+    // BẮT BUỘC phải mở trang này ít nhất 1 lần trước khi thực hiện bất kì thao tác nào khác liên quan
+    // đến dự án.
+
+    // Database 'ggcproject'
     $con = mysqli_connect("localhost", "root", "");
     mysqli_query($con, "DROP DATABASE ggcproject");
     if(mysqli_query($con, "CREATE DATABASE ggcproject")) {
-        echo 'database created successfully.';
+        echo 'Tạo database thành công.<br>';
+    } else {
+        echo 'Tạo database thất bại.<br>';
     }
 
-    //Table 'user_infos'
+    // Bảng [user_infos] dùng để lưu thông tin đăng nhập và thông tin cá nhân của người dùng
     $conDB = mysqli_connect("localhost", "root", "", "ggcproject");
     $createTB = "CREATE TABLE user_infos (
         id               integer       NOT NULL PRIMARY KEY AUTO_INCREMENT,
@@ -25,43 +31,34 @@
         status           int           NOT NULL
         )";
     if (!mysqli_query($conDB, $createTB)) {
-        echo 'table already exist.';
+        echo 'Tạo bảng user_infos thất bại.<br>';
     } else {
-        echo 'table created successfully.';
+        echo 'Tạo bảng user_infos thành công.<br>';
 
-        //user_infos sample data (can be deleted if not needed)
+        // Đưa dữ liệu mẫu vào bảng user_infos (có thể xóa nếu cảm thấy không cần thiết)
         mysqli_query($conDB, "INSERT INTO user_infos (username, pass, class, secure_question, secure_answer, email, phone, addrs, gender, birthdate, fname, lname) VALUES 
                                 ('user1', 'user1pass', 10, 'ques1', 'ques1ans', 'user1@gmail.com', '0111111111', 'addrs of user1', true, '2003-01-01', 'user', 'first')");
-
         mysqli_query($conDB, "INSERT INTO user_infos (username, pass, class, secure_question, secure_answer, email, phone, addrs, gender, birthdate, fname, lname) VALUES 
                                 ('user2', 'user2pass', 11, 'ques2', 'ques2ans', 'user2@gmail.com', '0111111111', 'addrs of user2', false, '2003-02-02', 'user', 'second')");
-
         mysqli_query($conDB, "INSERT INTO user_infos (username, pass, class, secure_question, secure_answer, email, phone, addrs, gender, birthdate, fname, lname) VALUES 
                                 ('user3', 'user3pass', 12, 'ques3', 'ques3ans', 'user3@gmail.com', '0333333333', 'addrs of user3', false, '2003-03-03', 'user', 'third')");       
-                                
         mysqli_query($conDB, "INSERT INTO user_infos (username, pass, class, secure_question, secure_answer, email, phone, addrs, gender, birthdate, fname, lname) VALUES 
                                 ('user4', 'user4pass', 11, 'ques4', 'ques4ans', 'user4@gmail.com', '0444444444', 'addrs of user4', true, '2003-04-04', 'user', 'fourth')");
-
         mysqli_query($conDB, "INSERT INTO user_infos (username, pass, class, secure_question, secure_answer, email, phone, addrs, gender, birthdate, fname, lname) VALUES 
                                 ('user5', 'user5pass', 10, 'ques5', 'ques5ans', 'user5@gmail.com', '0555555555', 'addrs of user5', true, '2003-05-05', 'user', 'fifth')");
-
         mysqli_query($conDB, "INSERT INTO user_infos (username, pass, class, secure_question, secure_answer, email, phone, addrs, gender, birthdate, fname, lname) VALUES 
                                 ('user6', 'user6pass', 11, 'ques6', 'ques6ans', 'user6@gmail.com', '0666666666', 'addrs of user6', false, '2003-06-06', 'user', 'sixth')"); 
-
         mysqli_query($conDB, "INSERT INTO user_infos (username, pass, class, secure_question, secure_answer, email, phone, addrs, gender, birthdate, fname, lname) VALUES 
                                 ('user7', 'user7pass', 12, 'ques7', 'ques7ans', 'user7@gmail.com', '0777777777', 'addrs of user7', true, '2003-07-07', 'user', 'seventh')");
-
         mysqli_query($conDB, "INSERT INTO user_infos (username, pass, class, secure_question, secure_answer, email, phone, addrs, gender, birthdate, fname, lname) VALUES 
                                 ('user8', 'user8pass', 11, 'ques8', 'ques8ans', 'user8@gmail.com', '0888888888', 'addrs of user8', false, '2003-08-08', 'user', 'eighth')");
-
         mysqli_query($conDB, "INSERT INTO user_infos (username, pass, class, secure_question, secure_answer, email, phone, addrs, gender, birthdate, fname, lname) VALUES 
                                 ('user9', 'user9pass', 10, 'ques9', 'ques9ans', 'user9@gmail.com', '0999999999', 'addrs of user9', false, '2003-09-09', 'user', 'ninth')");       
-
         mysqli_query($conDB, "INSERT INTO user_infos (username, pass, class, secure_question, secure_answer, email, phone, addrs, gender, birthdate, fname, lname) VALUES 
                                 ('user10', 'user10pass', 12, 'ques10', 'ques10ans', 'user10@gmail.com', '0123456789', 'addrs of user10', true, '2003-10-10', 'user', 'tenth')");
     }
 
-    //Table mock_exam_history
+    // Bảng [mock_exam_history] để lưu lịch sử thi thử của người dùng
     mysqli_query($conDB, "CREATE TABLE mock_exam_history (
         username    char(50),
         correct     int,
@@ -74,16 +71,27 @@
         ordinal     int       NOT NULL
     )");
 
-    //Table server_log to store users' activities
+    // Bảng [server_log] dùng để lưu mọi hoạt dộng của người dùng
     mysqli_query($conDB, "CREATE TABLE server_log (
         username varchar(50),
         events varchar(200),
         time TIMESTAMP DEFAULT CURRENT_TIMESTAMP
     )");
 
-    //Series of tables containing questions
+    /**
+     * Tạo ra nhiều bảng, mỗi bảng chứa các câu hỏi của 1 chương cụ thể ([ques_<level>_<chapter>])
+     * Đây không phải là 1 cách tiếp cận tốt, làm cho database trở nên lớn không cần thiết,
+     * tuy nhiên lại là cách duy nhất tôi có thể nghĩ đến để có thể dùng SQL query để lấy 
+     * đáp án cho từng câu sau khi người dùng nộp bài.
+     * 
+     * Tôi cũng đã nghĩ đến việc sẽ thay thế bằng 1 bảng chung, nhưng như thế thì bắt buộc
+     * mỗi câu hỏi phải có 1 ID độc nhất để phân biệt, và việc xử lý liên quan đến cái này
+     * hơi phức tạp, nên tôi quyết định bỏ qua. 
+     */
     for ($i = 10; $i <= 12; $i++) {
         for ($j = 1; $j <=7; $j++) {
+
+            // Tạo ra 1 bảng dùng để lưu câu hỏi
             mysqli_query($conDB, "DROP TABLE ques_".$i."_".$j);
             mysqli_query($conDB, "CREATE TABLE ques_".$i."_".$j." (
                 idx INTEGER,
@@ -96,7 +104,9 @@
                 right_ans INTEGER
             )");
             
-            $ques_index = 1;
+            $ques_index = 1; // Dùng để gán cho mỗi câu hỏi 1 số thử tự
+
+            // Nhập dữ liệu câu hỏi mẫu từ file câu hỏi có sẵn trong dự án vào bảng trên
             $fh = fopen("../resources/txt/ques_".$i."_".$j.".txt", 'r');
             while ($question = fgets($fh)) {
                 $answer1 = fgets($fh);
@@ -112,6 +122,8 @@
             fclose($fh);
         }
     }
+
+    // Vòng lặp trên chưa bao hêt toàn bộ các chương của môn này, vì vậy cần thêm 1 lần tạo bảng ở đây
     mysqli_query($conDB, "DROP TABLE ques_12_8");
     mysqli_query($conDB, "CREATE TABLE ques_12_8 (
         idx INTEGER,
@@ -124,6 +136,7 @@
         right_ans INTEGER
     )");
     
+    // Lí do tương tự trên
     $ques_index = 1;
     $fh = fopen("../resources/txt/ques_12_8.txt", 'r');
     while ($question = fgets($fh)) {
@@ -139,7 +152,7 @@
     }
     fclose($fh);
 
-    //Table 'tbquestion_graduation' containing mock exam questions
+    // Bảng [tbquestion_graduation] dùng để chứa các câu hỏi dùng để thi thử
     mysqli_query($conDB, "CREATE TABLE tbquestion_graduation
     (
         id       INT         NOT NULL PRIMARY KEY AUTO_INCREMENT,
@@ -151,6 +164,7 @@
         answer   VARCHAR(2) NOT NULL
     )");
 
+    // Thêm dữ liệu mẫu vào bảng
     mysqli_query($conDB, "INSERT INTO tbquestion_graduation (question, option_a, option_b, option_c, option_d, answer) VALUES
     ('Phương trình dao động của một vật dao động điều hòa là: x = - 5cos(10πt + π/6) cm. Chọn đáp án đúng:',
     'Biên độ A = -5 cm' ,'Pha ban đầu φ = π/6 (rad)' ,'Chu kì T = 0,2 s' ,'Li độ ban đầu x0 = 5 cm' ,'c' ),
@@ -207,7 +221,7 @@
     ('Con lắc đơn dao động nhỏ trong một điện trường đều có phương thẳng đứng hướng xuống và vật nặng có điện tích dương với biên độ A và chu kỳ dao động T. Vào thời điểm vật đi qua vị trí cân bằng thì đột ngột tắt điện trường. Chu kỳ và biên độ của con lắc khi đó thay đổi như thế nào? Bỏ qua mọi lực cản.', 'Chu kỳ tăng; biên độ giảm.', 'Chu kỳ giảm biên độ giảm.', 'Chu kỳ giảm; biên độ tăng.', 'Chu kỳ tăng; biên độ tăng.', 'd')
     ");
     
-    // Table tb_admin
+    // Bảng [tb_admin] dùng để lưu thông tin đăng nhập của administrators
     mysqli_query($conDB, "DROP TABLE tb_admin");
     if (mysqli_query($conDB, "CREATE TABLE tb_admin (
         id       int          PRIMARY KEY AUTO_INCREMENT,
