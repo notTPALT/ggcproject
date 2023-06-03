@@ -30,7 +30,7 @@ document.getElementById("username").addEventListener("input", () => {
 
     // Dùng XHR để lấy câu hỏi
     var xhr = new XMLHttpRequest();
-    xhr.open("POST", "../php/get_secure_question.php");
+    xhr.open("POST", "./php/get_secure_question.php");
     xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
     xhr.send("checkingUsername=" + checkingUsername);
 

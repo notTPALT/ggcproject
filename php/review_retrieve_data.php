@@ -7,7 +7,7 @@ if (isset($_GET['level']) && isset($_GET['chapter'])) {
     $chapter = $_GET['chapter'];
 
     // Kiểm tra tính có sẵn của chương và lớp hiện tại
-    if (!is_numeric($level) || !is_numeric($chapter) || !ctype_digit($level) || !ctype_digit($chapter) || $level < 10 || $level > 12 || $chapter < 1 || ($chapter == 8 && $level != 12) || $chapter > 7) {
+    if (!is_numeric($level) || !is_numeric($chapter) || !ctype_digit($level) || !ctype_digit($chapter) || $level < 10 || $level > 12 || $chapter < 1 || (($chapter == 8 && $level != 12) || $chapter > 8)) {
         echo '<script>location.href = "./page_not_found.php";</script>';
     }
 ?>
