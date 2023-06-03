@@ -6,7 +6,6 @@
 	$wrong_answer = $_SESSION['incorrect'];
 	$unanswered = $_SESSION['unanswered'];
 	$point = $_SESSION['point'];
-	project_log($con, "Finished a mock exam - Correct: ".$right_answer." Incorrect: ".$wrong_answer." Unanswered: ".$unanswered." Point: ".$point);
 	unset($_SESSION['correct']);
 	unset($_SESSION['incorrect']);
 	unset($_SESSION['unanswered']);

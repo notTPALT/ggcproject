@@ -2,6 +2,8 @@
     /**
      * File này chứa các function để lưu lịch sử hoạt động và câu lệnh thực hiện kết nối đến CSDL với $con là biến lưu trữ dữ liệu kêt
      * nối mặc định. $con sẽ là biến mặc định để thực hiện truy vấn.
+     * 
+     * Phải import file này trước khi thực hiện bất kì thao tác nào liên quan đến SQL.
      */
     $con = mysqli_connect("localhost", "root", "", "ggcproject");
 

@@ -87,7 +87,7 @@
                     <li><a id="_12_5" href="./review.php?level=12&chapter=5">Chương 5: Sóng Ánh Sáng</a></li>
                     <li><a id="_12_6" href="./review.php?level=12&chapter=6">Chương 6: Lượng Tử Ánh Sáng</a></li>
                     <li><a id="_12_7" href="./review.php?level=12&chapter=7">Chương 7: Hạt Nhân Nguyên Tử</a></li>
-                    <li><a id="_12_8" href="./review.php?level=12&chapter=8">Chương 8: Từ Vĩ Mô Đến Vĩ Mô</a></li>
+                    <li><a id="_12_8" href="./review.php?level=12&chapter=8">Chương 8: Từ Vi Mô Đến Vĩ Mô</a></li>
                 </ul>
             </li>
             <li><a href="./mock_exam_ready.php">Ôn thi tốt nghiệp</a></li>

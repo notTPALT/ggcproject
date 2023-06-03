@@ -1,9 +1,14 @@
-//Thêm username vào tiêu đề
+/**
+ * Cập nhật tên người dùng lên tiêu đề
+ * @param {string} username Tên người dùng
+ */
 function update_username(username) {
     document.getElementById("target").innerHTML += username;
 }
 
-//Cập nhật dữ liệu có sẵn của người dùng trong SQL 
+/**
+ * Đưa thông tin có sẵn lên giao diện
+ */
 function bind_existing_data(fname, lname, gender, birthdate, email, phone, addrs, secure_question, secure_answer) {
     document.addEventListener("DOMContentLoaded", function() {
         document.getElementById("fname").innerHTML = fname;

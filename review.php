@@ -95,17 +95,27 @@
                 }
                 </style>
 
+                <!-- Tên chương hiện tại -->
                 <h3 id="chapter-name" style="font-size: 25px;"></h3>
+
+                <!-- IDK what it does -->
                 <div id="check-ans"></div>
+
+                <!-- Chứa các câu hỏi ôn tập -->
                 <div id="question-container"></div>
+
                 <button id="submit" name="ans-submit">Nộp bài!</button>
+
+                <!-- Sẽ hiển thị sau khi nhấn nộp bài -->
                 <button id="next-chapter" hidden></button>
+
+                <!-- Hiển thị kết quả ôn tập -->
                 <div id="result" style="display: inline-block;"></div>
             </div>
         </div>
         <?php 
-                echo file_get_contents("./html/footer.html");
-                require_once("./php/review_retrieve_data.php");
+            echo file_get_contents("./html/footer.html");
+            require_once("./php/review_retrieve_data.php");
         ?>
     </div>
 </body>

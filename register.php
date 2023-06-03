@@ -183,9 +183,8 @@
 		else{
 			if ($password == $repassword){
 				mysqli_query($con, $sql);
-        project_log_no_username($con, "Added an account: ".$username);
-				echo '<script>location.href="./php/wait.php"</script>';
-				// header('locaiton: /php/wait.php');
+                project_log_no_username($con, "Added an account: ".$username);
+				echo '<script>location.href="./login.php"</script>';
 			} 
 			else{
 				echo "<script>

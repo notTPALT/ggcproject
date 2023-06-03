@@ -326,7 +326,7 @@
         else {
 			echo "<script>
                     var a = document.getElementById('error');
-                    a.innerHTML = '*Username or password incorrect*';
+                    a.innerHTML = '*Sai tên người dùng hoặc mật khẩu*';
 				</script>";
 		}
 		mysqli_close($con);

@@ -2,19 +2,6 @@ var arr = [];
 var num_of_ques = 0;
 var correct = 0;
 
-//Hiển thị tiêu đề chương
-function update_chapter_title(level, chapter) {
-    if (level != 0)
-        document.getElementById("chapter-name").innerHTML = document.getElementById("_" + level + "_" + chapter).innerHTML;
-}
-
-//Thêm các event cho 2 nút bắt đầu làm bài và nộp bài
-function update_button_events(level, chapter) {
-    document.getElementById("submit").addEventListener("click", () => {
-        update_result(level, chapter);
-    });
-}
-
 //Hiển thị nút sang chương tiếp theo
 function show_next_chapter_button(level, chapter) {
     //Chỉ có lớp 12 có 8 chương nên sẽ kiểm tra xem tới chương cuối chưa
@@ -33,31 +20,31 @@ function show_next_chapter_button(level, chapter) {
     document.getElementById("next-chapter").innerHTML = "Chương tiếp theo";
 }
 
-//Cập nhật số lượng câu đúng, đánh dấu câu sai
-//NOTE: Ở đây dùng Promise với async, await để tạm dừng script cho đến khi thực hiện xong đoạn lệnh này 
+//Cập nhật số lượng câu đúng, tô màu các câu đúng, sai hoặc không chọn
+//NOTE: Ở đây dùng Promise với async, await để tạm dừng script cho đến khi thực hiện xong đoạn lệnh đấy
 const update_correct_answer = (level, chapter, i) =>
     new Promise(function(resolve, reject) {
         xhr_getRightAns = new XMLHttpRequest();
-        //Lấy input người dùng chọn
+        //Lấy câu trả lời từ người dùng
         let user_ans = document.querySelector('input[name="ans' + i + '"]:checked');
         //Lấy label của input trên 
         let chosen_ans_label = document.querySelector('label[for="input_' + i + '_' + get_ans_value(i) +'"]');
 
-        //XMLHttpRequest để lấy đáp án câu hỏi từ SQL
+        //XMLHttpRequest để lấy đáp án câu hỏi từ CSDL
         xhr_getRightAns.open('POST', '../php/review_check_ans.php', true);
         xhr_getRightAns.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
         xhr_getRightAns.send('ques_index=' + i + '&level=' + level + '&chapter=' + chapter);
         xhr_getRightAns.onload = function() {
             if (xhr_getRightAns.status == 200) {
-                if (!user_ans) { //Nếu như người dùng bỏ câu hỏi thì xem như sai và đánh dấu màu vàng
+                if (!user_ans) { //Nếu như người dùng bỏ câu hỏi thì xem như sai và đánh dấu màu nâu
                     let right_ans_label = document.querySelector('label[for="input_' + i + '_' + xhr_getRightAns.response + '"]');
                     right_ans_label.style.color = "brown";
                     right_ans_label.style.fontWeight = "bold";
-                } else if (parseInt(xhr_getRightAns.response) == user_ans.value) { //Trùng đáp án
+                } else if (parseInt(xhr_getRightAns.response) == user_ans.value) { // Đúng
                     correct++;
                     chosen_ans_label.style.fontWeight = "bold";
                     chosen_ans_label.style.color = "green";
-                } else { //Trật đáp án
+                } else { // Sai 
                     chosen_ans_label.style.color = "red";
                     chosen_ans_label.style.fontWeight = "bold";
                     let right_ans_label = document.querySelector('label[for="input_' + i + '_' + xhr_getRightAns.response + '"]');

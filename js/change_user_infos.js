@@ -22,7 +22,7 @@ function bind_existing_data(fname, lname, gender, birthdate, email, phone, addrs
 }
 
 /**
- * Thêm tên người dùng váo tiêu đề trang
+ * Thêm tên người dùng vào tiêu đề trang
  * @param {string} username Tên người dùng
  */
 function update_username(username) {

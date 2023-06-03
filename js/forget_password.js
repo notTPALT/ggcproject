@@ -4,6 +4,7 @@
 function no_such_user() {
     document.getElementById("verification-check").innerHTML = "Tên người dùng không tồn tại";
 }
+
 /**
  * Trả về dòng thông báo sai mật khẩu.
  */
@@ -27,7 +28,7 @@ function verification_check(rightAnswer) {
 document.getElementById("username").addEventListener("input", () => {
     var checkingUsername = document.getElementById("username").value;
 
-    // Dùng AJAX để lấy câu hỏi
+    // Dùng XHR để lấy câu hỏi
     var xhr = new XMLHttpRequest();
     xhr.open("POST", "../php/get_secure_question.php");
     xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
