@@ -235,7 +235,8 @@
     } else {
         echo "Table tb_admin not created. <br>";
     }
-
+    mysqli_query($conDB, "INSERT INTO tb_admin (username, pass) VALUES ('admin', 'admin')");
+    
     unset($con);
     unset($conDB);
 ?>
