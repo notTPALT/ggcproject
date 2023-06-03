@@ -87,7 +87,8 @@
                         </td>
 
                         <td>
-                            <input id="question" type="text" name="secure_question" placeholder="Câu hỏi" disabled>
+                            <input id="question" type="text" name="secure_question" placeholder="Câu hỏi"
+                                style="cursor: not-allowed;" disabled>
                         </td>
                     </tr>
 
