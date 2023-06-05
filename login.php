@@ -13,7 +13,34 @@
     <title>Đăng nhập</title>
     <link rel="icon" href="./resources/favicon.png">
     <link rel="stylesheet" href="./css/style_form.css">
-    <link rel="stylesheet" href="./css/login.css">
+    <style>
+    .container {
+        width: 470px;
+        height: 390px;
+    }
+
+    table tbody {
+        transform: translate(60px, -10px);
+    }
+
+    table tbody tr td {
+        padding-top: 8px;
+        padding-left: 6px;
+    }
+
+    /*CSS cho các label Username và Password*/
+    label {
+        font-size: 22px;
+    }
+
+    /*CSS cho dữ liệu đầu vào dạng text và password*/
+    input[type='text'],
+    input[type="password"] {
+        width: 182px;
+        height: 23px;
+        margin: 3px 0px 0px -50px;
+    }
+    </style>
 </head>
 
 <body>
@@ -132,7 +159,7 @@
             // Thông báo sai thông tin đăng nhập
 			echo "<script>
                     var a = document.getElementById('error');
-                    a.innerHTML = '*Sai tên tài khoản hoặc mật khẩu*';
+                    a.innerHTML = '*Tài khoản hoặc mật khẩu không đúng*';
 				</script>";
 		}
 		mysqli_close($con);

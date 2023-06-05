@@ -60,6 +60,7 @@
 
     // Bảng [mock_exam_history] để lưu lịch sử thi thử của người dùng
     mysqli_query($conDB, "CREATE TABLE mock_exam_history (
+        id          int       NOT NULL PRIMARY KEY AUTO_INCREMENT,
         username    char(50),
         correct     int,
         incorrect   int,
@@ -68,7 +69,7 @@
         time        TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
         time_end    TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
         time_finish TIMESTAMP NOT NULL,
-        ordinal     int       NOT NULL
+        ordinal     int       NOT NULL DEFAULT 0
     )");
 
     // Bảng [server_log] dùng để lưu mọi hoạt dộng của người dùng

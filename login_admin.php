@@ -12,11 +12,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Đăng nhập Admin</title>
     <link rel="icon" href="./resources/favicon.png">
-    <link rel="stylesheet" href="./css/login_admin.css">
+    <link rel="stylesheet" href="./css/style_form.css">
+    <style>
+    body {
+        background-image: url('../resources/background_login_admin.jpg');
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+
+    table tbody {
+        transform: translate(60px, -20px);
+    }
+
+    table tbody tr td {
+        padding-top: 8px;
+        padding-left: 6px;
+    }
+
+    /*CSS cho các label Username và Password*/
+    label {
+        font-size: 22px;
+        font-family: Inter;
+        color: #333;
+        font-weight: bold;
+    }
+
+    /*CSS cho dữ liệu đầu vào dạng text và password*/
+    input[type='text'],
+    input[type="password"] {
+        width: 182px;
+        height: 23px;
+        margin: 3px 0px 0px 30px;
+        border-radius: 3px;
+        border: 1px solid silver;
+        font-size: 18px;
+        outline: none;
+    }
+    </style>
 </head>
 
 <body>
-    <div class="container-admin">
+    <div class=" container-admin">
         <!-- Form đăng nhập -->
         <form action="./login_admin.php" method="post" name="sign-In">
             <table>
@@ -118,7 +154,7 @@
             // Thông báo sai thông tin đăng nhập
 			echo "<script>
                     var a = document.getElementById('error');
-                    a.innerHTML = '*Username or password incorrect*';
+                    a.innerHTML = '*Tài khoản hoặc mật khẩu không đúng *';
 				</script>";
 		}
 		mysqli_close($con);

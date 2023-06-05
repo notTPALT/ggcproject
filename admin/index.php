@@ -2,7 +2,7 @@
     session_start();
     if (isset($_SESSION['admin'])){
     require('../php/connect_MySQL_n_log.php');
-    $username = isset($_POST['ad']) ? $_POST['ad'] : "admin";
+    $username = $_SESSION['admin'];
 ?>
 <!DOCTYPE html>
 <html>
@@ -15,7 +15,7 @@
     <link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <title>Admin</title>
-    <link rel="icon" href="../resources/favicon.png">
+    <link rel="icon" href="./resources/favicon.png">
     <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
@@ -30,7 +30,7 @@
                     <li><a href="account_user.php">亗 Tài khoản</a></li>
                     <li><a href="question.php">亗 Câu hỏi thi thử</a></li>
                     <li><a href="account_admin.php">亗 Tài khoản admin</a></li>
-                    <li id="review-index"><a>Câu hỏi ôn tập</a></li>
+                    <li id="review-index"><a>亗 Câu hỏi ôn tập</a></li>
                 </ul>
             </nav>
         </div>
@@ -46,7 +46,7 @@
 <?php 
     } 
     else{
-        header('Location: login_admin.php');
+        header('Location: ../login_admin.php');
         exit;
     }
 ?>

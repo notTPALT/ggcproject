@@ -31,8 +31,12 @@
         $result = mysqli_query($con, $sql);
         $result = mysqli_fetch_array($result);
         $count = 0;
+
         if ($result['max_ordinal'] !== null) {
             $count = $result['max_ordinal'] + 1;
+        }
+        else{
+            $count = 1;
         }
 
         // Lấy thời gian kết thúc bài thi (thời gian thi mặc định là 40 phút).
