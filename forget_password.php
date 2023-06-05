@@ -1,4 +1,7 @@
-<?php session_start(); ?>
+<?php 
+    session_start(); 
+    require_once("./php/connect_MySQL_n_log.php");
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -73,11 +76,11 @@
 
                     <tr>
                         <td>
-                            <label for="">Tên người dùng</label>
+                            <label for="">Tên tài khoản</label>
                         </td>
 
                         <td>
-                            <input id="username" type="text" name="username" placeholder="Tên người dùng" required>
+                            <input id="username" type="text" name="username" placeholder="Tên tài khoản" required>
                         </td>
                     </tr>
 
@@ -110,6 +113,5 @@
 </body>
 
 <?php
-    require_once("./php/connect_MySQL_n_log.php");
     require_once("./php/forget_password_action.php");
 ?>

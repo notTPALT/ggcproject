@@ -1,0 +1,21 @@
+Điều kiện tác động làm xuất hiện cặp electron-lỗ trống trong chất bán dẫn là
+độ ẩm của môi trường
+âm thanh
+ánh sáng thíhợp
+siêu âm
+none
+3
+Để tạo ra chất bán dẫn loại n, người ta pha thêm tạp chất, cápha tạp chất đúng là
+Ge + As
+Ge + In
+Ge + S
+Ge + Pb
+none
+1
+Chiếu một chùm tia sáng hẹp gồm hai thành phần ánh sáng đơn sắc vàng và kục đi từ không khí vào mặc của tấm thủy tinh theo phương xiên góHiện tượng xảy ra là:
+hai tia khúc xạ lệch về hai phía của pháp tuyến
+tia khúc xạ màu vàng bị lệch ít, tia khúc xạ màu lục bị lệch nhiều
+tia khúc xạ màu kkục bị lệch ít, tia khúc xạ màu vàng bị lệch nhiều
+chùm tia sáng chỉ bị khúc xạ
+none
+2

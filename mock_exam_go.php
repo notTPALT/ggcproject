@@ -212,7 +212,7 @@
 		?>
     </div>
 
-    ////<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script>
     document.getElementById("1").hidden = false; // Câu 1 sẽ được hiển thị đầu tiên
     reload_user_input(); // Load lại các câu trả lời mà người dùng đã trả lời trước đó

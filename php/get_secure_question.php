@@ -1,12 +1,12 @@
 <?php
 /**
- * File này dùng để trả về câu hỏi bảo mật dựa theo tên người dùng 
+ * File này dùng để trả về câu hỏi bảo mật dựa theo tên tài khoản 
  */
 
 require_once("./connect_MySQL_n_log.php");
 session_start();
 
-// Lấy tên người dùng được đưa vào
+// Lấy tên tài khoản được đưa vào
 $username = $_POST['checkingUsername'];
 
 // Truy vấn lấy câu hỏi

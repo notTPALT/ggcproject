@@ -22,8 +22,8 @@ function bind_existing_data(fname, lname, gender, birthdate, email, phone, addrs
 }
 
 /**
- * Thêm tên người dùng vào tiêu đề trang
- * @param {string} username Tên người dùng
+ * Thêm tên tài khoản vào tiêu đề trang
+ * @param {string} username Tên tài khoản
  */
 function update_username(username) {
     document.getElementById("target").innerHTML += username;    

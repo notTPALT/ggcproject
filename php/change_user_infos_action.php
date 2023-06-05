@@ -23,7 +23,7 @@
             }
         }
 
-        // Update tiêu đề trang theo tên người dùng đang đăng nhập
+        // Update tiêu đề trang theo tên tài khoản đang đăng nhập
         echo "<script>update_username('".$_SESSION['username']."');</script>"; 
         
         // Truy vấn để lấy thông tin cá nhân có sẵn trên CSDL

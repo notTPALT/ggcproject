@@ -3,7 +3,6 @@
     require('./php/connect_MySQL_n_log.php');
 ?>
 
-<!--ĐĂNG NHẬP-->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,221 +12,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Đăng nhập Admin</title>
     <link rel="icon" href="./resources/favicon.png">
-    <style>
-    body {
-        background-image: url(./resources/background_login_admin.jpg);
-        background-repeat: no-repeat;
-        background-size: 100%;
-    }
-
-    table tbody {
-        transform: translate(60px, -20px);
-    }
-
-    table tbody tr td {
-        padding-top: 8px;
-        padding-left: 6px;
-    }
-
-    /*CSS cho các label Username và Password*/
-    label {
-        font-size: 22px;
-        font-family: Inter;
-        color: #333;
-        font-weight: bold;
-    }
-
-    /*CSS cho dữ liệu đầu vào dạng text và password*/
-    input[type='text'],
-    input[type="password"] {
-        width: 182px;
-        height: 23px;
-        margin: 3px 0px 0px 30px;
-        border-radius: 3px;
-        border: 1px solid silver;
-        font-size: 18px;
-        outline: none;
-    }
-
-    * {
-        padding: 0;
-        margin: 0;
-        box-sizing: border-box;
-    }
-
-    body {
-        height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: whitesmoke;
-    }
-
-    .container,
-    .container-admin {
-        position: relative;
-        background-color: #8464c9;
-        text-decoration: none;
-        font-family: Inter;
-        font-weight: 500;
-        text-align: center;
-        padding-top: 30px;
-        overflow: hidden;
-        border-radius: 12px;
-    }
-
-    .container {
-        color: whitesmoke;
-        backdrop-filter: blur(16px) saturate(180%);
-        -webkit-backdrop-filter: blur(16px) saturate(180%);
-        background-color: rgba(11, 15, 13, 0.582);
-        border: 1px solid rgba(255, 255, 255, 0.125);
-    }
-
-    .container-admin {
-        overflow: hidden;
-        background: rgba(245, 245, 245, 0.767);
-        box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.1);
-        width: 468px;
-        height: 340px;
-    }
-
-    svg {
-        position: absolute;
-        left: 4px;
-        top: 4px;
-        width: 30px;
-        height: 30px;
-        padding: 5px;
-        border-radius: 4px;
-        background-color: white;
-    }
-
-    table {
-        padding-top: 30px;
-        text-align: left;
-    }
-
-    /*CSS phần chung cho các dữ liệu đầu vào dạng text,pasword, email và Select Class*/
-    input[type='text'],
-    input[type="password"],
-    input[type='email'],
-    #yourClass {
-        background-color: whitesmoke;
-        color: rgba(0, 0, 0, 0.733);
-        border: none;
-        padding-left: 5px;
-    }
-
-    /*CSS cho các phần riêng các option của select Class*/
-    #yourClass {
-        font-size: 20px;
-        text-align: center;
-    }
-
-    /*CSS cho các lựa chọn lớp 10, lớp 11, lớp 12 của select Class */
-    option {
-        font-size: 22px;
-        text-align: center;
-    }
-
-    /*CSS cho chữ của thẻ a*/
-    a {
-        font-size: 18px;
-        color: #a39393;
-    }
-
-    /*CSS cho nút Nam, Nữ, Khác */
-    input[type='radio'] {
-        width: 19px;
-        height: 19px;
-        margin: 13px 3px 13px 18px;
-    }
-
-    /*CSS cho phần đè lên nút Nam, Nữ, Khác */
-    input[type='radio']:after {
-        width: 19px;
-        height: 19px;
-        border-radius: 19px;
-        position: relative;
-        background-color: whitesmoke;
-        content: '';
-        display: inline-block;
-        visibility: visible;
-    }
-
-    /*CSS selection cho nút Nam, Nữ ,Khác */
-    input[type='radio']:checked:after {
-        width: 19px;
-        height: 19px;
-        border-radius: 19px;
-        position: relative;
-        background-color: rgb(34, 163, 142);
-        content: '';
-        display: inline-block;
-        visibility: visible;
-    }
-
-    input[type='submit'] {
-        border-radius: 4px;
-        width: 122px;
-        height: 44px;
-        background-color: black;
-        color: white;
-        border: none;
-        font-size: 19px;
-        display: block;
-        transform: translateY(20px);
-        margin: 0 auto;
-    }
-
-
-    .container-transform {
-        position: absolute;
-        left: -2.7px;
-        bottom: -10px;
-        display: inline-flex;
-    }
-
-    #COSTOMER,
-    #ADMIN {
-        text-decoration: none;
-        width: 236px;
-        height: 45px;
-        line-height: 27px;
-        padding: 10px 20px 5px 20px;
-        margin: 12px 0px 10px 0px;
-    }
-
-    #COSTOMER {
-        backdrop-filter: blur(16px) saturate(180%);
-        -webkit-backdrop-filter: blur(16px) saturate(180%);
-        background-color: rgba(11, 15, 13, 0.582);
-    }
-
-    #ADMIN {
-        background: linear-gradient(to right, #2A5470, #4C4177);
-    }
-
-    #COSTOMER>a,
-    #ADMIN>a {
-        text-decoration: none;
-        display: block;
-    }
-
-    #COSTOMER>a {
-        color: whitesmoke;
-    }
-
-    #ADMIN>a {
-        color: black;
-    }
-    </style>
+    <link rel="stylesheet" href="./css/login_admin.css">
 </head>
 
 <body>
     <div class="container-admin">
-        <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" name="sign-In">
+        <!-- Form đăng nhập -->
+        <form action="./login_admin.php" method="post" name="sign-In">
             <table>
                 <thead>
                     <tr>
@@ -283,6 +74,7 @@
             <input type="submit" name="dangnhap_admin" id="sign-up_person" value="Đăng nhập">
         </form>
 
+        <!-- Chuyển đổi giữa đăng nhập người dùng vá admin -->
         <div class="container-transform">
             <div id="COSTOMER">
                 <a href="./login.php">
@@ -302,22 +94,28 @@
 </html>
 
 <?php
+    // Chạy khi người dùng đã nhấn nút đăng nhập
 	if (isset($_POST["dangnhap_admin"])){
 		$us = $_POST['taikhoan'];
 		$ps = $_POST['matkhau'];
 		
-		// $sql = "SELECT COUNT(*) as total FROM user_infos where username = '$us' and pass = '$ps'";
+        // Tìm thông tin đăng nhập trong CSDL
 		$sql = "SELECT * FROM tb_admin WHERE username = '$us' AND pass = '$ps'";
-		
 		$user = mysqli_query($con, $sql);
 
+        // Xác nhận thông tin đăng nhập có tồn tại trong CSDL không
 		if (mysqli_num_rows($user) > 0) {
-            $_SESSION['admin'] = $us;
+            $_SESSION['admin'] = $us; // Lưu lại tên tài khoản vào session (admin)
+
+            // Lưu lần đăng nhập thành công này vào lịch sử hoạt động
             project_log_admin($con, "Logged in (Admin).");
+
+            // Chuyển đến trang chủ sau khi đăng nhập thành công
             echo "<script>
                     location.href='admin/index.php';
                 </script>";
         } else{
+            // Thông báo sai thông tin đăng nhập
 			echo "<script>
                     var a = document.getElementById('error');
                     a.innerHTML = '*Username or password incorrect*';

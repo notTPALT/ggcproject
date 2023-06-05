@@ -4,7 +4,7 @@
 
     // Kiểm tra người dùng đã submit form quên mật khẩu chưa
     if (isset($_POST['username'])) {
-        // Kiểm tra xem tên người dùng có tôn tại không
+        // Kiểm tra xem tên tài khoản có tôn tại không
         if (!usernameExist($con, $_POST['username'])) { 
             echo "<script>no_such_user();</script>"; // Thông báo lên giao diện
         } else { 
@@ -25,13 +25,13 @@
     }
 
     /**
-     * Kiểm tra xem tên người dùng được cho có tồn tại trong CSDL hay không.
+     * Kiểm tra xem tên tài khoản được cho có tồn tại trong CSDL hay không.
      * @param $con Biến thực hiện truy vấn
-     * @param $username Tên người dùng cần kiểm tra
+     * @param $username Tên tài khoản cần kiểm tra
      * @return bool true nếu tồn tại, ngược lại trả về false.
      */
     function usernameExist($con, $username) {
-        // Truy vấn đếm số tên người dùng giống với cái đã cho
+        // Truy vấn đếm số tên tài khoản giống với cái đã cho
         $username_check = mysqli_real_escape_string($con, $username);
         $check = mysqli_prepare($con, "SELECT COUNT(*) FROM user_infos WHERE username = ?");
 
