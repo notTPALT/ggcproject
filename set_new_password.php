@@ -7,18 +7,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quên mật khẩu</title>
+    <title>Đặt mật khẩu mới</title>
     <link rel="stylesheet" href="./css/style_form.css">
+    <link rel="icon" href="./resources/favicon.png">
     <style>
     .container {
         width: 450px;
-        height: 300px;
+        height: 309px;
     }
 
     table {
         height: 120px;
         padding-top: 10px;
-        transform: translateX(30px);
+        transform: translateX(50px);
     }
 
     /*CSS cho các cột trong table */
@@ -34,8 +35,9 @@
     /*CSS cho dữ liệu đầu vào dạng password*/
     input[type="password"] {
         width: 180px;
-        height: 25px;
+        height: 27px;
         margin: 13px 0px 13px 18px;
+        border-radius: 5px;
     }
     </style>
 </head>
@@ -60,14 +62,14 @@
             </a>
         </div>
 
-        <label for="" style="font-size: 28px;">Quên mật khẩu</label>
+        <label for="" style="font-size: 28px;">Đặt mật khẩu mới</label>
 
         <div id="submit-form" name="submit-form">
             <form action="./set_new_password.php" method="post">
                 <table>
                     <tr>
-                        <td>
-                            <div id="pass-check"></div>
+                        <td colspan="2">
+                            <div id="pass-check" style="color: red; font-size: 15px;"></div>
                         </td>
                     </tr>
 
