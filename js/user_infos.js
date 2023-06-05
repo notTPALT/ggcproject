@@ -1,6 +1,6 @@
 /**
- * Cập nhật tên người dùng lên tiêu đề
- * @param {string} username Tên người dùng
+ * Cập nhật tên tài khoản lên tiêu đề
+ * @param {string} username Tên tài khoản
  */
 function update_username(username) {
     document.getElementById("target").innerHTML += username;

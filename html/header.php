@@ -1,25 +1,31 @@
 <div class="header">
     <div id="header-top">
+        <!-- Logo của trang -->
         <div id="logo-header">
             <a href="index.php"><img src="./resources/favicon.png" alt="Logo"></a>
         </div>
 
-        <!--Tiêu đề trang-->
+        <!--Thanh tiêu đề trang-->
         <div id="banner">
             <div id="para">Ôn tập và thi thử trắc nghiệm Vật Lí online</div>
         </div>
 
-        <!--Các thao tác liên quan đến người dùng-->
+        <!-- Các thao tác liên quan đến thông tin đăng nhập -->
         <ul id="nav-infor">
             <li>
-                <a id="link-to-reg" href="./register.php"><button id="btn-show-username-or-register"
-                        style="background-color: rgba(0,0,0,0); border: 0px;"><label
-                            style="align: center; cursor: pointer;"><?php echo "Đăng ký"; ?></label></button></a>
+                <!-- Nút đăng ký hoặc hiển thị tên tài khoản -->
+                <!-- button này sẽ vô hiệu hóa và đổi innerHTML thành tên tài khoản nếu đã đăng nhập -->
+                <a id="link-to-reg" href="./register.php">
+                    <button id="btn-show-username-or-register" style="background-color: rgba(0,0,0,0); border: 0px;">
+                        <label style="align: center; cursor: pointer;">Đăng ký</label>
+                    </button>
+                </a>
+
+
                 <ul class="subnav-infor">
                     <?php
+                        // Thay thế nút đăng ký theo tình trạng đăng nhập
                         if (isset($_SESSION['username'])){ ?>
-
-                    <!-- Phu: script thay đổi chức năng các button -->
                     <script>
                     document.getElementById("link-to-reg").removeAttribute("href");
                     document.getElementById("btn-show-username-or-register").innerHTML =
@@ -28,11 +34,12 @@
                     <li><a href="./user_infos.php">Thông tin cá nhân</a></li>
                     <li><a href="./change_password.php">Đổi mật khẩu</a></li>
                     <li><a href="./mock_exam_history.php">Lịch sủ thi thử</a></li>
-                    <?php   } ?>
+                    <?php } ?>
                 </ul>
             </li>
         </ul>
         <?php
+            // Nút đăng nhập (Thay thế thành đăng ký nếu đã đăng nhập)
             if (isset($_SESSION['username'])){ ?>
         <a href="./log_out.php"><button id="button-dangxuat" name="xuli">Đăng xuất</button></a>
         <?php   }

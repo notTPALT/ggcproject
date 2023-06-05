@@ -1,8 +1,8 @@
 /**
- * Trả về dòng thông báo sai tên người dùng.
+ * Trả về dòng thông báo sai tên tài khoản.
  */
 function no_such_user() {
-    document.getElementById("verification-check").innerHTML = "Tên người dùng không tồn tại";
+    document.getElementById("verification-check").innerHTML = "Tên tài khoản không tồn tại";
 }
 
 /**
@@ -24,7 +24,7 @@ function verification_check(rightAnswer) {
     }
 }
 
-// Thêm event lấy câu hỏi bảo mật cho trường nhập tên người dùng
+// Thêm event lấy câu hỏi bảo mật cho trường nhập tên tài khoản
 document.getElementById("username").addEventListener("input", () => {
     var checkingUsername = document.getElementById("username").value;
 

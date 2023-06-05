@@ -2,7 +2,7 @@
     session_start();
     require('./php/connect_MySQL_n_log.php');
 ?>
-<!--ĐĂNG NHẬP-->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,39 +13,13 @@
     <title>Đăng nhập</title>
     <link rel="icon" href="./resources/favicon.png">
     <link rel="stylesheet" href="./css/style_form.css">
-    <style>
-    .container {
-        width: 470px;
-        height: 390px;
-    }
-
-    table tbody {
-        transform: translate(60px, -10px);
-    }
-
-    table tbody tr td {
-        padding-top: 8px;
-        padding-left: 6px;
-    }
-
-    /*CSS cho các label Username và Password*/
-    label {
-        font-size: 22px;
-    }
-
-    /*CSS cho dữ liệu đầu vào dạng text và password*/
-    input[type='text'],
-    input[type="password"] {
-        width: 182px;
-        height: 23px;
-        margin: 3px 0px 0px -50px;
-    }
-    </style>
+    <link rel="stylesheet" href="./css/login.css">
 </head>
 
 <body>
     <div class="container">
-        <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST" name="sign-up">
+        <!-- Form đăng nhập -->
+        <form action="./login.php" method="POST" name="sign-up">
             <table>
                 <thead>
                     <tr>
@@ -113,6 +87,7 @@
             <input type="submit" name="dangnhap" id="sign-up_person" value="Đăng nhập">
         </form>
 
+        <!-- Chuyển đổi giữa đăng nhập người dùng vá admin -->
         <div class="container-transform">
             <div id="COSTOMER">
                 <a href="./login.php">
@@ -132,25 +107,32 @@
 </html>
 
 <?php
+    // Chạy khi người dùng đã nhấn nút đăng nhập
 	if (isset($_POST["dangnhap"])){
 		$us = $_POST['taikhoan'];
 		$ps = $_POST['matkhau'];
 		
-		$sql = "SELECT * FROM user_infos where username = '$us' and pass = '$ps'";
-		
+        // Tìm thông tin đăng nhập trong CSDL
+		$sql = "SELECT * FROM user_infos where username = '$us' and pass = '$ps'";		
 		$user = mysqli_query($con, $sql);
 
+        // Xác nhận thông tin đăng nhập có tồn tại trong CSDL không
 		if (mysqli_num_rows($user) > 0) {
-            $_SESSION['username'] = $us;
+            $_SESSION['username'] = $us; // Lưu lại tên tài khoản vào session
+
+            // Lưu lần đăng nhập thành công này vào lịch sử hoạt động
             project_log($con, "Logged in (User).");
+
+            // Chuyển đến trang chủ sau khi đăng nhập thành công
 			echo "<script>
                     location.href='index.php';
                 </script>";
 		} 
         else {
+            // Thông báo sai thông tin đăng nhập
 			echo "<script>
                     var a = document.getElementById('error');
-                    a.innerHTML = '*Sai tên người dùng hoặc mật khẩu*';
+                    a.innerHTML = '*Sai tên tài khoản hoặc mật khẩu*';
 				</script>";
 		}
 		mysqli_close($con);

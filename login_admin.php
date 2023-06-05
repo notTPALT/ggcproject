@@ -3,7 +3,6 @@
     require('./php/connect_MySQL_n_log.php');
 ?>
 
-<!--ĐĂNG NHẬP-->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,47 +12,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Đăng nhập Admin</title>
     <link rel="icon" href="./resources/favicon.png">
-    <style>
-    body {
-        background-image: url(./resources/background_login_admin.jpg);
-        background-repeat: no-repeat;
-        background-size: 100%;
-    }
-
-    table tbody {
-        transform: translate(60px, -20px);
-    }
-
-    table tbody tr td {
-        padding-top: 8px;
-        padding-left: 6px;
-    }
-
-    /*CSS cho các label Username và Password*/
-    label {
-        font-size: 22px;
-        font-family: Inter;
-        color: #333;
-        font-weight: bold;
-    }
-
-    /*CSS cho dữ liệu đầu vào dạng text và password*/
-    input[type='text'],
-    input[type="password"] {
-        width: 182px;
-        height: 23px;
-        margin: 3px 0px 0px 30px;
-        border-radius: 3px;
-        border: 1px solid silver;
-        font-size: 18px;
-        outline: none;
-    }
-    </style>
+    <link rel="stylesheet" href="./css/login_admin.css">
 </head>
 
 <body>
     <div class="container-admin">
-        <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" name="sign-In">
+        <!-- Form đăng nhập -->
+        <form action="./login_admin.php" method="post" name="sign-In">
             <table>
                 <thead>
                     <tr>
@@ -109,6 +74,7 @@
             <input type="submit" name="dangnhap_admin" id="sign-up_person" value="Đăng nhập">
         </form>
 
+        <!-- Chuyển đổi giữa đăng nhập người dùng vá admin -->
         <div class="container-transform">
             <div id="COSTOMER">
                 <a href="./login.php">
@@ -128,22 +94,28 @@
 </html>
 
 <?php
+    // Chạy khi người dùng đã nhấn nút đăng nhập
 	if (isset($_POST["dangnhap_admin"])){
 		$us = $_POST['taikhoan'];
 		$ps = $_POST['matkhau'];
 		
-		// $sql = "SELECT COUNT(*) as total FROM user_infos where username = '$us' and pass = '$ps'";
+        // Tìm thông tin đăng nhập trong CSDL
 		$sql = "SELECT * FROM tb_admin WHERE username = '$us' AND pass = '$ps'";
-		
 		$user = mysqli_query($con, $sql);
 
+        // Xác nhận thông tin đăng nhập có tồn tại trong CSDL không
 		if (mysqli_num_rows($user) > 0) {
-            $_SESSION['admin'] = $us;
+            $_SESSION['admin'] = $us; // Lưu lại tên tài khoản vào session (admin)
+
+            // Lưu lần đăng nhập thành công này vào lịch sử hoạt động
             project_log_admin($con, "Logged in (Admin).");
+
+            // Chuyển đến trang chủ sau khi đăng nhập thành công
             echo "<script>
                     location.href='admin/index.php';
                 </script>";
         } else{
+            // Thông báo sai thông tin đăng nhập
 			echo "<script>
                     var a = document.getElementById('error');
                     a.innerHTML = '*Username or password incorrect*';

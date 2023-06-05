@@ -92,7 +92,7 @@
                         </td>
                     </tr>
                 </table>
-                <input id="submit" type="submit" name="submit" value="Hoàn thành">
+                <input id="submit" type="submit" name="set-new-pass-submit" value="Hoàn thành">
             </form>
         </div>
 </body>
