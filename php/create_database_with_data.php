@@ -62,11 +62,24 @@
 
     //Table mock_exam_history
     mysqli_query($conDB, "CREATE TABLE mock_exam_history (
+<<<<<<< Updated upstream
         username char(50),
         correct int,
         incorrect int,
         unanswered int,
         point_total char(10)
+=======
+        username    char(50),
+        correct     int,
+        incorrect   int,
+        unanswered  int,
+        point_total char(10),
+        time        TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+        time_end    TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+        time_finish TIMESTAMP NOT NULL,
+        ordinal     int       NOT NULL,
+        CONSTRAINT PK_lmao PRIMARY KEY (username, ordinal)
+>>>>>>> Stashed changes
     )");
 
     //Table server_log to store users' activities
@@ -204,6 +217,25 @@
     ('Con lắc đơn dao động nhỏ trong một điện trường đều có phương thẳng đứng hướng xuống và vật nặng có điện tích dương với biên độ A và chu kỳ dao động T. Vào thời điểm vật đi qua vị trí cân bằng thì đột ngột tắt điện trường. Chu kỳ và biên độ của con lắc khi đó thay đổi như thế nào? Bỏ qua mọi lực cản.', 'Chu kỳ tăng; biên độ giảm.', 'Chu kỳ giảm biên độ giảm.', 'Chu kỳ giảm; biên độ tăng.', 'Chu kỳ tăng; biên độ tăng.', 'd')
     ");
     
+<<<<<<< Updated upstream
+=======
+    // Bảng [tb_admin] dùng để lưu thông tin đăng nhập của administrators
+    mysqli_query($conDB, "DROP TABLE tb_admin");
+    if (mysqli_query($conDB, "CREATE TABLE tb_admin (
+        id       int          PRIMARY KEY AUTO_INCREMENT,
+        username varchar(50)  NOT NULL,
+        pass     varchar(50)  NOT NULL,
+        fname    varchar(50)  NOT NULL COLLATE utf8mb4_vietnamese_ci,
+        lname    varchar(50)  NOT NULL COLLATE utf8mb4_vietnamese_ci,
+        phone    text         NOT NULL
+    )")) {
+        echo "Created table tb_admin. <br>";
+    } else {
+        echo "Table tb_admin not created. <br>";
+    }
+    mysqli_query($conDB, "INSERT INTO tb_admin (username, pass) VALUES ('admin', 'admin')");
+    
+>>>>>>> Stashed changes
     unset($con);
     unset($conDB);
 ?>

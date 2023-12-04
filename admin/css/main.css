@@ -53,6 +53,10 @@ header {
     margin-bottom: 10px;
 }
 
+#review-index:hover {
+    background-color: #333;
+}
+
 .sidebar a {
     display: block;
     padding: 5px;

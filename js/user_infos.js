@@ -1,4 +1,11 @@
+<<<<<<< Updated upstream
 //Thêm username vào tiêu đề
+=======
+/**
+ * Cập nhật tên tài khoản lên tiêu đề
+ * @param {string} username Tên tài khoản
+ */
+>>>>>>> Stashed changes
 function update_username(username) {
     document.getElementById("target").innerHTML += username;
 }

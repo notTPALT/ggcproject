@@ -59,3 +59,13 @@
     <?php require_once("../../html/footer.html"); ?>
 </body>
 </html>
+<<<<<<< Updated upstream
+=======
+<?php 
+    } 
+    else{
+        header('Location: ../login_admin.php');
+        exit;
+    }
+?>
+>>>>>>> Stashed changes

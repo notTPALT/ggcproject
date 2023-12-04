@@ -101,15 +101,21 @@ async function update_result(level, chapter) {
     for (let i = 1; i <= num_of_ques; i++) {
         await update_correct_answer(level, chapter, i);
     }
+
+    let point = ((correct / num_of_ques) * 10).toFixed(1);
     document.getElementById("result").innerHTML = "Đúng " + correct + "/" + num_of_ques +
+<<<<<<< Updated upstream:js/test.js
         ".<br>Điểm trên hệ số 10: " + (correct / num_of_ques) * 10;
+=======
+        ".    Điểm: " + point;
+>>>>>>> Stashed changes:js/review.js
 
     //Dùng XMLHttpRequest để lưu dữ liệu ôn tập chương lần này
     var xhr = new XMLHttpRequest();
     xhr.open('POST', '../php/result_log.php');
     xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
     xhr.send('level=' + level + '&chapter=' + chapter + '&correct=' + correct + '&total=' + num_of_ques +
-        '&score=' + (correct / num_of_ques) * 10);
+        '&score=' + point);
 }
 
 //Trả về giá trị đã chọn của 1 câu hỏi

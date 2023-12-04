@@ -19,7 +19,14 @@ function bind_existing_data(fname, lname, gender, birthdate, email, phone, addrs
     });
 }
 
+<<<<<<< Updated upstream
 //Cập nhật username cho tiêu đề trang
+=======
+/**
+ * Thêm tên tài khoản vào tiêu đề trang
+ * @param {string} username Tên tài khoản
+ */
+>>>>>>> Stashed changes
 function update_username(username) {
     document.getElementById("target").innerHTML += username;    
 }

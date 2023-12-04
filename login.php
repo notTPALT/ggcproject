@@ -2,6 +2,10 @@
     session_start();
     require('./php/connect_MySQL_n_log.php');
 ?>
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
 <!DOCTYPE html>
 <html lang="en">
 
@@ -39,6 +43,7 @@
     input[type="password"] {
         width: 182px;
         height: 23px;
+<<<<<<< Updated upstream
         background-color: #a39393;
         border: none;
         margin: 3px 0px 0px -50px;
@@ -49,14 +54,23 @@
         font-size: 18px;
         color: #a39393;
     }
+=======
+        margin: 3px 0px 0px -50px;
+    }
+>>>>>>> Stashed changes
     </style>
 </head>
 
 <body>
     <div class="container">
+<<<<<<< Updated upstream
         <input type="submit" style = "margin-left: 5px;width: 40px;height: 40px;padding: 10px 10px;" id="btn_homepage" onclick="location.href='./index.php'" value="🏠">
         <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST" name="sign-up">
             <label for="" style="font-size: 35px;">Sign in</label>
+=======
+        <!-- Form đăng nhập -->
+        <form action="./login.php" method="POST" name="sign-up">
+>>>>>>> Stashed changes
             <table>
                 <tr>
                     <td colspan="2">
@@ -98,11 +112,30 @@
             </table>
             <input type="submit" name="dangnhap" id="sign-up_person" value="Sign in">
         </form>
+<<<<<<< Updated upstream
+=======
+
+        <!-- Chuyển đổi giữa đăng nhập người dùng vá admin -->
+        <div class="container-transform">
+            <div id="COSTOMER">
+                <a href="./login.php">
+                    USER
+                </a>
+            </div>
+
+            <div id="ADMIN">
+                <a href="./login_admin.php">
+                    ADMIN
+                </a>
+            </div>
+        </div>
+>>>>>>> Stashed changes
     </div>
 </body>
 
 </html>
 <?php
+<<<<<<< Updated upstream
 	if ((isset($_POST["dangnhap"])) && ($_POST['taikhoan'] != '') && ($_POST['matkhau'] != '')){
 		$us = $_POST['taikhoan'];
 		$ps = $_POST['matkhau'];
@@ -110,9 +143,20 @@
 		// $sql = "SELECT COUNT(*) as total FROM user_infos where username = '$us' and pass = '$ps'";
 		$sql = "SELECT * FROM user_infos where username = '$us' and pass = '$ps'";
 		
+=======
+    // Chạy khi người dùng đã nhấn nút đăng nhập
+	if (isset($_POST["dangnhap"])){
+		$us = $_POST['taikhoan'];
+		$ps = $_POST['matkhau'];
+		
+        // Tìm thông tin đăng nhập trong CSDL
+		$sql = "SELECT * FROM user_infos where username = '$us' and pass = '$ps'";		
+>>>>>>> Stashed changes
 		$user = mysqli_query($con, $sql);
 
+        // Xác nhận thông tin đăng nhập có tồn tại trong CSDL không
 		if (mysqli_num_rows($user) > 0) {
+<<<<<<< Updated upstream
             $_SESSION['username'] = $us;
             project_log($con, "Logged in");
 			header("location: ./index.php");
@@ -120,6 +164,23 @@
 			echo "<script>
           var a = document.getElementById('error');
           a.innerHTML = '*Username or password incorrect*';
+=======
+            $_SESSION['username'] = $us; // Lưu lại tên tài khoản vào session
+
+            // Lưu lần đăng nhập thành công này vào lịch sử hoạt động
+            project_log($con, "Logged in (User).");
+
+            // Chuyển đến trang chủ sau khi đăng nhập thành công
+			echo "<script>
+                    location.href='index.php';
+                </script>";
+		} 
+        else {
+            // Thông báo sai thông tin đăng nhập
+			echo "<script>
+                    var a = document.getElementById('error');
+                    a.innerHTML = '*Tài khoản hoặc mật khẩu không đúng*';
+>>>>>>> Stashed changes
 				</script>";
 		}
 		mysqli_close($con);

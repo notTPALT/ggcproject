@@ -17,7 +17,15 @@
                 mysqli_stmt_close($update_data_stmt);
             }
         }
+<<<<<<< Updated upstream
         echo "<script>update_username('".$_SESSION['username']."');</script>";   
+=======
+
+        // Update tiêu đề trang theo tên tài khoản đang đăng nhập
+        echo "<script>update_username('".$_SESSION['username']."');</script>"; 
+        
+        // Truy vấn để lấy thông tin cá nhân có sẵn trên CSDL
+>>>>>>> Stashed changes
         $get_user_data_stmt = mysqli_prepare($con, "SELECT secure_question, secure_answer, email, phone, addrs, gender, birthdate, fname, lname FROM user_infos WHERE username = '".$_SESSION['username']."'");
     
         if ($get_user_data_stmt) {

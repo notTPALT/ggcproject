@@ -26,6 +26,7 @@
 			$i++;
 		}
 
+<<<<<<< Updated upstream
 		$point = $right_answer * 0.25;
 		$sql_result = "INSERT INTO mock_exam_history VALUES ('".$_SESSION['username']."', $right_answer, $wrong_answer, $unanswered, '$point')";
 		$_SESSION['correct'] = $right_answer;
@@ -33,6 +34,62 @@
 		$_SESSION['unanswered'] = $unanswered;
 		$_SESSION['point'] = $point;
 		$sql_delete = "DROP TABLE ".$test;
+=======
+    define('NOT_IN_A_TEST', 0);
+    define('IN_A_TEST', 1);
+    
+    // Lấy status code từ CSDL
+    $userName = $_SESSION['username'];
+    $sql = "SELECT status FROM user_infos WHERE username = '$userName'";
+    $result = mysqli_query($con, $sql);
+    $result = mysqli_fetch_array($result);
+    $status = $result['status'];
+
+    // Chạy block này nếu đây là đợt thi thử mới
+    if ($status == NOT_IN_A_TEST) {
+
+        // Truy vấn cập nhật status
+        $sql = "UPDATE user_infos SET status = ".IN_A_TEST." WHERE username = '$userName'";
+        mysqli_query($con, $sql);
+
+        // Tăng số lần thi thử lên 1
+        $sql = "SELECT max(ordinal) as max_ordinal FROM mock_exam_history WHERE username =  '$userName'";
+        $result = mysqli_query($con, $sql);
+        $result = mysqli_fetch_array($result);
+        $count = 0;
+
+        if ($result['max_ordinal'] !== null) {
+            $count = $result['max_ordinal'] + 1;
+        }
+        else{
+            $count = 1;
+        }
+
+        // Lấy thời gian kết thúc bài thi (thời gian thi mặc định là 40 phút).
+        date_default_timezone_set('Asia/Ho_Chi_Minh');
+        $timeEnd = date("Y/m/d H:i:s", strtotime("+40 minutes"));
+
+        // Truy vấn cập nhật thông tin mới vào lịch sử thi
+        $sql = "INSERT INTO mock_exam_history(username, time_end, point_total, ordinal) 
+                VALUES('$userName', '$timeEnd', '0', '$count')";
+        mysqli_query($con, $sql);
+    }
+    
+    // Truy vấn lấy thời gian kết thúc đã lưu trước đó
+    $stmt_get_time_end = "SELECT time_end FROM mock_exam_history WHERE username = '$userName'
+            ORDER BY ordinal DESC LIMIT 1";
+    $result = mysqli_query($con, $stmt_get_time_end);
+    $result = mysqli_fetch_array($result);
+    $time_end_unix = strtotime($result['time_end']);
+    $time_end = date("F d, Y H:i:s", $time_end_unix);
+
+    // Chỉ thực thi khi người dùng đã nộp bài
+    if (isset($_POST['sub'])){
+        $i = 1; // Thể hiện index của câu trả lời cần kiểm tra
+        $right_answer = 0;
+        $wrong_answer = 0;
+        $unanswered = 0;
+>>>>>>> Stashed changes
         
 		if (mysqli_query($con, $sql_result) && mysqli_query($con, $sql_delete)){
 			echo "<script>
@@ -172,6 +229,10 @@
 			?>
     </div>
 
+<<<<<<< Updated upstream
+=======
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+>>>>>>> Stashed changes
     <script>
     document.getElementById("1").hidden = false;
     reload_user_input();

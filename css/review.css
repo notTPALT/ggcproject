@@ -1,0 +1,67 @@
+input[type="button"] {
+    margin: 5px auto;
+    color: #fff;
+    background-color: #4CAF50;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 150px;
+    /* Đặt chiều rộng */
+    height: 40px;
+    /* Đặt chiều cao */
+}
+
+#submit {
+    margin-top: 20px;
+    /* Khoảng cách với phần tử trước đó */
+    margin: 0 auto;
+    text-align: center;
+    color: #fff;
+    background-color: #4CAF50;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+}
+
+#submit:hover {
+    background-color: #45a049;
+}
+
+.question {
+    margin-bottom: 20px;
+    /* Khoảng cách giữa các câu hỏi */
+}
+
+.space-between-elements {
+    margin-bottom: 20px;
+    /* Khoảng cách dưới giữa các phần tử */
+}
+
+#next-chapter {
+    margin-top: 20px;
+    /* Khoảng cách với phần tử trước đó */
+    margin: 0 auto;
+    text-align: center;
+    color: #fff;
+    background-color: #4CAF50;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+}
+
+#next-chapter:hover {
+    background-color: #45a049;
+}
+
+#result {
+    font-size: 20px;
+    font-weight: bold;
+}
